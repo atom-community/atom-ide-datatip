@@ -1,0 +1,25 @@
+{
+  "name": "atom-ide-datatips",
+  "main": "./lib/atom-ide-datatips",
+  "version": "0.1.0",
+  "description": "A short description of your package",
+  "keywords": [],
+  "repository": "https://github.com/atom/atom-ide-datatips",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/atom": "^1.31.0",
+    "@types/node": "^10.12.18",
+    "atom-languageclient": "^0.9.9"
+  },
+  "providedServices": {
+    "datatip": {
+      "versions": {
+        "0.1.0": "provideDatatipService"
+      }
+    }
+  }
+}
