@@ -9,7 +9,11 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "dompurify": "^1.0.8",
+    "etch": "^0.14.0",
+    "marked": "^0.5.2"
+  },
   "devDependencies": {
     "@types/atom": "^1.31.0",
     "@types/node": "^10.12.18",
