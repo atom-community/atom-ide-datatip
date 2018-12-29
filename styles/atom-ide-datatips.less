@@ -9,7 +9,7 @@
   font-size: 80%;
   margin-top: -2px; // Compensate for shadow
   position: relative;
-  white-space: nowrap;
+  white-space: normal;
   pointer-events: all;
 }
 
@@ -24,6 +24,7 @@
   background-color: @syntax-background-color;
   display: flex;
   position: relative;
+  max-width: 750px;
   transition: background-color 0.15s ease;
   &:hover {
     background-color: mix(@syntax-background-color, @syntax-selection-color, 50%);

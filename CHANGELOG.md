@@ -1,3 +1,7 @@
+## 0.2.0 - 1st Bugfix Release
+* Adding Config settings for showing / dismissing overlay timer 
+
 ## 0.1.0 - First Release
-* Every feature added
-* Every bug fixed
+* Initial Release on Atom.io
+* Properly rendering markdown in overlay
+* UI bugfixes for overlay (shadow, sizing)
