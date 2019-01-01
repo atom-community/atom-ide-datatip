@@ -28,7 +28,7 @@
       "title": "Delay before opening a datatip after moving on an identifier",
       "description": "Delay (in ms) between hovering over an identifier and showing a datatip",
       "type": "number",
-      "default": 200,
+      "default": 500,
       "minimum": 1
     },
     "datatipInteractedWithDebounceDelay": {
