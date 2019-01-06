@@ -1,3 +1,6 @@
+## 0.2.3 - 3rd Hotfix
+* fix text editor scrolling when mouse-wheel in large markdown text
+
 ## 0.2.2 - 2nd Hotfix
 * fix an issue preventing the overlay to show if the markedString is undefined
 
