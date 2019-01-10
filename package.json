@@ -16,13 +16,14 @@
   "dependencies": {
     "dompurify": "^1.0.8",
     "etch": "^0.14.0",
-    "marked": "^0.5.2",
+    "marked": "^0.6.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
   "devDependencies": {
     "@types/atom": "^1.31.0",
     "@types/node": "^10.12.18",
+    "@types/react": "^16.7.18",
     "atom-languageclient": "^0.9.9"
   },
   "atomConfig": {
