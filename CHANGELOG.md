@@ -1,3 +1,8 @@
+## 0.4.0 - Support for config setting
+* there is now a new config option to disable display of the data tooltip automatically as soon as you move your cursor around.
+* if this setting is true, it will show the same behavior than before
+* if this setting is false, it will only activate / show the data tooltip when triggered manually via the keyboard shortcut (default: `CTRL+ALT` on Windows/Linux, or `CMD+ALT` on Mac)
+
 ## 0.3.0 - Support for React components in DataTip
 * merge pull request to support React components in DataTip API
 * upgrade marked to 0.6.0

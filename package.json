@@ -31,7 +31,7 @@
       "title": "Flag denotes if the data tip should be shown automatically",
       "description": "If set to true, the data tip is shown as soon as you move your cursor around. Otherwise you will have to activate it via keypress.",
       "type": "boolean",
-      "default": false
+      "default": true
     }
   },
   "providedServices": {
