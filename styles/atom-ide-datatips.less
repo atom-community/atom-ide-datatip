@@ -11,6 +11,9 @@
   position: relative;
   white-space: normal;
   pointer-events: all;
+  max-height: 300px;
+  max-width: 750px;
+  overflow: auto;
 }
 
 .datatip-overlay {
@@ -45,6 +48,7 @@
 }
 
 .datatip-marked-text-editor {
+  flex-grow: 1;
   .cursors {
     display: none;
   }
