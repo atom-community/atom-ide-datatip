@@ -5,8 +5,7 @@
   background: @app-background-color;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,1);
   color: @syntax-text-color;
-  font-family: var(--editor-font-family);
-  font-size: var(--editor-font-size);
+  font-size: 1rem; // some themes set font sizes on the root node
   margin-top: -2px; // Compensate for shadow
   position: relative;
   white-space: normal;
@@ -29,6 +28,10 @@
   position: relative;
   max-width: 750px;
   transition: background-color 0.15s ease;
+  padding: 8px;
+  white-space: pre-wrap;
+  font-family: var(--editor-font-family);
+  font-size: var(--editor-font-size);
   &:hover {
     background-color: mix(@syntax-background-color, @syntax-selection-color, 50%);
   }
