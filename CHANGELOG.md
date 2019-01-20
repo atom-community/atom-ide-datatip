@@ -1,3 +1,6 @@
+## 0.5.0 - Syntax colouring in Code Snippet view
+* finally get the syntax colouring working thanks to the guys from Atom-TypeScript
+
 ## 0.4.0 - Support for config setting
 * there is now a new config option to disable display of the data tooltip automatically as soon as you move your cursor around.
 * if this setting is true, it will show the same behavior than before
