@@ -1,3 +1,10 @@
+## 0.6.0 - Capture the Mouse Move Event
+* add a new config option (default: false) to update the data tip as soon as you move your mouse around
+
+### 0.5.1 - Bugfix Release
+* proper rendering of a sequence of snippets and markdown texts
+* fixing some UI glitches related to scrollbars
+
 ## 0.5.0 - Syntax colouring in Code Snippet view
 * finally get the syntax colouring working thanks to the guys from Atom-TypeScript
 
