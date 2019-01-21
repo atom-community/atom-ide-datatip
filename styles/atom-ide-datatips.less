@@ -31,7 +31,7 @@
   padding: 8px;
   white-space: pre-wrap;
   font-family: var(--editor-font-family);
-  font-size: var(--editor-font-size);
+  font-size: min(var(--editor-font-size), 0.9rem);
   &:hover {
     background-color: mix(@syntax-background-color, @syntax-selection-color, 50%);
   }
