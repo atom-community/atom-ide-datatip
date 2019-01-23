@@ -1,3 +1,10 @@
+### 0.6.2 - Bugfix Release
+* optimize mouse move capturing by waiting for mouse move ended event before calling datatip provider
+
+### 0.6.1 - Bugfix Release
+* optimize range / point calculation for cursor / mouse movement
+* make data tip stick on screen when mouse enters it
+
 ## 0.6.0 - Capture the Mouse Move Event
 * add a new config option (default: false) to update the data tip as soon as you move your mouse around
 
