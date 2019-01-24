@@ -1,3 +1,6 @@
+### 0.6.3 - Bugfix Release
+* introduce the same timing constraint for cursor move event to make rapid typing less cumbersome
+
 ### 0.6.2 - Bugfix Release
 * optimize mouse move capturing by waiting for mouse move ended event before calling datatip provider
 
