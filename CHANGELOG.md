@@ -1,3 +1,6 @@
+### 0.6.4 - Bugfix Release
+* hide the data tip as soon as keyboard input is detected
+
 ### 0.6.3 - Bugfix Release
 * introduce the same timing constraint for cursor move event to make rapid typing less cumbersome
 
