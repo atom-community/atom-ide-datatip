@@ -22,8 +22,11 @@
   },
   "devDependencies": {
     "@types/atom": "^1.31.0",
+    "@types/dompurify": "0.0.32",
+    "@types/marked": "^0.6.0",
     "@types/node": "^10.12.18",
-    "@types/react": "^16.7.18",
+    "@types/react": "^16.7.21",
+    "@types/react-dom": "^16.0.11",
     "atom-languageclient": "^0.9.9"
   },
   "configSchema": {
