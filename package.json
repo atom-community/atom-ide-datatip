@@ -1,7 +1,7 @@
 {
   "name": "atom-ide-datatip",
   "main": "./lib/main.js",
-  "version": "0.2.3",
+  "version": "0.6.5",
   "description": "A replacement for the Data Tooltip provider that was originally part of the Atom IDE package from Facebook.",
   "keywords": [
     "atom-package",
@@ -16,27 +16,31 @@
   "dependencies": {
     "dompurify": "^1.0.8",
     "etch": "^0.14.0",
-    "marked": "^0.5.2"
+    "marked": "^0.6.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   },
   "devDependencies": {
     "@types/atom": "^1.31.0",
+    "@types/dompurify": "0.0.32",
+    "@types/marked": "^0.6.0",
     "@types/node": "^10.12.18",
+    "@types/react": "^16.7.21",
+    "@types/react-dom": "^16.0.11",
     "atom-languageclient": "^0.9.9"
   },
-  "atomConfig": {
-    "datatipDebounceDelay": {
-      "title": "Delay before opening a datatip after moving on an identifier",
-      "description": "Delay (in ms) between hovering over an identifier and showing a datatip",
-      "type": "number",
-      "default": 500,
-      "minimum": 1
+  "configSchema": {
+    "showDataTipOnCursorMove": {
+      "title": "Flag denotes if the data tip should be shown automatically when the cursor moves",
+      "description": "If set to true, the data tip is shown as soon as you move your cursor around. Otherwise you will have to activate it via keypress.",
+      "type": "boolean",
+      "default": true
     },
-    "datatipInteractedWithDebounceDelay": {
-      "title": "Delay before closing a datatip after moving away from an identifier once interacted with the datatip",
-      "description": "Delay (in ms) between hovering out of an identifier and hiding a datatip after you have interacted with it",
-      "type": "number",
-      "default": 1000,
-      "minimum": 1
+    "showDataTipOnMouseMove": {
+      "title": "Flag denotes if the data tip should be shown automatically when the mouse moves",
+      "description": "If set to true, the data tip is shown as soon as you move your mouse around.",
+      "type": "boolean",
+      "default": false
     }
   },
   "providedServices": {

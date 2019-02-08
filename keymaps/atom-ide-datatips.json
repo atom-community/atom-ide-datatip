@@ -1,10 +1,8 @@
 {
   ".platform-darwin atom-text-editor": {
-    "cmd-alt": "datatip:toggle",
-    "ctrl-alt-c": "datatip:copy-to-clipboard"
+    "cmd-alt": "datatip:toggle"
   },
   ".platform-win32 atom-text-editor, .platform-linux atom-text-editor": {
-    "ctrl-alt": "datatip:toggle",
-    "ctrl-alt-c": "datatip:copy-to-clipboard"
+    "ctrl-alt": "datatip:toggle"
   }
 }
