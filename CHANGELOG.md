@@ -1,3 +1,6 @@
+### 0.6.5 - Bugfix Release
+* proper handling of null & undefined from LSP
+
 ### 0.6.4 - Bugfix Release
 * hide the data tip as soon as keyboard input is detected
 
