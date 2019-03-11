@@ -1,3 +1,6 @@
+### 0.6.6
+* move to atom-ide-community
+
 ### 0.6.5 - Bugfix Release
 * proper handling of null & undefined from LSP
 
