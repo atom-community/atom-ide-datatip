@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+/spec export-ignore
+/.editorconfig export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/screenshot.png export-ignore
