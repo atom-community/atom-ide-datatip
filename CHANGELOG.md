@@ -1,3 +1,11 @@
+## [0.6.8](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.6.7...v0.6.8) (2019-03-12)
+
+
+### Bug Fixes
+
+* travic-ci build ([491c14e](https://github.com/atom-ide-community/atom-ide-datatip/commit/491c14e))
+* updated package-lock.json for fixing travis build ([ee0ef35](https://github.com/atom-ide-community/atom-ide-datatip/commit/ee0ef35))
+
 ### 0.6.6
 * move to atom-ide-community
 
