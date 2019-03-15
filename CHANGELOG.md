@@ -1,3 +1,10 @@
+## [0.6.9](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.6.8...v0.6.9) (2019-03-15)
+
+
+### Bug Fixes
+
+* do not show the datatip when the mouse is too far away from a token ([793321e](https://github.com/atom-ide-community/atom-ide-datatip/commit/793321e)), closes [/github.com/facebookarchive/nuclide/blob/master/modules/atom-ide-ui/pkg/atom-ide-datatip/lib/DatatipManager.js#L79L94](https://github.com//github.com/facebookarchive/nuclide/blob/master/modules/atom-ide-ui/pkg/atom-ide-datatip/lib/DatatipManager.js/issues/L79L94)
+
 ## [0.6.8](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.6.7...v0.6.8) (2019-03-12)
 
 
