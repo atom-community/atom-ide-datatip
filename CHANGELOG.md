@@ -1,3 +1,10 @@
+## [0.7.4](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.7.3...v0.7.4) (2019-03-17)
+
+
+### Bug Fixes
+
+* font-size and pre tag design ([4a2a5a5](https://github.com/atom-ide-community/atom-ide-datatip/commit/4a2a5a5))
+
 ## [0.7.3](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.7.2...v0.7.3) (2019-03-17)
 
 
