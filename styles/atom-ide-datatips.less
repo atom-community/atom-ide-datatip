@@ -12,6 +12,13 @@
   pointer-events: all;
   max-width: 800px;
   overflow: none;
+  
+  p {
+    margin-left: 8px;
+    margin-right: 8px;
+    
+    &:last-child { margin-bottom: 8px; }
+  }
 }
 
 .datatip-overlay {
@@ -30,7 +37,7 @@
   padding: 8px;
   white-space: pre-wrap;
   font-family: var(--editor-font-family);
-  font-size: max(var(--editor-font-size), 0.9rem);
+  font-size: var(--editor-font-size);
   &:hover {
     background-color: mix(@syntax-background-color, @syntax-selection-color, 50%);
   }
