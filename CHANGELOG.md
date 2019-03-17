@@ -1,3 +1,10 @@
+## [0.7.3](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.7.2...v0.7.3) (2019-03-17)
+
+
+### Bug Fixes
+
+* dependency installation prompt ([85386ed](https://github.com/atom-ide-community/atom-ide-datatip/commit/85386ed))
+
 ## [0.7.2](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.7.1...v0.7.2) (2019-03-17)
 
 
