@@ -30,7 +30,7 @@
   padding: 8px;
   white-space: pre-wrap;
   font-family: var(--editor-font-family);
-  font-size: min(var(--editor-font-size), 0.9rem);
+  font-size: max(var(--editor-font-size), 0.9rem);
   &:hover {
     background-color: mix(@syntax-background-color, @syntax-selection-color, 50%);
   }
@@ -54,28 +54,4 @@
   .cursors {
     display: none;
   }
-}
-
-atom-text-editor {
-
-  .datatip-highlight-region > .region {
-    // Use a faded version of the cursor color so as to have a distinction when
-    // overlapping with a selection (`@syntax-selection-color`). This element is
-    // on top of the selection element, so that will show through.
-    background: fade(@syntax-cursor-color, 10%);
-  }
-
-  .datatip-highlight-region-active > .region {
-    // Animations such as `RotatingBackground` must be defined in a `*.atom-text-editor.less` file.
-    animation: RotatingBackground 1s ease-in-out infinite reverse;
-    background: linear-gradient(
-      90deg,
-      @syntax-selection-color,
-      @syntax-background-color,
-      @syntax-selection-color,
-      @syntax-background-color
-    );
-    background-size: 300% 100%;
-  }
-
 }
