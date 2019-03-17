@@ -1,3 +1,10 @@
+# [0.7.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.6.9...v0.7.0) (2019-03-17)
+
+
+### Features
+
+* introduce markdown-rendering service ([b42076f](https://github.com/atom-ide-community/atom-ide-datatip/commit/b42076f))
+
 ## [0.6.9](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.6.8...v0.6.9) (2019-03-15)
 
 
