@@ -8,7 +8,7 @@
 .datatip-marked-container {
   color: @syntax-text-color;
   font-family: var(--editor-font-family);
-  font-size: max(var(--editor-font-size), 0.9rem);
+  font-size: var(--editor-font-size);
   max-width: 800px;
   overflow: auto;
   padding: 8px;
@@ -25,6 +25,8 @@
 
   pre {
     font-family: var(--editor-font-family);
-    font-size: max(var(--editor-font-size), 0.9rem);
+    font-size: var(--editor-font-size);
+    margin-bottom: 8px;
+    border-radius: 0;
   }
 }
