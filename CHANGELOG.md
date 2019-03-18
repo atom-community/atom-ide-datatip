@@ -1,3 +1,11 @@
+## [0.8.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.8.0...v0.8.1) (2019-03-18)
+
+
+### Bug Fixes
+
+* [#30](https://github.com/atom-ide-community/atom-ide-datatip/issues/30) ([94c5031](https://github.com/atom-ide-community/atom-ide-datatip/commit/94c5031))
+* removed datatip padding ([da9553a](https://github.com/atom-ide-community/atom-ide-datatip/commit/da9553a)), closes [#28](https://github.com/atom-ide-community/atom-ide-datatip/issues/28)
+
 # [0.8.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.7.5...v0.8.0) (2019-03-18)
 
 
