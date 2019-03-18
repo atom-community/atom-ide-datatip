@@ -1,3 +1,10 @@
+## [0.7.5](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.7.4...v0.7.5) (2019-03-18)
+
+
+### Bug Fixes
+
+* datatip leftovers, max-height for large documentation ([4fd3228](https://github.com/atom-ide-community/atom-ide-datatip/commit/4fd3228))
+
 ## [0.7.4](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.7.3...v0.7.4) (2019-03-17)
 
 
