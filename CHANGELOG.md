@@ -1,3 +1,10 @@
+# [0.8.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.7.5...v0.8.0) (2019-03-18)
+
+
+### Features
+
+* add request token to markdown service calls ([16876c0](https://github.com/atom-ide-community/atom-ide-datatip/commit/16876c0))
+
 ## [0.7.5](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.7.4...v0.7.5) (2019-03-18)
 
 
