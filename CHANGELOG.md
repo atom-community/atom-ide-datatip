@@ -1,3 +1,10 @@
+## [0.9.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.9.0...v0.9.1) (2019-03-21)
+
+
+### Bug Fixes
+
+* datatip overlay size ([be70a7f](https://github.com/atom-ide-community/atom-ide-datatip/commit/be70a7f))
+
 # [0.9.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.8.3...v0.9.0) (2019-03-21)
 
 
