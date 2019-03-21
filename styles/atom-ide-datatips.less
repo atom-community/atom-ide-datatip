@@ -10,7 +10,7 @@
   position: relative;
   white-space: normal;
   pointer-events: all;
-  max-height: 24em;
+  max-height: 48em;
   max-width: 64em;
   overflow: none;
 
@@ -23,7 +23,7 @@
 }
 
 .datatip-overlay {
-  z-index: 4 !important; // HACK: exceed the z-index of
+  z-index: 12 !important; // HACK: exceed the z-index of
                           // .atom-dock-resize-handle-resizable, so that
                           // mouseleaves aren't triggered when the cursor enters
                           // the resizable
@@ -33,7 +33,7 @@
   background-color: @syntax-background-color;
   display: flex;
   position: relative;
-  max-height: 24em;
+  max-height: 48em;
   max-width: 64em;
   transition: background-color 0.15s ease;
   padding: 8px;
