@@ -17,7 +17,7 @@ A replacement of the DataTip functionality from the original Atom-IDE / Nuclide 
 
 3. Install `busy-signal` package in Atom, which is used for signaling background tasks.
 
-![A screenshot of your package](https://user-images.githubusercontent.com/499192/54529587-95d64580-4980-11e9-827d-957cf48778ab.png)
+![A screenshot of your package](https://atom-ide-community.github.io/assets/images/screenshot-datatip.png)
 
 ## Contributing
 
