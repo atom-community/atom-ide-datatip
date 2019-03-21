@@ -1,3 +1,10 @@
+# [0.9.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.8.3...v0.9.0) (2019-03-21)
+
+
+### Features
+
+* don't show overlay if another is already visible at the same range ([58fc173](https://github.com/atom-ide-community/atom-ide-datatip/commit/58fc173))
+
 ## [0.8.3](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.8.2...v0.8.3) (2019-03-19)
 
 
