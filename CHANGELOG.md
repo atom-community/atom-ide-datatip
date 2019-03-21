@@ -1,3 +1,10 @@
+## [0.9.2](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.9.1...v0.9.2) (2019-03-21)
+
+
+### Bug Fixes
+
+* it doesn't like dynamic heights for long markdown descriptions :( ([456c02f](https://github.com/atom-ide-community/atom-ide-datatip/commit/456c02f))
+
 ## [0.9.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.9.0...v0.9.1) (2019-03-21)
 
 
