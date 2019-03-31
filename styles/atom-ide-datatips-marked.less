@@ -11,8 +11,7 @@
   font-size: var(--editor-font-size);
   max-height: 480px;
   max-width: 64em;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: auto;
   white-space: normal;
 
   // Avoid excess internal padding from markdown blocks.
@@ -24,13 +23,9 @@
     margin-bottom: 0;
   }
 
-  .datatip-marked-snippet {
-    display: inline-block;
+  pre {
     font-family: var(--editor-font-family);
     font-size: var(--editor-font-size);
-  }
-
-  pre {
     margin-bottom: 8px;
     border-radius: 0;
   }
