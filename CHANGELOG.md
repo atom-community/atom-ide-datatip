@@ -1,3 +1,10 @@
+## [0.9.4](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.9.3...v0.9.4) (2019-03-31)
+
+
+### Bug Fixes
+
+* hide datatip view if cursor moved to position without datatip ([bf3e635](https://github.com/atom-ide-community/atom-ide-datatip/commit/bf3e635))
+
 ## [0.9.3](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.9.2...v0.9.3) (2019-03-31)
 
 
