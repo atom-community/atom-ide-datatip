@@ -1,3 +1,15 @@
+## [0.9.3](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.9.2...v0.9.3) (2019-03-31)
+
+
+### Bug Fixes
+
+* remove blinking of tooltip window when mouse hover it ([f940370](https://github.com/atom-ide-community/atom-ide-datatip/commit/f940370))
+
+
+### Reverts
+
+* unrelated and wrong changes ([0da78d7](https://github.com/atom-ide-community/atom-ide-datatip/commit/0da78d7))
+
 ## [0.9.2](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.9.1...v0.9.2) (2019-03-21)
 
 
