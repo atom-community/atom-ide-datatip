@@ -1,3 +1,10 @@
+## [0.9.5](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.9.4...v0.9.5) (2019-04-08)
+
+
+### Bug Fixes
+
+* rendering of markdown text with additional break in the description ([172719d](https://github.com/atom-ide-community/atom-ide-datatip/commit/172719d))
+
 ## [0.9.4](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.9.3...v0.9.4) (2019-03-31)
 
 
