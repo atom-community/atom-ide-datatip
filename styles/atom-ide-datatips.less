@@ -32,22 +32,36 @@
 }
 
 .datatip-container {
-  background-color: @syntax-background-color;
-  display: flex;
-  position: relative;
-  max-height: 480px;
-  max-width: 64em;
-  transition: background-color 0.15s ease;
-  padding: 8px;
-  white-space: pre-wrap;
+  color: @syntax-text-color;
   font-family: var(--editor-font-family);
   font-size: var(--editor-font-size);
+  max-height: 480px;
+  max-width: 64em;
+  overflow: auto;
+  white-space: normal;
+
+  // Avoid excess internal padding from markdown blocks.
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
   &:hover {
     background-color: mix(@syntax-background-color, @syntax-selection-color, 50%);
   }
 
   &:not(:last-of-type) {
     border-bottom: 1px solid fade(@syntax-cursor-color, 10%);
+  }
+
+  pre {
+    font-family: var(--editor-font-family);
+    font-size: var(--editor-font-size);
+    margin-bottom: 8px;
+    border-radius: 0;
   }
 }
 
