@@ -1,3 +1,10 @@
+## [0.10.2](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.10.1...v0.10.2) (2019-04-18)
+
+
+### Bug Fixes
+
+* markdown text positioning ([770399a](https://github.com/atom-ide-community/atom-ide-datatip/commit/770399a))
+
 ## [0.10.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.10.0...v0.10.1) (2019-04-18)
 
 
