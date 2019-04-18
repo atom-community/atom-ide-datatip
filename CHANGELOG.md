@@ -1,3 +1,22 @@
+# [0.10.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.9.5...v0.10.0) (2019-04-18)
+
+
+### Bug Fixes
+
+* encapsulation of datatip service interface ([43b505e](https://github.com/atom-ide-community/atom-ide-datatip/commit/43b505e))
+* remove console logs ([505dbce](https://github.com/atom-ide-community/atom-ide-datatip/commit/505dbce))
+* remove obsolete typings reference ([c4ad0d4](https://github.com/atom-ide-community/atom-ide-datatip/commit/c4ad0d4))
+* update markdown service reference to 1.0.0 ([d2b299f](https://github.com/atom-ide-community/atom-ide-datatip/commit/d2b299f))
+
+
+### Features
+
+* additional code documentation ([f0328f2](https://github.com/atom-ide-community/atom-ide-datatip/commit/f0328f2))
+* code docs and adding typings ([45b1ec5](https://github.com/atom-ide-community/atom-ide-datatip/commit/45b1ec5))
+* prepare central data tip manager ([837a39b](https://github.com/atom-ide-community/atom-ide-datatip/commit/837a39b))
+* separate snippet from documentation view again ([1c3cd9b](https://github.com/atom-ide-community/atom-ide-datatip/commit/1c3cd9b))
+* use new renderer with default grammar input ([17b9f3e](https://github.com/atom-ide-community/atom-ide-datatip/commit/17b9f3e))
+
 ## [0.9.5](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.9.4...v0.9.5) (2019-04-08)
 
 
