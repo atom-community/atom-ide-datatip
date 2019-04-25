@@ -1,3 +1,10 @@
+## [0.10.4](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.10.3...v0.10.4) (2019-04-25)
+
+
+### Bug Fixes
+
+* remove language identifier preambles from code snippets ([2c02f9b](https://github.com/atom-ide-community/atom-ide-datatip/commit/2c02f9b))
+
 ## [0.10.3](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.10.2...v0.10.3) (2019-04-25)
 
 
