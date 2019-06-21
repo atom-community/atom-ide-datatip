@@ -1,3 +1,10 @@
+## [0.10.5](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.10.4...v0.10.5) (2019-06-21)
+
+
+### Bug Fixes
+
+* upgrade packages ([55209af](https://github.com/atom-ide-community/atom-ide-datatip/commit/55209af))
+
 ## [0.10.4](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.10.3...v0.10.4) (2019-04-25)
 
 
