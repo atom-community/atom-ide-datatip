@@ -1,3 +1,10 @@
+## [0.10.6](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.10.5...v0.10.6) (2019-06-21)
+
+
+### Bug Fixes
+
+* [#43](https://github.com/atom-ide-community/atom-ide-datatip/issues/43) use grammar scope name instead of grammar name ([6b2b43c](https://github.com/atom-ide-community/atom-ide-datatip/commit/6b2b43c))
+
 ## [0.10.5](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.10.4...v0.10.5) (2019-06-21)
 
 
