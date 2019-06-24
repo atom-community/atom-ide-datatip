@@ -1,3 +1,16 @@
+# [0.11.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.10.6...v0.11.0) (2019-06-24)
+
+
+### Bug Fixes
+
+* make iteration over datatip providers obvious ([3b8f0fa](https://github.com/atom-ide-community/atom-ide-datatip/commit/3b8f0fa))
+
+
+### Features
+
+* iterate over datatip providers and show the datatip of the first ([29ee00b](https://github.com/atom-ide-community/atom-ide-datatip/commit/29ee00b))
+* upgrade additional build packages ([9818b39](https://github.com/atom-ide-community/atom-ide-datatip/commit/9818b39))
+
 ## [0.10.6](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.10.5...v0.10.6) (2019-06-21)
 
 
