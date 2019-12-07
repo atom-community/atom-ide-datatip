@@ -1,3 +1,10 @@
+## [0.11.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.11.0...v0.11.1) (2019-12-07)
+
+
+### Bug Fixes
+
+* use UI-font for markdown body strings ([db0d07b](https://github.com/atom-ide-community/atom-ide-datatip/commit/db0d07b))
+
 # [0.11.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.10.6...v0.11.0) (2019-06-24)
 
 
