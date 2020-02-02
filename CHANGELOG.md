@@ -1,3 +1,10 @@
+## [0.11.2](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.11.1...v0.11.2) (2020-02-02)
+
+
+### Bug Fixes
+
+* toggle command not closing tooltip ([9f60168](https://github.com/atom-ide-community/atom-ide-datatip/commit/9f60168)), closes [#54](https://github.com/atom-ide-community/atom-ide-datatip/issues/54)
+
 ## [0.11.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.11.0...v0.11.1) (2019-12-07)
 
 
