@@ -1,3 +1,11 @@
+## [0.11.3](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.11.2...v0.11.3) (2020-04-11)
+
+
+### Bug Fixes
+
+* clarify config descriptions ([cc87ca8](https://github.com/atom-ide-community/atom-ide-datatip/commit/cc87ca8))
+* config for waiting time (decreased the default) ([07a8164](https://github.com/atom-ide-community/atom-ide-datatip/commit/07a8164))
+
 ## [0.11.2](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.11.1...v0.11.2) (2020-02-02)
 
 
