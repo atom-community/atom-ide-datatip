@@ -65,6 +65,12 @@
       "description": "If set to true, the data tip is shown as soon as you move your mouse around.",
       "type": "boolean",
       "default": false
+    },
+    "hoverTime": {
+      "title": "Hover/Stay Time",
+      "description": "The time that the mouse/cursor should hover/stay to show a datatip. Also specifies the time that the datatip is still shown when the mouse/cursor moves [ms].",
+      "type": "number",
+      "default": 50
     }
   },
   "providedServices": {
