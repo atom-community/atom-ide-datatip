@@ -1,3 +1,10 @@
+## [0.11.4](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.11.3...v0.11.4) (2020-04-13)
+
+
+### Bug Fixes
+
+* activation hook to improve the loading time by deferring it ([3262ab3](https://github.com/atom-ide-community/atom-ide-datatip/commit/3262ab3))
+
 ## [0.11.3](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.11.2...v0.11.3) (2020-04-11)
 
 
