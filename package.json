@@ -19,10 +19,10 @@
   ],
   "dependencies": {
     "atom-package-deps": "^5.1.0",
-    "dompurify": "^1.0.11",
+    "dompurify": "^2.0.8",
     "etch": "^0.14.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
@@ -30,10 +30,10 @@
     "@commitlint/travis-cli": "^8.3.5",
     "@semantic-release/apm-config": "^8.0.0",
     "@types/atom": "^1.40.2",
-    "@types/dompurify": "0.0.32",
+    "@types/dompurify": "^2.0.1",
     "@types/node": "^13.11.1",
-    "@types/react": "^16.8.22",
-    "@types/react-dom": "^16.8.4",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
     "atom-languageclient": "^0.9.9",
     "commitlint": "^8.3.5",
     "husky": "^4.2.5",
