@@ -10,6 +10,9 @@
   ],
   "repository": "https://github.com/atom-ide-community/atom-ide-datatip",
   "license": "MIT",
+  "scripts": {
+    "test": "atom --test spec"
+  },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
