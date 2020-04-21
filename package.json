@@ -12,7 +12,8 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint . --ext js,json",
-    "test": "atom --test spec"
+    "test": "atom --test spec",
+    "semantic-release": "semantic-release"
   },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
@@ -31,7 +32,6 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@commitlint/travis-cli": "^8.3.5",
     "@semantic-release/apm-config": "^8.0.0",
     "@types/atom": "^1.40.2",
     "@types/dompurify": "^2.0.1",
