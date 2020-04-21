@@ -11,6 +11,7 @@
   "repository": "https://github.com/atom-ide-community/atom-ide-datatip",
   "license": "MIT",
   "scripts": {
+    "lint": "eslint . --ext js,json",
     "test": "atom --test spec"
   },
   "engines": {
