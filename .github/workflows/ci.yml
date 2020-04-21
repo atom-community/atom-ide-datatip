@@ -27,6 +27,10 @@ jobs:
       - name: Install APM dependencies
         run: |
           apm ci  # uses locked module. use `apm install` for non-locked
+      - name: Atom Package dependencies
+        run: |
+          apm install atom-ide-markdown-service
+          apm install busy-signal
       - name: Run tests 👩🏾‍💻
         run: npm run test
 
