@@ -6,11 +6,6 @@ import babel from 'rollup-plugin-babel';
 // import typescript from '@rollup/plugin-typescript';
 // import coffeescript from 'rollup-plugin-coffee-script';
 
-// import less from 'rollup-plugin-less';
-// import postcss from 'rollup-plugin-postcss';
-// import svgr from '@svgr/rollup';
-// import url from '@rollup/plugin-url';
-// import json from '@rollup/plugin-json';
 
 import { terser } from 'rollup-plugin-terser';
 
@@ -18,18 +13,6 @@ import pkg from './package.json';
 
 let plugins = [
   babel(),
-
-  // url(),
-  // svgr(),
-  // less(),
-  // postcss({
-  //   plugins: [],
-  //   minimize: true,
-  //   sourceMap: 'inline',
-  // }),
-  // json(
-  //   { compact: true }
-  // ),
 
   // // datatip loads faster without this
   // peerexternal({
