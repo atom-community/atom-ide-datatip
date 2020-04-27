@@ -9,7 +9,7 @@ import babel from 'rollup-plugin-babel';
 
 import { terser } from 'rollup-plugin-terser';
 
-import pkg from './package.json';
+// import pkg from './package.json';
 
 let plugins = [
   babel(),
@@ -60,8 +60,7 @@ export default [
     input: 'lib/main.js',
     output: [
       {
-        file: pkg.main,
-        // dir: "dist", // alternative
+        dir: "dist",
         format: 'cjs',
         sourcemap: true,
       },
