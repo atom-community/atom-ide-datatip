@@ -45,7 +45,7 @@ jobs:
         uses: wagoid/commitlint-github-action@v1
       - uses: actions/setup-node@v1
         with:
-          node-version: "13.x"
+          node-version: "14.x"
       - name: Install NPM dependencies
         run: |
           npm ci  # uses locked module. use `npm install` for non-locked
@@ -62,7 +62,7 @@ jobs:
       - uses: UziTech/action-setup-atom@v1
       - uses: actions/setup-node@v1
         with:
-          node-version: '13.x'
+          node-version: '14.x'
       - name: NPM install
         run: npm ci
       - name: Release 🎉
