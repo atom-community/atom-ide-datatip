@@ -66,10 +66,13 @@ jobs:
       - name: NPM install
         run: npm ci
       - name: Release 🎉
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          extends: |
+            @semantic-release/apm-config
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ATOM_ACCESS_TOKEN: ${{ secrets.ATOM_ACCESS_TOKEN  }}
-        run: npx semantic-release
   Skip:
     if: contains(github.event.head_commit.message, '[skip ci]')
     runs-on: ubuntu-latest
