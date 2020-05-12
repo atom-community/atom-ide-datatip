@@ -30,59 +30,5 @@
       }
     }
 
-    /* TypeScript files */
-
-//      {
-//      "files": ["**/*.ts", "**/*.tsx"],
-//      "env": {
-//        "atomtest": true,
-//        "es6": true,
-//        "node": true,
-//        "browser": true
-//      },
-//      "globals": { "atom": "readonly" },
-//      "parser": "@typescript-eslint/parser",
-//      "parserOptions": {
-//        "ecmaFeatures": { "jsx": true },
-//        "ecmaVersion": 2020,
-//        "sourceType": "module"
-//      },
-//      "plugins": ["@typescript-eslint", "only-warn"],
-//      "extends": [
-//        "eslint:recommended",
-//        "plugin:@typescript-eslint/eslint-recommended",
-//        "plugin:@typescript-eslint/recommended"
-//      ],
-//      "rules": {
-//        "@typescript-eslint/explicit-function-return-type": "off",
-//        "@typescript-eslint/camelcase": "off",
-//        "@typescript-eslint/no-use-before-define": "off",
-//        "@typescript-eslint/member-delimiter-style": "off"
-//      }
-//    },
-
-      /* CoffeeScript files */
-
-//    {
-//      "files": ["**/*.coffee"],
-//      "env": {
-//        "atomtest": true,
-//        "es6": true,
-//        "node": true,
-//        "browser": true
-//      },
-//      "globals": { "atom": "readonly" },
-//      // "parser": "eslint-plugin-coffee",
-//      "parser": "eslint-plugin-coffee",
-//      "parserOptions": {
-//        "ecmaFeatures": { "jsx": true },
-//        "ecmaVersion": 2020,
-//        "sourceType": "module"
-//      },
-//      "plugins": ["coffee", "only-warn"],
-//      "extends": ["plugin:coffee/eslint-recommended"]
-//    },
-
-
   ]
 }
