@@ -18,7 +18,7 @@
     "debug": "npm run clean && shx cp -r lib dist && env NODE_ENV=development env BABEL_ENV=development babel dist --out-dir dist",
     "dev": "npm run clean && env NODE_ENV=development env BABEL_ENV=production rollup -c -w",
     "build": "npm run clean && env NODE_ENV=production env BABEL_ENV=production rollup -c",
-    "ppublish": "bash ./ppublish.sh",
+    "build-commit": "build-commit -o dist",
     "bump": "ncu -u",
     "prepare": "npm run build"
   },
@@ -68,7 +68,8 @@
     "@babel/plugin-proposal-optional-chaining": "^7.10.4",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "npm-check-updates": "^7.0.1"
+    "npm-check-updates": "^7.0.1",
+    "build-commit": "^0.1.1"
   },
   "atomTestRunner": "./spec/runner",
   "activationHooks": [

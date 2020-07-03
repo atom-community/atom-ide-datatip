@@ -71,7 +71,7 @@ jobs:
         run: npm ci
       - name: Build
         run: |
-          ./ppublish.sh
+          npm run build-commit
       - name: Release 🎉
         uses: cycjimmy/semantic-release-action@v2
         with:
