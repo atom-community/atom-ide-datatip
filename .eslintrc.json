@@ -15,6 +15,7 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
+  "ignorePatterns": ["./dist/*"],
   "plugins": ["only-warn"],
   "extends": ["eslint:recommended"],
   "overrides": [
