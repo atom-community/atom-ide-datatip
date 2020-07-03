@@ -11,7 +11,8 @@
   "repository": "https://github.com/atom-ide-community/atom-ide-datatip",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint . --ext js,json",
+    "format": "prettier --write .",
+    "lint": "eslint . --fix --ext js,ts,coffee,json",
     "test-debug": "npm run debug && atom --test spec",
     "test": "npm run build && atom --test spec",
     "clean": "shx rm -rf dist",
