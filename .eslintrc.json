@@ -21,7 +21,7 @@
   },
   "plugins": ["prettier", "only-warn"],
   "extends": ["prettier", "eslint:recommended"],
-  "ignorePatterns": ["lib/", "node_modules/"],
+  "ignorePatterns": ["dist/", "node_modules/"],
   "overrides": [
     {
       // Bundled node version with atom has an old ESLint
