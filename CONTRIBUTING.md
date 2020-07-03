@@ -28,22 +28,22 @@ The format we follow is:
 
 [optional footer]"
 
-*Type*: Here are the types available and when they should be used:
+_Type_: Here are the types available and when they should be used:
 
-| Type | Effect | Used for |
-|------|--------|----------|
-| fix  | Creates a patch release | Bug fixes that don't break the public API |
-| feat | Creates a minor release | Features added that don't break the public API |
-| BREAKING CHANGE | Creates a major release (this is only used after we reach 1.0) | Features or bug fixes that require breaking changes |
-| chore | Does not make a release | Development work that doesn't affect the core package functionality |
+| Type            | Effect                                                         | Used for                                                            |
+| --------------- | -------------------------------------------------------------- | ------------------------------------------------------------------- |
+| fix             | Creates a patch release                                        | Bug fixes that don't break the public API                           |
+| feat            | Creates a minor release                                        | Features added that don't break the public API                      |
+| BREAKING CHANGE | Creates a major release (this is only used after we reach 1.0) | Features or bug fixes that require breaking changes                 |
+| chore           | Does not make a release                                        | Development work that doesn't affect the core package functionality |
 
 Please checkout the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/#summary) to find more types and what they do.
 
-*Message*: can be anything you want. Start with a lower case. Limit the first line (type and message) to 50 chars.
+_Message_: can be anything you want. Start with a lower case. Limit the first line (type and message) to 50 chars.
 
-*Description*: try to describe _why_ your change was needed rather than _what_ your change was (we can see that in the code). Wrap lines at 72 chars.
+_Description_: try to describe _why_ your change was needed rather than _what_ your change was (we can see that in the code). Wrap lines at 72 chars.
 
-*Footer*: If your bug fix or feature is related to a github issue, this is where you would link it. For example, `Fixes: #1`.
+_Footer_: If your bug fix or feature is related to a github issue, this is where you would link it. For example, `Fixes: #1`.
 
 ### More Info
 

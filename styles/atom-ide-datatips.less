@@ -3,7 +3,7 @@
 
 .datatip-element {
   background: @app-background-color;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,1);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 1);
   color: @syntax-text-color;
   font-size: 1rem; // some themes set font sizes on the root node
   margin-top: -2px; // Compensate for shadow
@@ -19,15 +19,17 @@
     margin-left: 8px;
     margin-right: 8px;
 
-    &:last-child { margin-bottom: 8px; }
+    &:last-child {
+      margin-bottom: 8px;
+    }
   }
 }
 
 .datatip-overlay {
   z-index: 12 !important; // HACK: exceed the z-index of
-                          // .atom-dock-resize-handle-resizable, so that
-                          // mouseleaves aren't triggered when the cursor enters
-                          // the resizable
+  // .atom-dock-resize-handle-resizable, so that
+  // mouseleaves aren't triggered when the cursor enters
+  // the resizable
 }
 
 .datatip-container {
@@ -49,7 +51,11 @@
   }
 
   &:hover {
-    background-color: mix(@syntax-background-color, @syntax-selection-color, 50%);
+    background-color: mix(
+      @syntax-background-color,
+      @syntax-selection-color,
+      50%
+    );
   }
 
   &:not(:last-of-type) {

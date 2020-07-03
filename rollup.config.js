@@ -1,13 +1,12 @@
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 // import peerexternal from 'rollup-plugin-peer-deps-external';
 
-import babel from 'rollup-plugin-babel';
+import babel from "rollup-plugin-babel";
 // import typescript from '@rollup/plugin-typescript';
 // import coffeescript from 'rollup-plugin-coffee-script';
 
-
-import { terser } from 'rollup-plugin-terser';
+import { terser } from "rollup-plugin-terser";
 
 // import pkg from './package.json';
 
@@ -20,14 +19,14 @@ let plugins = [
   // }),
 
   // so Rollup can find externals
-  resolve({ extensions: ['.js', '.coffee'], preferBuiltins: true }),
+  resolve({ extensions: [".js", ".coffee"], preferBuiltins: true }),
 
   // so Rollup can convert externals to an ES module
   commonjs({
     // undetected named exports
     namedExports: {
       // left-hand side can be an absolute path, a path relative to the current directory, or the name of a module in node_modules
-      'react-dom/server': ['renderToStaticMarkup'],
+      "react-dom/server": ["renderToStaticMarkup"],
       // "dompurify": ["sanitize"] // doesn't work
     },
   }),
@@ -42,7 +41,7 @@ let plugins = [
 ];
 
 // minify only in production mode
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === "production") {
   plugins.push(
     // minify
     terser({
@@ -57,16 +56,16 @@ if (process.env.NODE_ENV === 'production') {
 
 export default [
   {
-    input: 'lib/main.js',
+    input: "lib/main.js",
     output: [
       {
         dir: "dist",
-        format: 'cjs',
+        format: "cjs",
         sourcemap: true,
       },
     ],
     // loaded externally
-    external: ['atom'],
+    external: ["atom"],
     plugins: plugins,
   },
 ];
