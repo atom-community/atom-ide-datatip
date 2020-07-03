@@ -8,28 +8,61 @@
     "browser": true,
     "jasmine": true
   },
-  "globals": { "atom": "readonly", "measure": "readonly" },
+  "globals": {
+    "atom": "readonly"
+  },
   "parser": "babel-eslint",
   "parserOptions": {
-    "ecmaFeatures": { "jsx": true },
-    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "ignorePatterns": ["./dist/*"],
-  "plugins": ["only-warn"],
-  "extends": ["eslint:recommended"],
+  "plugins": ["prettier", "only-warn"],
+  "extends": ["prettier", "eslint:recommended"],
+  "ignorePatterns": ["lib/", "node_modules/"],
   "overrides": [
-
-    /* JSON files */
-
     {
+      // Bundled node version with atom has an old ESLint
+      // TypeScript files
+      "files": ["**/*.ts", "**/*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["prettier", "@typescript-eslint", "only-warn"],
+      "extends": [
+        "prettier",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/camelcase": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/member-delimiter-style": "off"
+      }
+    },
+    {
+      // JSON files
       "files": ["*.json"],
       "plugins": ["json"],
-      "extends": ["plugin:json/recommended"],
+      "extends": ["prettier", "plugin:json/recommended"],
       "rules": {
-        "json/*": ["error", {"allowComments": true}]
+        "json/*": [
+          "error",
+          {
+            "allowComments": true
+          }
+        ]
       }
+    },
+    {
+      // CoffeeScript files
+      "files": ["**/*.coffee"],
+      "parser": "eslint-plugin-coffee",
+      "plugins": ["coffee", "only-warn"],
+      "extends": ["plugin:coffee/eslint-recommended"]
     }
-
   ]
 }
