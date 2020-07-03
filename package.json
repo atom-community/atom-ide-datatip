@@ -10,6 +10,10 @@
   ],
   "repository": "https://github.com/atom-ide-community/atom-ide-datatip",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint . --ext js,json",
+    "test": "atom --test spec"
+  },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
@@ -27,8 +31,6 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@commitlint/travis-cli": "^8.3.5",
-    "@semantic-release/apm-config": "^8.0.0",
     "@types/atom": "^1.40.2",
     "@types/dompurify": "^2.0.1",
     "@types/node": "^13.11.1",
@@ -38,14 +40,18 @@
     "commitlint": "^8.3.5",
     "husky": "^4.2.5",
     "prettier": "^1.18.2",
-    "semantic-release": "^17.0.6"
+    "jasmine": "^3.5.0",
+    "@types/jasmine": "^3.5.10",
+    "atom-jasmine3-test-runner": "^4.4.4",
+    "eslint": "latest",
+    "babel-eslint": "latest",
+    "eslint-plugin-json": "latest",
+    "eslint-plugin-only-warn": "latest"
   },
+  "atomTestRunner": "./spec/runner",
   "activationHooks": [
     "core:loaded-shell-environment"
   ],
-  "release": {
-    "extends": "@semantic-release/apm-config"
-  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
