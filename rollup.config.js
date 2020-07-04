@@ -1,13 +1,13 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-
+// import typescript from "@rollup/plugin-typescript";
+// import coffeescript from 'rollup-plugin-coffee-script';
 import babel from "rollup-plugin-babel";
-// import typescript from '@rollup/plugin-typescript';
-
+// import json from "@rollup/plugin-json"
 import { terser } from "rollup-plugin-terser";
 
 let plugins = [
-  // // so Rollup can convert TypeScript to JavaScript
+  // so Rollup can convert TypeScript to JavaScript
   // typescript({
   //   noEmitOnError: false,
   // }),
@@ -54,7 +54,12 @@ export default [
       },
     ],
     // loaded externally
-    external: ["atom"],
+    external: [
+      "atom",
+      // node stuff
+      "path",
+      "fs",
+    ],
     plugins: plugins,
   },
 ];

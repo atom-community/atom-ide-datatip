@@ -1,10 +1,38 @@
-let presets = ["@babel/preset-react"];
+let presets = [
+  [
+    "@babel/preset-env",
+    {
+      targets: {
+        electron: 5,
+      },
+    },
+  ],
+  "@babel/preset-react",
+  "@babel/preset-flow",
+];
 
 let plugins = [
-  // "transform-react-remove-prop-types",
-  // "@babel/plugin-syntax-dynamic-import",
-  // '@babel/plugin-proposal-optional-chaining',
-  // '@babel/plugin-proposal-class-properties'
+  "@babel/plugin-transform-async-to-generator",
+
+  "@babel/plugin-proposal-function-bind",
+
+  "@babel/plugin-proposal-export-default-from",
+  "@babel/plugin-proposal-logical-assignment-operators",
+  ["@babel/plugin-proposal-optional-chaining", { loose: false }],
+  ["@babel/plugin-proposal-pipeline-operator", { proposal: "minimal" }],
+  ["@babel/plugin-proposal-nullish-coalescing-operator", { loose: false }],
+  "@babel/plugin-proposal-do-expressions",
+
+  ["@babel/plugin-proposal-decorators", { legacy: true }],
+  "@babel/plugin-proposal-function-sent",
+  "@babel/plugin-proposal-export-namespace-from",
+  "@babel/plugin-proposal-numeric-separator",
+  "@babel/plugin-proposal-throw-expressions",
+
+  "@babel/plugin-syntax-dynamic-import",
+  "@babel/plugin-syntax-import-meta",
+  ["@babel/plugin-proposal-class-properties", { loose: true }],
+  "@babel/plugin-proposal-json-strings",
 ];
 
 if (process.env.BABEL_ENV === "development") {
@@ -15,5 +43,5 @@ module.exports = {
   presets: presets,
   plugins: plugins,
   exclude: "node_modules/**",
-  // runtimeHelpers: true,
+  sourceMap: "inline",
 };
