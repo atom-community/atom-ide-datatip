@@ -1,3 +1,22 @@
+# [0.12.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.11.4...v0.12.0) (2020-07-05)
+
+
+### Features
+
+* add ppublish ([39f5e44](https://github.com/atom-ide-community/atom-ide-datatip/commit/39f5e4431ff9f0ca9149fbceb38aab71811fc035))
+* babel.config.js ([3a8a36b](https://github.com/atom-ide-community/atom-ide-datatip/commit/3a8a36be51662a7c649e8e9d80475ecc6dc602ec))
+* dynamic atom-package-deps import ([ae9ea63](https://github.com/atom-ide-community/atom-ide-datatip/commit/ae9ea63e446cbbb0083cc59b97e2d1a7f0f8da43))
+* enable release again ([7a7c343](https://github.com/atom-ide-community/atom-ide-datatip/commit/7a7c3431c57c37646dd46e029112cf15b8de6f0e))
+* move config to main.js ([c23cdd3](https://github.com/atom-ide-community/atom-ide-datatip/commit/c23cdd35f1b007d9d84b0b1b918d62f74af86112))
+* remove use babel ([12fed03](https://github.com/atom-ide-community/atom-ide-datatip/commit/12fed03d8e168c3cf01e615fa3a6fc51adbcc95c))
+* removed unused plugins ([e6c161c](https://github.com/atom-ide-community/atom-ide-datatip/commit/e6c161c9efebc1e8db5234f7350a85f293370038))
+* rollup deps in package.json and scripts ([cedce82](https://github.com/atom-ide-community/atom-ide-datatip/commit/cedce82fec41f91e27c99016f4b0b3b7e92382d3))
+* rollup.config.js ([8d91d5a](https://github.com/atom-ide-community/atom-ide-datatip/commit/8d91d5a6552fead87c319ca79d99c16c5d0de7a3))
+* update package-lock.json ([ccbd413](https://github.com/atom-ide-community/atom-ide-datatip/commit/ccbd4131bf05e69fea778c39d3008f4023dd0672))
+* use community bot for now ([b64d730](https://github.com/atom-ide-community/atom-ide-datatip/commit/b64d730f98affb18ebb9f45791fc2c1d65218309))
+* using env to support cmd ([0e7e37e](https://github.com/atom-ide-community/atom-ide-datatip/commit/0e7e37e47d154387ca4e42dc99624457996f47bd))
+* using named import/exports ([4332b20](https://github.com/atom-ide-community/atom-ide-datatip/commit/4332b209b719b1240c05fb52e8f9f6d90f049532))
+
 ## [0.11.4](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.11.3...v0.11.4) (2020-04-13)
 
 ### Bug Fixes
