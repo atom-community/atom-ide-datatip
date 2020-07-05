@@ -1,3 +1,11 @@
+## [0.12.2](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.12.1...v0.12.2) (2020-07-05)
+
+
+### Bug Fixes
+
+* push changes ([f5c4827](https://github.com/atom-ide-community/atom-ide-datatip/commit/f5c482786ddba7402c1315dcde8165c1e603ad68))
+* rename rollup extension to mjs ([191e78d](https://github.com/atom-ide-community/atom-ide-datatip/commit/191e78d4831931387b44d0eae875072ff4b56a83))
+
 ## [0.12.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.12.0...v0.12.1) (2020-07-05)
 
 
