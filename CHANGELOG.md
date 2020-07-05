@@ -1,3 +1,11 @@
+## [0.12.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.12.0...v0.12.1) (2020-07-05)
+
+
+### Bug Fixes
+
+* bump rollup ([3a8d0d7](https://github.com/atom-ide-community/atom-ide-datatip/commit/3a8d0d73291a98b6a2d7a802ede723671434d930))
+* update package-lock ([07f83d0](https://github.com/atom-ide-community/atom-ide-datatip/commit/07f83d00efa9ced9268e13abb2c79dd1cf5b35a2))
+
 # [0.12.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.11.4...v0.12.0) (2020-07-05)
 
 
