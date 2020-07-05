@@ -64,7 +64,7 @@
     "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^9.0.1",
     "commitlint": "^9.0.1",
-    "rollup": "^2.18.2",
+    "rollup": "^2.19.0",
     "@rollup/plugin-node-resolve": "^8.1.0",
     "@rollup/plugin-commonjs": "^13.0.0",
     "rollup-plugin-babel": "^4.4.0",
