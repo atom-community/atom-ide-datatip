@@ -62,7 +62,7 @@
     "tslint": "latest",
     "tslint-config-prettier": "latest",
     "@commitlint/cli": "^9.0.1",
-    "@commitlint/config-conventional": "^9.0.1",
+    "@commitlint/config-conventional": "^9.1.1",
     "commitlint": "^9.0.1",
     "rollup": "^2.19.0",
     "@rollup/plugin-node-resolve": "^8.1.0",
