@@ -20,27 +20,28 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 This repository might include code from the following projects, which have their own licenses:
+
 - [atom-ide-ui](https://github.com/facebookarchive/atom-ide-ui/blob/master/LICENSE):
   > BSD License
-  > 
+  >
   > For atom-ide-ui software
-  > 
+  >
   > Copyright (c) 2017-present, Facebook, Inc. All rights reserved.
-  > 
+  >
   > Redistribution and use in source and binary forms, with or without modification,
   > are permitted provided that the following conditions are met:
-  > 
-  >  * Redistributions of source code must retain the above copyright notice, this
-  >    list of conditions and the following disclaimer.
-  > 
-  >  * Redistributions in binary form must reproduce the above copyright notice,
-  >    this list of conditions and the following disclaimer in the documentation
-  >    and/or other materials provided with the distribution.
-  > 
-  >  * Neither the name Facebook nor the names of its contributors may be used to
-  >    endorse or promote products derived from this software without specific
-  >    prior written permission.
-  > 
+  >
+  > - Redistributions of source code must retain the above copyright notice, this
+  >   list of conditions and the following disclaimer.
+  >
+  > - Redistributions in binary form must reproduce the above copyright notice,
+  >   this list of conditions and the following disclaimer in the documentation
+  >   and/or other materials provided with the distribution.
+  >
+  > - Neither the name Facebook nor the names of its contributors may be used to
+  >   endorse or promote products derived from this software without specific
+  >   prior written permission.
+  >
   > THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
   > ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
   > WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
