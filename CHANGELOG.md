@@ -1,3 +1,12 @@
+## [0.13.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.13.0...v0.13.1) (2020-07-21)
+
+
+### Bug Fixes
+
+* fix the markdown service ([e0a6ee1](https://github.com/atom-ide-community/atom-ide-datatip/commit/e0a6ee10170ba17e7702ba16fbb30eff2afc58e3))
+* race conditions ([27905ea](https://github.com/atom-ide-community/atom-ide-datatip/commit/27905eac483ff7213a7b24c6b86666184a4d56d2))
+* use JSX to create the elements ([c3bb452](https://github.com/atom-ide-community/atom-ide-datatip/commit/c3bb452c2274e4764b89dd1ee23224642677819a))
+
 # [0.13.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.12.3...v0.13.0) (2020-07-21)
 
 ### Features
