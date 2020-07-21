@@ -1,3 +1,10 @@
+## [0.12.3](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.12.2...v0.12.3) (2020-07-21)
+
+
+### Bug Fixes
+
+* increase default wait time to 200 ([86e4a7d](https://github.com/atom-ide-community/atom-ide-datatip/commit/86e4a7df43667dcd469920ab6ec44ecddcfdfad2))
+
 ## [0.12.2](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.12.1...v0.12.2) (2020-07-05)
 
 ### Bug Fixes
