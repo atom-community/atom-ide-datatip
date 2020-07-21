@@ -1,3 +1,13 @@
+# [0.13.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.12.3...v0.13.0) (2020-07-21)
+
+
+### Features
+
+* apply datatip-content to React datatips ([162b820](https://github.com/atom-ide-community/atom-ide-datatip/commit/162b820ce7b501a25eb01c8e31950d4999a12b5d))
+* apply datatip-marked to HTML datatips ([0be36fd](https://github.com/atom-ide-community/atom-ide-datatip/commit/0be36fdc659d2bfe9b9f525371a945b70230483d))
+* apply datatip-snippet to Snippet datatips ([d1f035d](https://github.com/atom-ide-community/atom-ide-datatip/commit/d1f035d9499625adbf68e32b16630225e367fd27))
+* glow on hover ([ba039bc](https://github.com/atom-ide-community/atom-ide-datatip/commit/ba039bc9f668729ae7aae690b33a30ba6966e4cb))
+
 ## [0.12.3](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.12.2...v0.12.3) (2020-07-21)
 
 ### Bug Fixes
