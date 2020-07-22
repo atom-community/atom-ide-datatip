@@ -3,6 +3,7 @@
 
 .datatip-marked > div:not(:last-child) {
   border-bottom: 1px solid fade(@syntax-cursor-color, 10%);
+  // user-select: text;   // allow selecting text // TODO does not work
 }
 
 .datatip-marked-container {
@@ -13,6 +14,7 @@
   max-width: 64em;
   overflow: auto;
   white-space: normal;
+  // user-select: text;
 
   // Avoid excess internal padding from markdown blocks.
   :first-child {

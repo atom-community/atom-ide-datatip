@@ -9,7 +9,8 @@
   margin-top: -2px; // Compensate for shadow
   position: relative;
   white-space: normal;
-  pointer-events: all;
+  pointer-events: all; // hyperlinks will work
+  // user-select: text;   // allow selecting text // TODO does not work
   max-height: 480px;
   max-width: 64em;
   overflow: none;
@@ -84,6 +85,8 @@
   .list-tree {
     cursor: inherit;
   }
+  // user-select: text;   // allow selecting text // TODO does not work
+
 }
 
 // Applied to Snippet datatips
@@ -92,4 +95,6 @@
   .cursors {
     display: none;
   }
+  // user-select: text;   // allow selecting text // TODO does not work
+
 }
