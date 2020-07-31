@@ -1,19 +1,17 @@
 ## [0.13.2](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.13.1...v0.13.2) (2020-07-22)
 
-
 ### Bug Fixes
 
-* add hover glow config ([0bff6eb](https://github.com/atom-ide-community/atom-ide-datatip/commit/0bff6eb7edda46e745c8146dc8d826193a84c22b))
-* info border ([c2eb4cc](https://github.com/atom-ide-community/atom-ide-datatip/commit/c2eb4cceaae0871ddcea338c94e6b60b1c5f0281))
+- add hover glow config ([0bff6eb](https://github.com/atom-ide-community/atom-ide-datatip/commit/0bff6eb7edda46e745c8146dc8d826193a84c22b))
+- info border ([c2eb4cc](https://github.com/atom-ide-community/atom-ide-datatip/commit/c2eb4cceaae0871ddcea338c94e6b60b1c5f0281))
 
 ## [0.13.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.13.0...v0.13.1) (2020-07-21)
 
-
 ### Bug Fixes
 
-* fix the markdown service ([e0a6ee1](https://github.com/atom-ide-community/atom-ide-datatip/commit/e0a6ee10170ba17e7702ba16fbb30eff2afc58e3))
-* race conditions ([27905ea](https://github.com/atom-ide-community/atom-ide-datatip/commit/27905eac483ff7213a7b24c6b86666184a4d56d2))
-* use JSX to create the elements ([c3bb452](https://github.com/atom-ide-community/atom-ide-datatip/commit/c3bb452c2274e4764b89dd1ee23224642677819a))
+- fix the markdown service ([e0a6ee1](https://github.com/atom-ide-community/atom-ide-datatip/commit/e0a6ee10170ba17e7702ba16fbb30eff2afc58e3))
+- race conditions ([27905ea](https://github.com/atom-ide-community/atom-ide-datatip/commit/27905eac483ff7213a7b24c6b86666184a4d56d2))
+- use JSX to create the elements ([c3bb452](https://github.com/atom-ide-community/atom-ide-datatip/commit/c3bb452c2274e4764b89dd1ee23224642677819a))
 
 # [0.13.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.12.3...v0.13.0) (2020-07-21)
 

@@ -1,10 +1,10 @@
-let presets = ["babel-preset-atomic"];
+let presets = ["babel-preset-atomic"]
 
-let plugins = [];
+let plugins = []
 
 module.exports = {
   presets: presets,
   plugins: plugins,
   exclude: "node_modules/**",
   sourceMap: "inline",
-};
+}
