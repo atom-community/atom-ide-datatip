@@ -1,3 +1,10 @@
+# [0.14.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.13.2...v0.14.0) (2020-08-12)
+
+
+### Features
+
+* bump ([6ce4a2e](https://github.com/atom-ide-community/atom-ide-datatip/commit/6ce4a2e89c47d3ed0dcf8e9fb9fafe84b990d349))
+
 ## [0.13.2](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.13.1...v0.13.2) (2020-07-22)
 
 ### Bug Fixes
