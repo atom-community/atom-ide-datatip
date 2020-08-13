@@ -1,3 +1,10 @@
+## [0.14.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.14.0...v0.14.1) (2020-08-13)
+
+
+### Bug Fixes
+
+* change default delay to 100ms ([1a93eca](https://github.com/atom-ide-community/atom-ide-datatip/commit/1a93ecaba0003e41b3ac01aefb78ae6712fbd1d6))
+
 # [0.14.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.13.2...v0.14.0) (2020-08-12)
 
 
