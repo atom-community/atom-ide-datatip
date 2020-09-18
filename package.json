@@ -32,7 +32,7 @@
   ],
   "dependencies": {
     "atom-package-deps": "^6.0.0",
-    "dompurify": "^2.0.12",
+    "dompurify": "^2.0.14",
     "etch": "^0.14.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
