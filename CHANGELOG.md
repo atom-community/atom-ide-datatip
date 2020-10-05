@@ -1,3 +1,17 @@
+# [0.15.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.14.1...v0.15.0) (2020-10-05)
+
+
+### Bug Fixes
+
+* babel env var ([aef34c7](https://github.com/atom-ide-community/atom-ide-datatip/commit/aef34c7bd72fc7b2bc117a4d965801b435975e76))
+
+
+### Features
+
+* bump ([5b943eb](https://github.com/atom-ide-community/atom-ide-datatip/commit/5b943ebfaed32bf2470bb34125f6396a52cb3945))
+* install atom-ide-base ([2fea1d8](https://github.com/atom-ide-community/atom-ide-datatip/commit/2fea1d84f4e8f3bbd4317d2426fd92fd82c2a418))
+* use ProviderRegistry from atom-ide-base ([703ccff](https://github.com/atom-ide-community/atom-ide-datatip/commit/703ccff0aafccbd279cce7fbc41367f6a4522d24))
+
 ## [0.14.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.14.0...v0.14.1) (2020-08-13)
 
 
