@@ -1,4 +1,5 @@
 dependencies:
+  atom-ide-base: 1.8.0
   atom-package-deps: 6.0.0
   dompurify: 2.0.12
   etch: 0.14.0
@@ -1955,6 +1956,14 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
+  /atom-ide-base/1.8.0:
+    dependencies:
+      atom-package-deps: 6.0.0
+    dev: false
+    engines:
+      atom: '>=0.174.0 <2.0.0'
+    resolution:
+      integrity: sha512-5mL0xRXphiru24krn5ODfurxaUiMkPdMJnOo1qh2VWV4qMPoj9WxKzVN64ywugcAchhDSJJ23YAHqYgBsR5b9Q==
   /atom-jasmine3-test-runner/5.0.5:
     dependencies:
       etch: 0.14.0
@@ -7113,6 +7122,7 @@ specifiers:
   '@types/node': ^14.0.27
   '@types/react': ^16.9.46
   '@types/react-dom': ^16.9.8
+  atom-ide-base: ^1.8.0
   atom-jasmine3-test-runner: ^5.0.5
   atom-languageclient: ^0.9.9
   atom-package-deps: ^6.0.0
