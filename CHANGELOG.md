@@ -1,3 +1,12 @@
+# [0.16.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.15.0...v0.16.0) (2020-10-06)
+
+
+### Features
+
+* use atom-ide-base 1.8.0 ([60c3558](https://github.com/atom-ide-community/atom-ide-datatip/commit/60c35587fa2e03a80f810a1431abcbcfb2cddf0d))
+* use getSnippetHtml and getDocumentationHtml from atom-ide-base ([cfd2eb1](https://github.com/atom-ide-community/atom-ide-datatip/commit/cfd2eb15be19c28b6f8145ff202c589148ca6091))
+* use ViewContainer from atom-ide=base ([956fba4](https://github.com/atom-ide-community/atom-ide-datatip/commit/956fba4390a7c77f6bc5877e73a7461f29c7b048))
+
 # [0.15.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.14.1...v0.15.0) (2020-10-05)
 
 
