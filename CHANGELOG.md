@@ -1,3 +1,10 @@
+# [0.17.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.16.0...v0.17.0) (2020-10-08)
+
+
+### Features
+
+* use atom-ide-base 1.11.2 ([630ada2](https://github.com/atom-ide-community/atom-ide-datatip/commit/630ada209e601e1ff6f4cede2f5c4502559adbe1))
+
 # [0.16.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.15.0...v0.16.0) (2020-10-06)
 
 
