@@ -31,7 +31,7 @@
     "busy-signal"
   ],
   "dependencies": {
-    "atom-ide-base": "^1.10.0",
+    "atom-ide-base": "^1.11.2",
     "atom-package-deps": "^6.0.0"
   },
   "devDependencies": {
