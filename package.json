@@ -27,7 +27,6 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "package-deps": [
-    "atom-ide-markdown-service",
     "busy-signal"
   ],
   "dependencies": {
@@ -63,13 +62,6 @@
     "datatip": {
       "versions": {
         "0.1.0": "provideDatatipService"
-      }
-    }
-  },
-  "consumedServices": {
-    "markdown-renderer": {
-      "versions": {
-        "1.0.0": "consumeMarkdownRenderer"
       }
     }
   }
