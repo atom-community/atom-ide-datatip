@@ -1,3 +1,19 @@
+# [0.18.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.17.0...v0.18.0) (2020-10-09)
+
+
+### Bug Fixes
+
+* fix component data name ([f620147](https://github.com/atom-ide-community/atom-ide-datatip/commit/f6201472f13180ef6af4ecbcdc01fa5ae370f7ae))
+
+
+### Features
+
+* add glowClass to initialization + reduce glow brightness ([04b4d22](https://github.com/atom-ide-community/atom-ide-datatip/commit/04b4d22056b27a9696518e82fd1529f8546501af))
+* atom-ide-base 2 ([cef003a](https://github.com/atom-ide-community/atom-ide-datatip/commit/cef003a9e17289cae9f69d5919de7c06b32ea20e))
+* faster filtering algorithm ([d5be56d](https://github.com/atom-ide-community/atom-ide-datatip/commit/d5be56d17c8511c20c5557bfdb31a9cfc6d5cb1e))
+* use atom-ide-base markdown-service ([9f7a21a](https://github.com/atom-ide-community/atom-ide-datatip/commit/9f7a21a7699b06e44178dfd3e52c67bc2cd9e7a8))
+* use self-contained components from atom-ide-base ([1d910f5](https://github.com/atom-ide-community/atom-ide-datatip/commit/1d910f58aaf64924ee1b05317b5c80b81e5ece8d))
+
 # [0.17.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.16.0...v0.17.0) (2020-10-08)
 
 
