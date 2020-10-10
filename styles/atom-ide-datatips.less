@@ -2,6 +2,7 @@
 @import "syntax-variables";
 
 .datatip-element {
+  overflow: auto; // prevents the long text to come out of the datatip
   background: @app-background-color;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 1);
   color: @syntax-text-color;
@@ -13,7 +14,6 @@
   // user-select: text;   // allow selecting text // TODO does not work
   max-height: 480px;
   max-width: 64em;
-  overflow: none;
   display: block;
 
   p {
@@ -52,7 +52,6 @@
   font-size: var(--editor-font-size);
   max-height: 480px;
   max-width: 64em;
-  overflow: auto;
   white-space: normal;
 
   // Avoid excess internal padding from markdown blocks.
