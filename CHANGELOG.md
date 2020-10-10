@@ -1,3 +1,10 @@
+## [0.18.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.18.0...v0.18.1) (2020-10-10)
+
+
+### Bug Fixes
+
+* overflow:auto datatip-element ([b4d9665](https://github.com/atom-ide-community/atom-ide-datatip/commit/b4d96650738c9a9bd1ac26577f8bfd34420ae3bc))
+
 # [0.18.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.17.0...v0.18.0) (2020-10-09)
 
 
