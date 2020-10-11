@@ -1,3 +1,11 @@
+## [0.19.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.19.0...v0.19.1) (2020-10-11)
+
+
+### Bug Fixes
+
+* fix memory leaks due to the markers not being destroyed ([7253200](https://github.com/atom-ide-community/atom-ide-datatip/commit/7253200b2b50d58b5fd6f1087138cedcbde7bc2b))
+* reduce the latency from 100ms to 80ms ([7012ad1](https://github.com/atom-ide-community/atom-ide-datatip/commit/7012ad13614971f4397350f389510da871bde1a1))
+
 # [0.19.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.18.2...v0.19.0) (2020-10-11)
 
 

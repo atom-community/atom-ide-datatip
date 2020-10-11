@@ -1,7 +1,7 @@
 {
   "name": "atom-ide-datatip",
   "main": "./dist/main.js",
-  "version": "0.19.0",
+  "version": "0.19.1",
   "description": "A replacement for the Data Tooltip provider that was originally part of the Atom IDE package from Facebook.",
   "keywords": [
     "atom-package",
