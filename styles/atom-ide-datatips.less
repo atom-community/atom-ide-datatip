@@ -46,7 +46,7 @@
 }
 
 // Applied to React, and HTML datatips
-.datatip-container {
+.datatip-component-container {
   color: @syntax-text-color;
   font-family: var(--editor-font-family);
   font-size: var(--editor-font-size);
@@ -75,7 +75,7 @@
   }
 }
 
-.datatip-content {
+.datatip-component {
   flex-grow: 1;
 
   // Allow higher-level component to override the cursor property on certain children.
@@ -86,6 +86,9 @@
 }
 
 // Applied to Snippet datatips
+.datatip-markdown > div:not(:last-child) {
+.datatip-markdown-container {
+.datatip-snippet-container {
 .datatip-snippet {
   flex-grow: 1;
   .cursors {
