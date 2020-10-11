@@ -13,6 +13,8 @@
   pointer-events: all; // hyperlinks will work
   // user-select: text;   // allow selecting text // TODO does not work
 
+  padding: 5px 5px 2px 5px;
+
   p {
     margin-left: 8px;
     margin-right: 8px;
@@ -132,14 +134,12 @@
 /** Applied to SnippetView */
 
 .datatip-snippet-container {
-  padding: 2px 0 2px 4px;
-}
-
-.datatip-snippet {
   max-width: 500px;
   max-height: 300px;
   overflow: auto;
+}
 
+.datatip-snippet {
   flex-grow: 1;
   .cursors {
     display: none;
