@@ -146,3 +146,14 @@
   }
   // user-select: text;   // allow selecting text // TODO does not work
 }
+
+// Highlight the hovered words
+atom-text-editor {
+
+  .datatip-highlight-region > .region {
+    // Use a faded version of the cursor color so as to have a distinction when
+    // overlapping with a selection (`@syntax-selection-color`). This element is
+    // on top of the selection element, so that will show through.
+    background: fade(@syntax-cursor-color, 10%);
+  }
+}
