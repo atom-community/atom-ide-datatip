@@ -1,3 +1,17 @@
+## [0.18.2](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.18.1...v0.18.2) (2020-10-11)
+
+
+### Bug Fixes
+
+* add marging to pre ([fdbd331](https://github.com/atom-ide-community/atom-ide-datatip/commit/fdbd331d0e8937fa0e3f37553018eeec08228e83))
+* add padding to datatip elements ([4b4dc3a](https://github.com/atom-ide-community/atom-ide-datatip/commit/4b4dc3a6554c89897161b5cd7d748b8f4b2685ea))
+* don't add overflow to child elements ([985734d](https://github.com/atom-ide-community/atom-ide-datatip/commit/985734dc6a6f25eda849fd1c4642790ed71209c4))
+* move markdown view style ([ea14afe](https://github.com/atom-ide-community/atom-ide-datatip/commit/ea14afe30f827bb28336547b02cc53f0e2ec815d))
+* position and display for component container ([aa177ce](https://github.com/atom-ide-community/atom-ide-datatip/commit/aa177cea64bbe87328a164c4d41f47dfee9bafff))
+* remove dimensions from datatip-element, nowrap whitespace ([193f098](https://github.com/atom-ide-community/atom-ide-datatip/commit/193f098abd81238daf9c170e3ffedb32a5f77770))
+* snippet style padding, dimensions, overflow ([b9b9982](https://github.com/atom-ide-community/atom-ide-datatip/commit/b9b9982b3e1fc7b673488e33b1bdcb078be7388f))
+* use better names for classes ([0d9c292](https://github.com/atom-ide-community/atom-ide-datatip/commit/0d9c292e6d1d8587139f2f94ea72a63222c81b40))
+
 ## [0.18.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.18.0...v0.18.1) (2020-10-10)
 
 
