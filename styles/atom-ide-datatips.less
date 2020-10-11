@@ -85,9 +85,49 @@
   // user-select: text;   // allow selecting text // TODO does not work
 }
 
-// Applied to Snippet datatips
+/** Applied to MarkdownView */
+
 .datatip-markdown > div:not(:last-child) {
+  border-bottom: 1px solid fade(@syntax-cursor-color, 10%);
+  // user-select: text;   // allow selecting text // TODO does not work
+}
+
 .datatip-markdown-container {
+  overflow: auto;
+  color: @syntax-text-color;
+  font-family: var(--editor-font-family);
+  font-size: var(--editor-font-size);
+  max-height: 400px;
+  max-width: 500px;
+  white-space: normal;
+  // user-select: text;
+
+  // Avoid excess internal padding from markdown blocks.
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  pre {
+    font-family: var(--editor-font-family);
+    font-size: var(--editor-font-size);
+    margin-bottom: 8px;
+    border-radius: 0;
+  }
+
+  p {
+    &:first-child {
+      margin-top: 8px;
+    }
+    &:last-child {
+      margin-bottom: 8px;
+    }
+  }
+}
+
 .datatip-snippet-container {
 .datatip-snippet {
   flex-grow: 1;
