@@ -17,6 +17,9 @@
   font-family: var(--editor-font-family);
   font-size: var(--editor-font-size);
 
+  max-height: 500px;
+  max-width: 700px;
+
   // code blocks styling
   pre {
     font-family: var(--editor-font-family);
@@ -61,8 +64,6 @@
   display: flex;
   position: relative;
   color: @syntax-text-color;
-  max-height: 480px;
-  max-width: 64em;
   white-space: normal;
 
   // Avoid excess internal padding from markdown blocks.
@@ -98,8 +99,6 @@
 
 .datatip-markdown-container {
   color: @syntax-text-color;
-  max-height: 400px;
-  max-width: 500px;
   white-space: normal;
   // user-select: text;
 
@@ -125,8 +124,6 @@
 /** Applied to SnippetView */
 
 .datatip-snippet-container {
-  max-width: 500px;
-  max-height: 300px;
   overflow: auto;
 }
 
