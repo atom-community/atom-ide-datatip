@@ -6,7 +6,6 @@
   background: @app-background-color;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 1);
   color: @syntax-text-color;
-  font-size: 1rem; // some themes set font sizes on the root node
   margin-top: -2px; // Compensate for shadow
   position: relative;
   white-space: nowrap;
@@ -14,6 +13,9 @@
   // user-select: text;   // allow selecting text // TODO does not work
 
   padding: 5px 5px 2px 5px;
+
+  font-family: var(--editor-font-family);
+  font-size: var(--editor-font-size);
 
   // code blocks styling
   pre {
@@ -59,8 +61,6 @@
   display: flex;
   position: relative;
   color: @syntax-text-color;
-  font-family: var(--editor-font-family);
-  font-size: var(--editor-font-size);
   max-height: 480px;
   max-width: 64em;
   white-space: normal;
@@ -98,8 +98,6 @@
 
 .datatip-markdown-container {
   color: @syntax-text-color;
-  font-family: var(--editor-font-family);
-  font-size: var(--editor-font-size);
   max-height: 400px;
   max-width: 500px;
   white-space: normal;
