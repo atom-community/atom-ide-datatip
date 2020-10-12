@@ -1,3 +1,18 @@
+# [0.20.0](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.19.1...v0.20.0) (2020-10-12)
+
+
+### Bug Fixes
+
+* set datatip-element class for ViewContainer ([bf0ebaf](https://github.com/atom-ide-community/atom-ide-datatip/commit/bf0ebafb09381bde5c59634b5dca33b4ce1beed7))
+* set font-size and font-family on the datatip-element ([81072ca](https://github.com/atom-ide-community/atom-ide-datatip/commit/81072ca53aa37ff4dfda28c90dd625e1765cd29d))
+* set max width and hight on the datatip-element ([332d94e](https://github.com/atom-ide-community/atom-ide-datatip/commit/332d94e3a478643a7e37f26ae4d8d53ed328d35d))
+* style code blocks for all datatip-elements ([8226892](https://github.com/atom-ide-community/atom-ide-datatip/commit/822689224b0390fca4dfe3d8be62397c7fcb9b35))
+
+
+### Features
+
+* code snippet highlighting ([4cd5f46](https://github.com/atom-ide-community/atom-ide-datatip/commit/4cd5f46f53afb007894b66801f714a3a9ef01cdd))
+
 ## [0.19.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.19.0...v0.19.1) (2020-10-11)
 
 
