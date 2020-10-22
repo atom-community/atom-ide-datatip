@@ -1,3 +1,10 @@
+## [0.20.3](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.20.2...v0.20.3) (2020-10-22)
+
+
+### Bug Fixes
+
+* make mousewheel listener passive ([0363e9c](https://github.com/atom-ide-community/atom-ide-datatip/commit/0363e9cebc098eebef598f5681a2a39ece6d600b))
+
 ## [0.20.2](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.20.1...v0.20.2) (2020-10-22)
 
 
