@@ -1,3 +1,10 @@
+## [0.20.2](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.20.1...v0.20.2) (2020-10-22)
+
+
+### Bug Fixes
+
+* fix scrolling on the datatip ([dc1c991](https://github.com/atom-ide-community/atom-ide-datatip/commit/dc1c991896795a555c5e3532cc140dd9a133ab23))
+
 ## [0.20.1](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.20.0...v0.20.1) (2020-10-22)
 
 
