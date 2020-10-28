@@ -1,3 +1,13 @@
+## [0.20.4](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.20.3...v0.20.4) (2020-10-28)
+
+
+### Bug Fixes
+
+* clean memory in case of an error ([21505d3](https://github.com/atom-ide-community/atom-ide-datatip/commit/21505d3957803a5820e748f366058359292d7f89))
+* return right away if the element is not created ([88e4854](https://github.com/atom-ide-community/atom-ide-datatip/commit/88e4854b2fb2ad0192906cae0e40b8b4484aded5))
+* use optional chaining in onCommandEvt ([7396906](https://github.com/atom-ide-community/atom-ide-datatip/commit/739690641e3db12091115a3c29fb7c9c0da4f216))
+* use optional chaining in unmountDataTip ([8b2d646](https://github.com/atom-ide-community/atom-ide-datatip/commit/8b2d646825e3da76580634d58d9ac1be80220a8d))
+
 ## [0.20.3](https://github.com/atom-ide-community/atom-ide-datatip/compare/v0.20.2...v0.20.3) (2020-10-22)
 
 
