@@ -1,6 +1,6 @@
 # atom-ide-datatip package
 
-[![Build Status](https://badgen.net/travis/atom-ide-community/atom-ide-datatip/master)](https://travis-ci.org/atom-ide-community/atom-ide-datatip)
+[![Build Status](https://badgen.net/travis/atom-community/atom-ide-datatip/master)](https://travis-ci.org/atom-community/atom-ide-datatip)
 
 A replacement of the DataTip functionality from the original Atom-IDE / Nuclide package developed by Facebook.
 
@@ -18,7 +18,7 @@ You can also search for [packages](https://atom.io/packages/search?q=IDE) in Ato
 
 3. Install `busy-signal` package in Atom, which is used for signaling background tasks.
 
-![A screenshot of your package](https://atom-ide-community.github.io/assets/images/screenshot-datatip.png)
+![A screenshot of your package](https://atom-community.github.io/assets/images/screenshot-datatip.png)
 
 ## Contributing
 

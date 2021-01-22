@@ -8,7 +8,7 @@
     "atom-ide",
     "datatip"
   ],
-  "repository": "https://github.com/atom-ide-community/atom-ide-datatip",
+  "repository": "https://github.com/atom-community/atom-ide-datatip",
   "license": "MIT",
   "scripts": {
     "format": "prettier --write .",
