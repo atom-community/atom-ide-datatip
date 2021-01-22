@@ -3,16 +3,10 @@
 
 .datatip-element {
   overflow: auto; // prevents the long text to come out of the datatip
-  background: @app-background-color;
-  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 1);
   color: @syntax-text-color;
-  margin-top: -2px; // Compensate for shadow
-  position: relative;
   white-space: nowrap;
   pointer-events: all; // hyperlinks will work
   // user-select: text;   // allow selecting text // TODO does not work
-
-  padding: 5px 5px 2px 5px;
 
   font-family: var(--editor-font-family);
   font-size: var(--editor-font-size);
@@ -37,6 +31,10 @@
       margin-bottom: 8px;
     }
   }
+}
+
+.datatip-element.select-list.popover-list {
+  width: auto;
 }
 
 .datatip-element.datatip-glow {
