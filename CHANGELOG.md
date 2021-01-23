@@ -1,3 +1,27 @@
+# [0.21.0](https://github.com/atom-community/atom-ide-datatip/compare/v0.20.4...v0.21.0) (2021-01-23)
+
+
+### Bug Fixes
+
+* add types from jsdoc to ts ([20a7ecb](https://github.com/atom-community/atom-ide-datatip/commit/20a7ecbefc63ab5e03f4175521312b102f2c1a80))
+* bump @types/atom ([aaf1e26](https://github.com/atom-community/atom-ide-datatip/commit/aaf1e26541f7bbaff5925968b1293275a5157960))
+* bump rollup ([54c783a](https://github.com/atom-community/atom-ide-datatip/commit/54c783af2fa355b3e585c8a3be7ac459cf540604))
+* change the style of the datatip to match other Atom popovers ([fdbdbc4](https://github.com/atom-community/atom-ide-datatip/commit/fdbdbc41b6425ccbca4f633f1ac5f29f6b784a8e))
+* import used types ([b82a1bb](https://github.com/atom-community/atom-ide-datatip/commit/b82a1bb3aebb73277d4806ca16dfb0ea87a82e1c))
+* lint fix ([1203c79](https://github.com/atom-community/atom-ide-datatip/commit/1203c796d544fe34fff45bf5ec42b19fed26cbba))
+* remove unnecessary null set in deactive/dispose ([1b76156](https://github.com/atom-community/atom-ide-datatip/commit/1b76156ca11e84c2d5366351abe72213670feb29))
+* remove unused param ([1be8e1f](https://github.com/atom-community/atom-ide-datatip/commit/1be8e1f3cf4753487025a6a859e505f36d7d45c3))
+* return of mountDataTipWithMarker ([67cd74d](https://github.com/atom-community/atom-ide-datatip/commit/67cd74d9806d408262d97a5184af1595550f71b1))
+* rollup config ([f08aab6](https://github.com/atom-community/atom-ide-datatip/commit/f08aab6c97560bec3420f6849920fce02d07e312))
+* update atom-package-deps ([fc137e5](https://github.com/atom-community/atom-ide-datatip/commit/fc137e51b1fd9110808e44eb3199ad08490efb33))
+* use class properties in datatip manager ([816be8c](https://github.com/atom-community/atom-ide-datatip/commit/816be8c92416c0716072285a5fedcbf7f667102f))
+* use import type ([9720762](https://github.com/atom-community/atom-ide-datatip/commit/97207625656ea0b64733b2ad424e5ce8dbdf3190))
+
+
+### Features
+
+* convert to TypeScript ([6b7075f](https://github.com/atom-community/atom-ide-datatip/commit/6b7075f16fdad1ac2705361099c9e1c44e7510ee))
+
 ## [0.21.0](https://github.com/atom-community/atom-ide-datatip/compare/v0.20.4...v0.21.0)
 
 ### Features:
