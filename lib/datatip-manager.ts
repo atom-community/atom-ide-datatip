@@ -93,7 +93,7 @@ export class DataTipManager {
     this.subscriptions.add(
       atom.workspace.observeTextEditors((editor) => {
         const disposable = this.watchEditor(editor)
-        editor.onDidDestroy(() => disposable.dispose())
+        editor.onDidDestroy(() => disposable?.dispose())
       }),
       atom.commands.add("atom-text-editor", {
         "datatip:toggle": (evt) => this.onCommandEvt(evt),
@@ -136,7 +136,6 @@ export class DataTipManager {
 
   /**
    * returns the provider registry as a consumable service
-   * @return {ProviderRegistry<DatatipProvider>} [description]
    */
   get datatipService() {
     return this.providerRegistry
@@ -184,7 +183,7 @@ export class DataTipManager {
    * it has been decided to track this instance
    * @param editor the Atom Text editor instance to be tracked
    */
-  updateCurrentEditor(editor: TextEditor) {
+  updateCurrentEditor(editor: TextEditor | null) {
     if (editor === this.editor) {
       return
     }
@@ -198,7 +197,7 @@ export class DataTipManager {
     this.editor = null
     this.editorView = null
 
-    if (!atom.workspace.isTextEditor(editor)) {
+    if (editor == null || !atom.workspace.isTextEditor(editor)) {
       return
     }
 
@@ -221,7 +220,7 @@ export class DataTipManager {
         this.unmountDataTip()
       }),
       new Disposable(() => {
-        this.editorView.removeEventListener("mousemove", this.onMouseMoveEvt)
+        this.editorView?.removeEventListener("mousemove", this.onMouseMoveEvt)
       })
     )
   }
@@ -243,7 +242,7 @@ export class DataTipManager {
         const editor = evt.cursor.editor
         const position = evt.cursor.getBufferPosition()
         if (this.currentMarkerRange === null || !this.currentMarkerRange.containsPoint(position)) {
-          this.showDataTip(editor, position, evt)
+          this.showDataTip(editor, position)
         }
       },
       this.hoverTime,
@@ -261,7 +260,7 @@ export class DataTipManager {
 
     this.mouseMoveTimer = setTimeout(
       (evt) => {
-        if (this.editorView === null) {
+        if (this.editorView == null || this.editor == null) {
           return
         }
 
@@ -286,7 +285,7 @@ export class DataTipManager {
 
         const point = this.editor.bufferPositionForScreenPosition(screenPosition)
         if (this.currentMarkerRange === null || !this.currentMarkerRange.containsPoint(point)) {
-          this.showDataTip(this.editor, point, evt)
+          this.showDataTip(this.editor, point)
         }
       },
       this.hoverTime,
@@ -306,7 +305,7 @@ export class DataTipManager {
    * the central command event handler
    * @param evt command event
    */
-  onCommandEvt(evt: CommandEvent) {
+  onCommandEvt(evt: CommandEvent<TextEditorElement>) {
     const editor = evt.currentTarget.getModel()
 
     if (atom.workspace.isTextEditor(editor)) {
@@ -317,7 +316,7 @@ export class DataTipManager {
         return this.unmountDataTip()
       }
 
-      this.showDataTip(editor, position, undefined)
+      this.showDataTip(editor, position)
     }
   }
 
@@ -331,12 +330,11 @@ export class DataTipManager {
   async showDataTip(
     editor: TextEditor,
     position: Point,
-    evt: CursorPositionChangedEvent | MouseEvent | null
   ): Promise<void> {
     try {
       let datatip: Datatip | null = null
       for (const provider of this.providerRegistry.getAllProvidersForEditor(editor)) {
-        const providerTip = await provider.datatip(editor, position, evt)
+        const providerTip = await provider.datatip(editor, position)
         if (providerTip) {
           datatip = providerTip
           break
@@ -473,11 +471,11 @@ export class DataTipManager {
     disposables.add(new Disposable(() => overlayMarker.destroy()))
 
     view.element.addEventListener("mouseenter", () => {
-      this.editorView.removeEventListener("mousemove", this.onMouseMoveEvt)
+      this.editorView?.removeEventListener("mousemove", this.onMouseMoveEvt)
     })
 
     view.element.addEventListener("mouseleave", () => {
-      this.editorView.addEventListener("mousemove", this.onMouseMoveEvt)
+      this.editorView?.addEventListener("mousemove", this.onMouseMoveEvt)
     })
 
     // TODO move this code to atom-ide-base
@@ -485,7 +483,7 @@ export class DataTipManager {
 
     disposables.add(
       new Disposable(() => {
-        this.editorView.addEventListener("mousemove", this.onMouseMoveEvt)
+        this.editorView?.addEventListener("mousemove", this.onMouseMoveEvt)
         view.destroy()
       })
     )
