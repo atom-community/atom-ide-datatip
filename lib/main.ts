@@ -15,9 +15,8 @@ let datatipManager: DataTipManager | null = null
 
 /**
  * called by Atom when activating an extension
- * @param  {any} state the current state of atom
  */
-export async function activate(state) {
+export async function activate() {
   // Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
   subscriptions = new CompositeDisposable()
   if (!datatipManager) datatipManager = new DataTipManager()
