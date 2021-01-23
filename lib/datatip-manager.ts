@@ -230,7 +230,7 @@ export class DataTipManager {
    * the central cursor movement event handler
    * @param evt the cursor move event
    */
-  onCursorMoveEvt(evt: MouseEvent) {
+  onCursorMoveEvt(evt: CursorPositionChangedEvent) {
     if (this.cursorMoveTimer) {
       clearTimeout(this.cursorMoveTimer)
     }
