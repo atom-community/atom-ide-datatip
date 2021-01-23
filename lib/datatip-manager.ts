@@ -1,7 +1,7 @@
 // @ts-check
 
 import { CompositeDisposable, Disposable, Range, Point, TextEditor, CursorPositionChangedEventommandEvent } from "atom"
-import type { DatatipProvider, MarkdownService } from "atom-ide-base"
+import { DatatipProvider, MarkdownService } from "atom-ide-base"
 import { ViewContainer } from "atom-ide-base/commons-ui/float-pane/ViewContainer"
 import { ProviderRegistry } from "atom-ide-base/commons-atom/ProviderRegistry"
 
@@ -12,63 +12,76 @@ export class DataTipManager {
      * @type {CompositeDisposable}
      */
     this.subscriptions = new CompositeDisposable()
+
     /**
      * holds a list of registered data tip providers
      * @type {ProviderRegistry<DatatipProvider>}
      */
     this.providerRegistry = new ProviderRegistry()
+
     /**
      * holds a weak reference to all watched Atom text editors
      * @type {WeakSet<TextEditor>}
      */
     this.watchedEditors = new WeakSet()
+
     /**
      * holds a reference to the current watched Atom text editor
      * @type {TextEditor}
      */
     this.editor = null
+
     /**
      * holds a reference to the current watched Atom text editor viewbuffer
      */
     this.editorView = null
+
     /**
      * holds a reference to all disposable items for the current watched Atom text editor
      * @type {CompositeDisposable}
      */
     this.editorSubscriptions = null
+
     /**
      * holds a reference to all disposable items for the current data tip
      * @type {CompositeDisposable}
      */
     this.dataTipMarkerDisposables = null
+
     /**
      * config flag denoting if the data tip should be shown when moving the cursor on screen
      * @type {Boolean}
      */
     this.showDataTipOnCursorMove = false
+
     /**
      * config flag denoting if the data tip should be shown when moving the mouse cursor around
      * @type {Boolean}
      */
     this.showDataTipOnMouseMove = false
+
     /**
      * holds the range of the current data tip to prevent unnecessary show/hide calls
      * @type {Range}
      */
     this.currentMarkerRange = null
+
     /**
      * the mouse move event handler that evaluates the screen position and eventually shows a data tip
      */
     this.onMouseMoveEvt = this.onMouseMoveEvt.bind(this)
+
     /**
      * the cursor move event handler that evaluates the cursor position and eventually shows a data tip
      */
     this.onCursorMoveEvt = this.onCursorMoveEvt.bind(this)
+
     /**
      * to optimize show/hide calls we set a timeout of hoverTime for the mouse movement
      * only if the mouse pointer is not moving for more than hoverTime the data tip functionality is triggered
      */
     this.mouseMoveTimer = null
+
     /**
      * to optimize show/hide calls we set a timeout of hoverTime for the cursor movement
      * only if the cursor is not moving for more than hoverTime the data tip functionality is triggered
@@ -400,7 +413,11 @@ export class DataTipManager {
             }
           }
 
-          const dataTipView = new ViewContainer({ snippet, markdown, className: `datatip-element select-list popover-list ${this.glowClass}` })
+          const dataTipView = new ViewContainer({
+            snippet,
+            markdown,
+            className: `datatip-element select-list popover-list ${this.glowClass}`,
+          })
 
           this.dataTipMarkerDisposables = this.mountDataTipWithMarker(editor, datatip.range, position, dataTipView)
         }
@@ -420,7 +437,6 @@ export class DataTipManager {
    * @return a composite object to release references at a later stage
    */
   mountDataTipWithMarker(editor: TextEditor, range: Range, position: Point, view: ViewContainer): CompositeDisposable {
-
     // TODO do we need this?
     if (!view.element) {
       // if the element is not created return right away
