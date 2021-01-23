@@ -6,66 +6,84 @@ import { ViewContainer } from "atom-ide-base/commons-ui/float-pane/ViewContainer
 import { ProviderRegistry } from "atom-ide-base/commons-atom/ProviderRegistry"
 
 export class DataTipManager {
+  /**
+   * holds a reference to disposable items from this data tip manager
+   * @type {CompositeDisposable}
+   */
+  subscriptions = new CompositeDisposable()
+
+  /**
+   * holds a list of registered data tip providers
+   * @type {ProviderRegistry<DatatipProvider>}
+   */
+  providerRegistry = new ProviderRegistry()
+
+  /**
+   * holds a weak reference to all watched Atom text editors
+   * @type {WeakSet<TextEditor>}
+   */
+  watchedEditors = new WeakSet()
+
+  /**
+   * holds a reference to the current watched Atom text editor
+   * @type {TextEditor}
+   */
+  editor = null
+
+  /**
+   * holds a reference to the current watched Atom text editor viewbuffer
+   */
+  editorView = null
+
+  /**
+   * holds a reference to all disposable items for the current watched Atom text editor
+   * @type {CompositeDisposable}
+   */
+  editorSubscriptions = null
+
+  /**
+   * holds a reference to all disposable items for the current data tip
+   * @type {CompositeDisposable}
+   */
+  dataTipMarkerDisposables = null
+
+  /**
+   * config flag denoting if the data tip should be shown when moving the cursor on screen
+   * @type {Boolean}
+   */
+  showDataTipOnCursorMove = false
+
+  /**
+   * config flag denoting if the data tip should be shown when moving the mouse cursor around
+   * @type {Boolean}
+   */
+  showDataTipOnMouseMove = false
+
+  /**
+   * holds the range of the current data tip to prevent unnecessary show/hide calls
+   * @type {Range}
+   */
+  currentMarkerRange = null
+
+  /**
+   * to optimize show/hide calls we set a timeout of hoverTime for the mouse movement
+   * only if the mouse pointer is not moving for more than hoverTime the data tip functionality is triggered
+   */
+  mouseMoveTimer = null
+
+  /**
+   * to optimize show/hide calls we set a timeout of hoverTime for the cursor movement
+   * only if the cursor is not moving for more than hoverTime the data tip functionality is triggered
+   */
+  cursorMoveTimer = null
+
+  /** The time that the mouse/cursor should hover/stay to show a datatip. Also specifies the time that the datatip is still shown when the mouse/cursor moves [ms]. */
+  hoverTime = atom.config.get("atom-ide-datatip.hoverTime")
+
+  // glow on hover
+  glowClass = atom.config.get("atom-ide-datatip.glowOnHover") ? "datatip-glow" : ""
+
   constructor() {
-    /**
-     * holds a reference to disposable items from this data tip manager
-     * @type {CompositeDisposable}
-     */
-    this.subscriptions = new CompositeDisposable()
-
-    /**
-     * holds a list of registered data tip providers
-     * @type {ProviderRegistry<DatatipProvider>}
-     */
-    this.providerRegistry = new ProviderRegistry()
-
-    /**
-     * holds a weak reference to all watched Atom text editors
-     * @type {WeakSet<TextEditor>}
-     */
-    this.watchedEditors = new WeakSet()
-
-    /**
-     * holds a reference to the current watched Atom text editor
-     * @type {TextEditor}
-     */
-    this.editor = null
-
-    /**
-     * holds a reference to the current watched Atom text editor viewbuffer
-     */
-    this.editorView = null
-
-    /**
-     * holds a reference to all disposable items for the current watched Atom text editor
-     * @type {CompositeDisposable}
-     */
-    this.editorSubscriptions = null
-
-    /**
-     * holds a reference to all disposable items for the current data tip
-     * @type {CompositeDisposable}
-     */
-    this.dataTipMarkerDisposables = null
-
-    /**
-     * config flag denoting if the data tip should be shown when moving the cursor on screen
-     * @type {Boolean}
-     */
-    this.showDataTipOnCursorMove = false
-
-    /**
-     * config flag denoting if the data tip should be shown when moving the mouse cursor around
-     * @type {Boolean}
-     */
-    this.showDataTipOnMouseMove = false
-
-    /**
-     * holds the range of the current data tip to prevent unnecessary show/hide calls
-     * @type {Range}
-     */
-    this.currentMarkerRange = null
-
     /**
      * the mouse move event handler that evaluates the screen position and eventually shows a data tip
      */
@@ -75,24 +93,6 @@ export class DataTipManager {
      * the cursor move event handler that evaluates the cursor position and eventually shows a data tip
      */
     this.onCursorMoveEvt = this.onCursorMoveEvt.bind(this)
-
-    /**
-     * to optimize show/hide calls we set a timeout of hoverTime for the mouse movement
-     * only if the mouse pointer is not moving for more than hoverTime the data tip functionality is triggered
-     */
-    this.mouseMoveTimer = null
-
-    /**
-     * to optimize show/hide calls we set a timeout of hoverTime for the cursor movement
-     * only if the cursor is not moving for more than hoverTime the data tip functionality is triggered
-     */
-    this.cursorMoveTimer = null
-
-    /** The time that the mouse/cursor should hover/stay to show a datatip. Also specifies the time that the datatip is still shown when the mouse/cursor moves [ms]. */
-    this.hoverTime = atom.config.get("atom-ide-datatip.hoverTime")
-
-    // glow on hover
-    this.glowClass = atom.config.get("atom-ide-datatip.glowOnHover") ? "datatip-glow" : ""
   }
 
   /**
