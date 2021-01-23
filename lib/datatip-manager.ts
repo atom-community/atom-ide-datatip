@@ -425,7 +425,7 @@ export class DataTipManager {
    * @param  view the data tip component to display
    * @return a composite object to release references at a later stage
    */
-  mountDataTipWithMarker(editor: TextEditor, range: Range, position: Point, view: ViewContainer): CompositeDisposable {
+  mountDataTipWithMarker(editor: TextEditor, range: Range, position: Point, view: ViewContainer): CompositeDisposable | null {
     // TODO do we need this?
     if (!view.element) {
       // if the element is not created return right away
