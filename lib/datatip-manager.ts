@@ -1,7 +1,7 @@
 // @ts-check
 
 import { CompositeDisposable, Disposable, Range, Point, TextEditor, TextEditorElement, CommandEvent, CursorPositionChangedEvent } from "atom"
-import type { DatatipProvider } from "atom-ide-base"
+import type { Datatip, DatatipProvider } from "atom-ide-base"
 import { ViewContainer } from "atom-ide-base/commons-ui/float-pane/ViewContainer"
 import { ProviderRegistry } from "atom-ide-base/commons-atom/ProviderRegistry"
 
@@ -334,7 +334,7 @@ export class DataTipManager {
     evt: CursorPositionChangedEvent | MouseEvent | null
   ): Promise<void> {
     try {
-      let datatip = null
+      let datatip: Datatip | null = null
       for (const provider of this.providerRegistry.getAllProvidersForEditor(editor)) {
         const providerTip = await provider.datatip(editor, position, evt)
         if (providerTip) {
@@ -360,7 +360,7 @@ export class DataTipManager {
         // store marker range
         this.currentMarkerRange = datatip.range
 
-        if (datatip.component) {
+        if ("component" in datatip) {
           const dataTipView = new ViewContainer({
             component: {
               component: datatip.component,
