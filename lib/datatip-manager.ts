@@ -60,13 +60,13 @@ export class DataTipManager {
    * to optimize show/hide calls we set a timeout of hoverTime for the mouse movement
    * only if the mouse pointer is not moving for more than hoverTime the data tip functionality is triggered
    */
-  mouseMoveTimer = null
+  mouseMoveTimer: NodeJS.Timeout | null = null
 
   /**
    * to optimize show/hide calls we set a timeout of hoverTime for the cursor movement
    * only if the cursor is not moving for more than hoverTime the data tip functionality is triggered
    */
-  cursorMoveTimer = null
+  cursorMoveTimer: NodeJS.Timeout | null = null
 
   /** The time that the mouse/cursor should hover/stay to show a datatip. Also specifies the time that the datatip is still shown when the mouse/cursor moves [ms]. */
   hoverTime = atom.config.get("atom-ide-datatip.hoverTime")
