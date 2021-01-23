@@ -2,7 +2,7 @@
 
 import { CompositeDisposable } from "atom"
 import { DataTipManager } from "./datatip-manager"
-import { DatatipService } from "atom-ide-base"
+import type { DatatipService } from "atom-ide-base"
 
 /**
  * [subscriptions description]
@@ -49,9 +49,9 @@ export function deactivate() {
 
 /**
  * called by IDE extensions to retrieve the Datatip service for registration
- * @return { DatatipService } the current DataTipManager instance
+ * @return the current DataTipManager instance
  */
-export function provideDatatipService() {
+export function provideDatatipService(): DatatipService {
   return datatipManager!.datatipService
 }
 
