@@ -1,10 +1,10 @@
 import { createPlugins } from "rollup-plugin-atomic"
 
-const plugins = createPlugins(["js", "babel"])
+const plugins = createPlugins([["ts", { tsconfig: "./lib/tsconfig.json" }, true], "js"])
 
 export default [
   {
-    input: "lib/main.js",
+    input: "lib/main.ts",
     output: [
       {
         dir: "dist",
