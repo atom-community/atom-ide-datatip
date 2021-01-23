@@ -1,7 +1,7 @@
 // @ts-check
 
 import { CompositeDisposable, Disposable, Range, Point, TextEditor, CursorPositionChangedEventommandEvent } from "atom"
-import { DatatipProvider, MarkdownService } from "atom-ide-base"
+import type { DatatipProvider, MarkdownService } from "atom-ide-base"
 import { ViewContainer } from "atom-ide-base/commons-ui/float-pane/ViewContainer"
 import { ProviderRegistry } from "atom-ide-base/commons-atom/ProviderRegistry"
 
