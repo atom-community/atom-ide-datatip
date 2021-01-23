@@ -1,3 +1,11 @@
+## [0.21.0](https://github.com/atom-community/atom-ide-datatip/compare/v0.20.4...v0.21.0)
+
+### Features:
+- Convert codebase to TypeScript
+
+### Bug Fixes:
+- Use popover-list class for datatip
+
 ## [0.20.4](https://github.com/atom-community/atom-ide-datatip/compare/v0.20.3...v0.20.4) (2020-10-28)
 
 
