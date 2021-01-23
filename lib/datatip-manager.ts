@@ -132,7 +132,6 @@ export class DataTipManager {
     if (this.subscriptions) {
       this.subscriptions.dispose()
     }
-    this.subscriptions = null
   }
 
   /**

@@ -7,11 +7,11 @@ import { DatatipService } from "atom-ide-base"
 /**
  * [subscriptions description]
  */
-let subscriptions: CompositeDisposable | null = null
+let subscriptions: CompositeDisposable
 /**
  * [datatipManager description]
  */
-let datatipManager: DataTipManager | null = null
+let datatipManager: DataTipManager
 
 /**
  * called by Atom when activating an extension
@@ -44,8 +44,6 @@ export function deactivate() {
   if (subscriptions) {
     subscriptions.dispose()
   }
-  subscriptions = null
-  datatipManager = null
 }
 
 /**
