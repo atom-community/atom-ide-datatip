@@ -31,8 +31,9 @@ async function install_deps() {
   // install package-deps if not loaded
   if (!atom.packages.isPackageLoaded("busy-signal")) {
     // Dynamic import https://mariusschulz.com/blog/dynamic-import-expressions-in-typescript
+    // @ts-ignore
     await import("atom-package-deps").then((atom_package_deps) => {
-      atom_package_deps.install("atom-ide-datatip")
+      atom_package_deps.install("atom-ide-datatip", true)
     })
   }
 }
