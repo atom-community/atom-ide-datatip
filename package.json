@@ -30,11 +30,11 @@
     "busy-signal"
   ],
   "dependencies": {
-    "atom-package-deps": "^6.0.0",
+    "atom-package-deps": "^7.1.0",
     "atom-ide-base": "^2.1.1"
   },
   "devDependencies": {
-    "@types/atom": "^1.40.4",
+    "@types/atom": "^1.40.7",
     "@types/node": "^14.14.2",
     "atom-languageclient": "^1.0.0",
     "@types/jasmine": "^3.5.14",
@@ -44,8 +44,8 @@
     "prettier": "^2.1.2",
     "eslint": "7.11.0",
     "eslint-config-atomic": "^1.5.0",
-    "rollup": "^2.32.1",
-    "rollup-plugin-atomic": "^1.6.2",
+    "rollup": "^2.38.0",
+    "rollup-plugin-atomic": "^2.0.1",
     "shx": "^0.3.2",
     "cross-env": "latest",
     "@babel/cli": "7.12.1",
