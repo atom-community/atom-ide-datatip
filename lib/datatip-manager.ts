@@ -8,27 +8,23 @@ import { ProviderRegistry } from "atom-ide-base/commons-atom/ProviderRegistry"
 export class DataTipManager {
   /**
    * holds a reference to disposable items from this data tip manager
-   * @type {CompositeDisposable}
    */
-  subscriptions = new CompositeDisposable()
+  subscriptions: CompositeDisposable = new CompositeDisposable()
 
   /**
    * holds a list of registered data tip providers
-   * @type {ProviderRegistry<DatatipProvider>}
    */
-  providerRegistry = new ProviderRegistry()
+  providerRegistry: ProviderRegistry<DatatipProvider> = new ProviderRegistry()
 
   /**
    * holds a weak reference to all watched Atom text editors
-   * @type {WeakSet<TextEditor>}
    */
-  watchedEditors = new WeakSet()
+  watchedEditors: WeakSet<TextEditor> = new WeakSet()
 
   /**
    * holds a reference to the current watched Atom text editor
-   * @type {TextEditor}
    */
-  editor = null
+  editor: TextEditor | null = null
 
   /**
    * holds a reference to the current watched Atom text editor viewbuffer
@@ -37,33 +33,28 @@ export class DataTipManager {
 
   /**
    * holds a reference to all disposable items for the current watched Atom text editor
-   * @type {CompositeDisposable}
    */
-  editorSubscriptions = null
+  editorSubscriptions: CompositeDisposable | null = null
 
   /**
    * holds a reference to all disposable items for the current data tip
-   * @type {CompositeDisposable}
    */
-  dataTipMarkerDisposables = null
+  dataTipMarkerDisposables: CompositeDisposable | null = null
 
   /**
    * config flag denoting if the data tip should be shown when moving the cursor on screen
-   * @type {Boolean}
    */
   showDataTipOnCursorMove = false
 
   /**
    * config flag denoting if the data tip should be shown when moving the mouse cursor around
-   * @type {Boolean}
    */
   showDataTipOnMouseMove = false
 
   /**
    * holds the range of the current data tip to prevent unnecessary show/hide calls
-   * @type {Range}
    */
-  currentMarkerRange = null
+  currentMarkerRange: Range | null = null
 
   /**
    * to optimize show/hide calls we set a timeout of hoverTime for the mouse movement
@@ -263,7 +254,6 @@ export class DataTipManager {
 
   /**
    * the central mouse movement event handler
-   * @param evt [description]
    */
   onMouseMoveEvt(evt: MouseEvent) {
     if (this.mouseMoveTimer) {

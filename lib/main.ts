@@ -5,20 +5,13 @@ import { DataTipManager } from "./datatip-manager"
 import { DatatipService } from "atom-ide-base"
 
 /**
- * the Atom IDE data tip plugin
- * @type {Object}
- */
-
-/**
  * [subscriptions description]
- * @type {CompositeDisposable}
  */
-let subscriptions
+let subscriptions: CompositeDisposable | null = null
 /**
  * [datatipManager description]
- * @type {DataTipManager}
  */
-let datatipManager
+let datatipManager: DataTipManager | null = null
 
 /**
  * called by Atom when activating an extension
@@ -61,7 +54,7 @@ export function deactivate() {
  * @return { DatatipService } the current DataTipManager instance
  */
 export function provideDatatipService() {
-  return datatipManager.datatipService
+  return datatipManager!.datatipService
 }
 
 export const config = {
