@@ -279,6 +279,7 @@ export class DataTipManager {
         // means the mouse event occured quite far away from where the text ends on that row. Do not
         // show the datatip in such situations and hide any existing datatips (the mouse moved more to
         // the right, away from the actual text)
+        // @ts-ignore: internal API
         if (distance >= this.editor.getDefaultCharWidth()) {
           return this.unmountDataTip()
         }
