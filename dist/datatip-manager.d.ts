@@ -23,12 +23,12 @@ export declare class DataTipManager {
     dispose(): void;
     get datatipService(): ProviderRegistry<DatatipProvider>;
     watchEditor(editor: TextEditor): Disposable | undefined;
-    updateCurrentEditor(editor: TextEditor): void;
+    updateCurrentEditor(editor: TextEditor | null): void;
     onCursorMoveEvt(evt: CursorPositionChangedEvent): void;
     onMouseMoveEvt(evt: MouseEvent): void;
     onMouseWheel(evt: WheelEvent): void;
-    onCommandEvt(evt: CommandEvent): void;
-    showDataTip(editor: TextEditor, position: Point, evt: CursorPositionChangedEvent | MouseEvent | null): Promise<void>;
+    onCommandEvt(evt: CommandEvent<TextEditorElement>): void;
+    showDataTip(editor: TextEditor, position: Point): Promise<void>;
     mountDataTipWithMarker(editor: TextEditor, range: Range, position: Point, view: ViewContainer): CompositeDisposable | null;
     unmountDataTip(): void;
 }

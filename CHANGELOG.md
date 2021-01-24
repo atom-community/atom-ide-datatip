@@ -1,3 +1,12 @@
+## [0.21.1](https://github.com/atom-community/atom-ide-datatip/compare/v0.21.0...v0.21.1) (2021-01-24)
+
+
+### Bug Fixes
+
+* do not show datatip on cursor stay ([f34e02a](https://github.com/atom-community/atom-ide-datatip/commit/f34e02a9a2e0039c6b11dc8ca118a056bceea8fc))
+* make config a json file ([86b7b0d](https://github.com/atom-community/atom-ide-datatip/commit/86b7b0dab614184722da2793bc3e97316a0f9a08))
+* show datatip on mouse move automatically ([d2196b4](https://github.com/atom-community/atom-ide-datatip/commit/d2196b4b9aadaa500077976fe0e38506b8918fda))
+
 # [0.21.0](https://github.com/atom-community/atom-ide-datatip/compare/v0.20.4...v0.21.0) (2021-01-23)
 
 
