@@ -1,8 +1,8 @@
-// @ts-check
-
 import { CompositeDisposable } from "atom"
 import { DataTipManager } from "./datatip-manager"
 import type { DatatipService } from "atom-ide-base"
+
+export { default as config } from "./config.json"
 
 /**
  * [subscriptions description]
@@ -53,33 +53,4 @@ export function deactivate() {
  */
 export function provideDatatipService(): DatatipService {
   return datatipManager!.datatipService
-}
-
-export const config = {
-  showDataTipOnCursorMove: {
-    title: 'Show datatip automatically on "cursor" stay',
-    description:
-      "If set to true, the data tip is shown as soon as you move your cursor stays on a word. Otherwise you will have to activate it via keypress.",
-    type: "boolean",
-    default: true,
-  },
-  showDataTipOnMouseMove: {
-    title: 'Show datatip automatically on "mouse" hover',
-    description: "If set to true, the data tip is shown as soon as mouse hovers on a word.",
-    type: "boolean",
-    default: false,
-  },
-  hoverTime: {
-    title: "Hover/Stay Time",
-    description:
-      "The time that the mouse/cursor should hover/stay to show a datatip. Also specifies the time that the datatip is still shown when the mouse/cursor moves [ms].",
-    type: "number",
-    default: 80,
-  },
-  glowOnHover: {
-    title: "Glow on hover",
-    description: "Should the datatip glow when you hover on it?",
-    type: "boolean",
-    default: true,
-  },
 }

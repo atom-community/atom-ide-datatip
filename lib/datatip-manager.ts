@@ -1,6 +1,13 @@
-// @ts-check
-
-import { CompositeDisposable, Disposable, Range, Point, TextEditor, TextEditorElement, CommandEvent, CursorPositionChangedEvent } from "atom"
+import {
+  CompositeDisposable,
+  Disposable,
+  Range,
+  Point,
+  TextEditor,
+  TextEditorElement,
+  CommandEvent,
+  CursorPositionChangedEvent,
+} from "atom"
 import type { Datatip, DatatipProvider } from "atom-ide-base"
 import { ViewContainer } from "atom-ide-base/commons-ui/float-pane/ViewContainer"
 import { ProviderRegistry } from "atom-ide-base/commons-atom/ProviderRegistry"
@@ -49,7 +56,7 @@ export class DataTipManager {
   /**
    * config flag denoting if the data tip should be shown when moving the mouse cursor around
    */
-  showDataTipOnMouseMove = false
+  showDataTipOnMouseMove = true
 
   /**
    * holds the range of the current data tip to prevent unnecessary show/hide calls
@@ -328,10 +335,7 @@ export class DataTipManager {
    * @param evt the original event triggering this data tip evaluation
    * @return a promise object to track the asynchronous operation
    */
-  async showDataTip(
-    editor: TextEditor,
-    position: Point,
-  ): Promise<void> {
+  async showDataTip(editor: TextEditor, position: Point): Promise<void> {
     try {
       let datatip: Datatip | null = null
       for (const provider of this.providerRegistry.getAllProvidersForEditor(editor)) {
@@ -424,7 +428,12 @@ export class DataTipManager {
    * @param  view the data tip component to display
    * @return a composite object to release references at a later stage
    */
-  mountDataTipWithMarker(editor: TextEditor, range: Range, position: Point, view: ViewContainer): CompositeDisposable | null {
+  mountDataTipWithMarker(
+    editor: TextEditor,
+    range: Range,
+    position: Point,
+    view: ViewContainer
+  ): CompositeDisposable | null {
     // TODO do we need this?
     if (!view.element) {
       // if the element is not created return right away
