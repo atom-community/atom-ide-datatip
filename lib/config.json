@@ -9,7 +9,7 @@
     "description": "If set to true, the data tip is shown as soon as mouse hovers on a word.",
     "title": "Show datatip automatically on 'mouse' hover",
     "type": "boolean",
-    "default": false
+    "default": true
   },
   "hoverTime": {
     "title": "Hover/Stay Time",
