@@ -1,5 +1,3 @@
-// @ts-check
-
 import { CompositeDisposable } from "atom"
 import { DataTipManager } from "./datatip-manager"
 import type { DatatipService } from "atom-ide-base"
