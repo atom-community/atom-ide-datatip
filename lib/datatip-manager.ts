@@ -58,7 +58,7 @@ export class DataTipManager {
   /**
    * config flag denoting if the data tip should be shown when moving the mouse cursor around
    */
-  showDataTipOnMouseMove = false
+  showDataTipOnMouseMove = true
 
   /**
    * holds the range of the current data tip to prevent unnecessary show/hide calls
