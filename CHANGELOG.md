@@ -1,3 +1,10 @@
+# [0.22.0](https://github.com/atom-community/atom-ide-datatip/compare/v0.21.1...v0.22.0) (2021-01-30)
+
+
+### Features
+
+* use gray color for datatips (doc category) ([1379cd2](https://github.com/atom-community/atom-ide-datatip/commit/1379cd25e4051f15b1a0582adfbe36015ee519c3))
+
 ## [0.21.1](https://github.com/atom-community/atom-ide-datatip/compare/v0.21.0...v0.21.1) (2021-01-24)
 
 
