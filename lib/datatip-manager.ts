@@ -488,10 +488,12 @@ export class DataTipManager {
 
     element.addEventListener("mouseenter", () => {
       this.editorView?.removeEventListener("mousemove", this.onMouseMoveEvt)
+      element.addEventListener("keydown", copyListener)
     })
 
     element.addEventListener("mouseleave", () => {
       this.editorView?.addEventListener("mousemove", this.onMouseMoveEvt)
+      element.removeEventListener("keydown", copyListener)
     })
 
     // TODO move this code to atom-ide-base
@@ -516,3 +518,14 @@ export class DataTipManager {
     this.dataTipMarkerDisposables = null
   }
 }
+
+// TODO we should not need this
+/** A manual copy listener */
+function copyListener(event: KeyboardEvent) {
+  event.preventDefault()
+  if (event.ctrlKey && event.key === "c") {
+    const text = document.getSelection()?.toString() ?? ""
+    navigator.clipboard.writeText(text).catch(() => {})
+  }
+}
+
