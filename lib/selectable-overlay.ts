@@ -15,7 +15,7 @@ export function makeOverlaySelectable(editor: TextEditor, overlayElement: HTMLEl
   - focus on the datatip once the text is selected (cursor gets disabled temporarily)
   - remove focus once mouse leaves
 */
-function overlayFocusFix(editor: TextEditor, element: HTMLElement) {
+export function overlayFocusFix(editor: TextEditor, element: HTMLElement) {
   const editorComponent = atom.views.getView(editor).getComponent()
   element.addEventListener("mousedown", () => {
     blurEditor(editorComponent)
@@ -54,12 +54,12 @@ export async function copyListener(event: KeyboardEvent) {
   }
 } // TODO we should not need to manually listen for copy paste
 
-function focusEditor(editorComponent: TextEditorComponent) {
+export function focusEditor(editorComponent: TextEditorComponent) {
   // @ts-ignore
   editorComponent?.didFocus()
 }
 
-function blurEditor(editorComponent: TextEditorComponent) {
+export function blurEditor(editorComponent: TextEditorComponent) {
   // @ts-ignore
   editorComponent?.didBlurHiddenInput({
     relatedTarget: null,
