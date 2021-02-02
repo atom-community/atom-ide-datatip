@@ -20,7 +20,21 @@ function overlayFocusFix(editor: TextEditor, element: HTMLElement) {
   })
 }
 
-/** A manual copy listener
+/** Makes the overlay component copyable
+  - you should call `makeOverlaySelectable` before this
+  - If your element already has mouseenter and mouseleav listeners, directly use `copyListener` */
+export function makeOverLayCopyable(element: HTMLElement) {
+  element.addEventListener("mouseenter", () => {
+    element.addEventListener("keydown", copyListener)
+  })
+
+  element.addEventListener("mouseleave", () => {
+    element.removeEventListener("keydown", copyListener)
+  })
+}
+
+/**
+ * A manual copy listener
  * Usage. Add the listener to your mouse enter and mouseleave listeners
    ```ts
    element.addEventListener("mouseenter", () => {element.addEventListener("keydown", copyListener)}`
