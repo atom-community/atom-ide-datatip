@@ -434,7 +434,7 @@ export class DataTipManager {
     position: Point,
     view: ViewContainer
   ): CompositeDisposable | null {
-    const { element } = view
+    const element = view.element as HTMLElement
 
     // TODO do we need this?
     if (!element) {
