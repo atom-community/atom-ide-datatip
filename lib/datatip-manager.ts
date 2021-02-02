@@ -7,11 +7,11 @@ import {
   TextEditorElement,
   CommandEvent,
   CursorPositionChangedEvent,
-  TextEditorComponent,
 } from "atom"
 import type { Datatip, DatatipProvider } from "atom-ide-base"
 import { ViewContainer } from "atom-ide-base/commons-ui/float-pane/ViewContainer"
 import { ProviderRegistry } from "atom-ide-base/commons-atom/ProviderRegistry"
+import { makeOverlaySelectable, copyListener } from "./selectable-overlay"
 
 export class DataTipManager {
   /**
@@ -476,7 +476,7 @@ export class DataTipManager {
       invalidate: "never",
     })
 
-    //
+    // makes overlay selectable
     makeOverlaySelectable(editor, element)
 
     editor.decorateMarker(overlayMarker, {
@@ -486,7 +486,6 @@ export class DataTipManager {
       item: element,
     })
     disposables.add(new Disposable(() => overlayMarker.destroy()))
-
 
     element.addEventListener("mouseenter", () => {
       this.editorView?.removeEventListener("mousemove", this.onMouseMoveEvt)
@@ -519,47 +518,4 @@ export class DataTipManager {
     this.dataTipMarkerDisposables?.dispose()
     this.dataTipMarkerDisposables = null
   }
-}
-
-/** makes the text selectable with the help of user-select: text */
-function makeOverlaySelectable(editor: TextEditor, overlayElement: HTMLElement) {
-  overlayElement.setAttribute("tabindex", "-1")
-  overlayFocusFix(editor, overlayElement)
-}
-
-function overlayFocusFix(editor: TextEditor, element: HTMLElement) {
-  const editorComponent = atom.views.getView(editor).getComponent()
-  /**
-    - focus on the datatip once the text is selected (cursor gets disabled temporarily)
-    - remove focus once mouse leaves
-  */
-  element.addEventListener("mousedown", () => {
-    blurEditor(editorComponent)
-    element.addEventListener("mouseleave", () => {
-      focusEditor(editorComponent)
-    })
-  })
-
-}
-
-// TODO we should not need this
-/** A manual copy listener */
-async function copyListener(event: KeyboardEvent) {
-  event.preventDefault()
-  if (event.ctrlKey && event.key === "c") {
-    const text = document.getSelection()?.toString() ?? ""
-    await navigator.clipboard.writeText(text)
-  }
-}
-
-function focusEditor(editorComponent: TextEditorComponent) {
-  // @ts-ignore
-  editorComponent?.didFocus()
-}
-
-function blurEditor(editorComponent: TextEditorComponent) {
-  // @ts-ignore
-  editorComponent?.didBlurHiddenInput({
-    relatedTarget: null,
-  })
 }
