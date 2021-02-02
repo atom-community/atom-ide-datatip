@@ -535,11 +535,11 @@ export class DataTipManager {
 
 // TODO we should not need this
 /** A manual copy listener */
-function copyListener(event: KeyboardEvent) {
+async function copyListener(event: KeyboardEvent) {
   event.preventDefault()
   if (event.ctrlKey && event.key === "c") {
     const text = document.getSelection()?.toString() ?? ""
-    navigator.clipboard.writeText(text).catch(() => {})
+    await navigator.clipboard.writeText(text)
   }
 }
 
