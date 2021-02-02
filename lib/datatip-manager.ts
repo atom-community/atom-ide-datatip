@@ -474,6 +474,10 @@ export class DataTipManager {
     const overlayMarker = editor.markBufferRange(new Range(position, position), {
       invalidate: "never",
     })
+
+    // makes the text selectable with the help of user-select: text
+    element.setAttribute("tabindex", "-1")
+
     editor.decorateMarker(overlayMarker, {
       type: "overlay",
       class: "datatip-overlay",

@@ -5,8 +5,9 @@
   overflow: auto; // prevents the long text to come out of the datatip
   color: @syntax-text-color;
   white-space: nowrap;
+
   pointer-events: all; // hyperlinks will work
-  // user-select: text;   // allow selecting text // TODO does not work
+  user-select: text; // allow selecting text
 
   font-family: @font-family;
   font-size: var(--editor-font-size);
@@ -85,20 +86,17 @@
   .list-tree {
     cursor: inherit;
   }
-  // user-select: text;   // allow selecting text // TODO does not work
 }
 
 /** Applied to MarkdownView */
 
 .datatip-markdown > div:not(:last-child) {
   border-bottom: 1px solid fade(@syntax-cursor-color, 10%);
-  // user-select: text;   // allow selecting text // TODO does not work
 }
 
 .datatip-markdown-container {
   color: @syntax-text-color;
   white-space: normal;
-  // user-select: text;
 
   // Avoid excess internal padding from markdown blocks.
   :first-child {
@@ -130,7 +128,6 @@
   .cursors {
     display: none;
   }
-  // user-select: text;   // allow selecting text // TODO does not work
 }
 
 // Highlight the hovered words
