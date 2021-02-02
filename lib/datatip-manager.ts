@@ -434,8 +434,10 @@ export class DataTipManager {
     position: Point,
     view: ViewContainer
   ): CompositeDisposable | null {
+    const { element } = view
+
     // TODO do we need this?
-    if (!view.element) {
+    if (!element) {
       // if the element is not created return right away
       return this.dataTipMarkerDisposables
     }
@@ -476,20 +478,20 @@ export class DataTipManager {
       type: "overlay",
       class: "datatip-overlay",
       position: "tail",
-      item: view.element,
+      item: element,
     })
     disposables.add(new Disposable(() => overlayMarker.destroy()))
 
-    view.element.addEventListener("mouseenter", () => {
+    element.addEventListener("mouseenter", () => {
       this.editorView?.removeEventListener("mousemove", this.onMouseMoveEvt)
     })
 
-    view.element.addEventListener("mouseleave", () => {
+    element.addEventListener("mouseleave", () => {
       this.editorView?.addEventListener("mousemove", this.onMouseMoveEvt)
     })
 
     // TODO move this code to atom-ide-base
-    view.element.addEventListener("mousewheel", this.onMouseWheel, { passive: true })
+    element.addEventListener("mousewheel", this.onMouseWheel, { passive: true })
 
     disposables.add(
       new Disposable(() => {
