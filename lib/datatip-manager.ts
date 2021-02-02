@@ -491,7 +491,7 @@ export class DataTipManager {
     })
 
     // TODO move this code to atom-ide-base
-    element.addEventListener("mousewheel", this.onMouseWheel, { passive: true })
+    element.addEventListener("wheel", this.onMouseWheel, { passive: true })
 
     disposables.add(
       new Disposable(() => {
