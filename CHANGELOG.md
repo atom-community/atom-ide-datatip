@@ -1,3 +1,17 @@
+## [0.23.1](https://github.com/atom-community/atom-ide-datatip/compare/v0.23.0...v0.23.1) (2021-02-02)
+
+
+### Bug Fixes
+
+* add makeOverLayCopyable function ([a62a5b0](https://github.com/atom-community/atom-ide-datatip/commit/a62a5b0a284c244f0404b63582df8404a989b45b))
+* add userSelect override in makeOverlaySelectable ([19ffa09](https://github.com/atom-community/atom-ide-datatip/commit/19ffa0929fdec14d1c86d2fab96ec85fe4779543))
+* create selectable-overlay file ([7b261e1](https://github.com/atom-community/atom-ide-datatip/commit/7b261e12e4fa05b7eb3861a8c0fa62d4a20a8474))
+* export all functions ([0b0aa9c](https://github.com/atom-community/atom-ide-datatip/commit/0b0aa9ca3aff291fe6d103ca76d5e491350eb940))
+* refactor makeOverlaySelectable ([235163e](https://github.com/atom-community/atom-ide-datatip/commit/235163e9314dc364920e8633ccc180c9507c278b))
+* refactor overlayFocusFix ([80eb5b5](https://github.com/atom-community/atom-ide-datatip/commit/80eb5b5524aca3a0a1ae43779356acb7f5696071))
+* update atomi-ide-base ([a08af45](https://github.com/atom-community/atom-ide-datatip/commit/a08af45bb05416638df205c2a58f4a66d6ee9c0f))
+* use atom-ide-base selectable-overlay functions ([eba2a13](https://github.com/atom-community/atom-ide-datatip/commit/eba2a1346025c332ba265f00f0d390611f93a4ca))
+
 # [0.23.0](https://github.com/atom-community/atom-ide-datatip/compare/v0.22.1...v0.23.0) (2021-02-02)
 
 

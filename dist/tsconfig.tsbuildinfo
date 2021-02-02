@@ -387,8 +387,8 @@
         "affectsGlobalScope": true
       },
       "../node_modules/atom-ide-base/types-packages/busy-signal.d.ts": {
-        "version": "d12c163bd62d14d755ef37b92f99da3cb50608538bf72b3b15b69948db970699",
-        "signature": "d12c163bd62d14d755ef37b92f99da3cb50608538bf72b3b15b69948db970699",
+        "version": "921b3ecb9fa8126c8df1aa6ca84d826aeec4b79ec626862dcc95848559ac3e42",
+        "signature": "921b3ecb9fa8126c8df1aa6ca84d826aeec4b79ec626862dcc95848559ac3e42",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/atom/linter/config.d.ts": {
@@ -402,53 +402,53 @@
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/code-actions.d.ts": {
-        "version": "58e7bb37f50469e891f652ea55f467355d00df64d757d7e2830557e2d76e142a",
-        "signature": "58e7bb37f50469e891f652ea55f467355d00df64d757d7e2830557e2d76e142a",
+        "version": "9203301efaed9db5b0c10f17092c2a7c51c86e480a0aacbf10aaa313fc3a3b12",
+        "signature": "9203301efaed9db5b0c10f17092c2a7c51c86e480a0aacbf10aaa313fc3a3b12",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/code-highlight.d.ts": {
-        "version": "fbd7be81aa16097d5bc0ff89c9aab1d480671c138b42bd45c6c2b55671576d9f",
-        "signature": "fbd7be81aa16097d5bc0ff89c9aab1d480671c138b42bd45c6c2b55671576d9f",
+        "version": "87dd41b85c6a3d3325a8b3ab428c9c1f76bc6d1b651c879fa97d59223451cdcd",
+        "signature": "87dd41b85c6a3d3325a8b3ab428c9c1f76bc6d1b651c879fa97d59223451cdcd",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/datatip.d.ts": {
-        "version": "a5baef940358648ee24bf14da93ebdd9dd6985c12f45d67dfece89a77939f107",
-        "signature": "a5baef940358648ee24bf14da93ebdd9dd6985c12f45d67dfece89a77939f107",
+        "version": "86ca56b2006d3fb3f88fea7efbe27ac84fc3a3f8e5f795ceab538f9f792f2ab8",
+        "signature": "86ca56b2006d3fb3f88fea7efbe27ac84fc3a3f8e5f795ceab538f9f792f2ab8",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/definitions.d.ts": {
-        "version": "54c8be44ffe76da698b775c974ca6eaa61dff831c6b623887f451f146c9be3fb",
-        "signature": "54c8be44ffe76da698b775c974ca6eaa61dff831c6b623887f451f146c9be3fb",
+        "version": "5ca6d5604a9fc45fb854a9f456f7a06e9f0253edb262977930a161b064faf173",
+        "signature": "5ca6d5604a9fc45fb854a9f456f7a06e9f0253edb262977930a161b064faf173",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/find-references.d.ts": {
-        "version": "174999ced2887ab7f847b6513d609c0667e0d8075bd6b611388ff34275c1c3cb",
-        "signature": "174999ced2887ab7f847b6513d609c0667e0d8075bd6b611388ff34275c1c3cb",
+        "version": "6c456ecf8ebd3e2512cf572e228d99665c9a7d5ed854115276f3d2dce11fa6df",
+        "signature": "6c456ecf8ebd3e2512cf572e228d99665c9a7d5ed854115276f3d2dce11fa6df",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/hyperclick.d.ts": {
-        "version": "2cc6083956727e5bdfc2fce30131c09cf8b8f3a2b1289b015c9dbac4fc6c93c4",
-        "signature": "2cc6083956727e5bdfc2fce30131c09cf8b8f3a2b1289b015c9dbac4fc6c93c4",
+        "version": "ab168fc1219e2fbd709090fd102b12610e1c1a7e0615097f5d9ff19ca442fa12",
+        "signature": "ab168fc1219e2fbd709090fd102b12610e1c1a7e0615097f5d9ff19ca442fa12",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/outline.d.ts": {
-        "version": "6c9fefc9d2148a948eb9f4fcc9188ed9e0dc1224b1986f90b4200d046c5d54c6",
-        "signature": "6c9fefc9d2148a948eb9f4fcc9188ed9e0dc1224b1986f90b4200d046c5d54c6",
+        "version": "60f96b541f2b63e7f30ab642707c45fe8454d6bb22545925c4906a55f4532254",
+        "signature": "60f96b541f2b63e7f30ab642707c45fe8454d6bb22545925c4906a55f4532254",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/sig-help.d.ts": {
-        "version": "eea66d57b2b62c9f902739ea85ee2300b9876d2ca888031522cfd0dec1a6c2ad",
-        "signature": "eea66d57b2b62c9f902739ea85ee2300b9876d2ca888031522cfd0dec1a6c2ad",
+        "version": "733d3a6fd4e4145856e5a6e83483db88e95405383ca22c5e5078fa4efb1b9756",
+        "signature": "733d3a6fd4e4145856e5a6e83483db88e95405383ca22c5e5078fa4efb1b9756",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/markdown-service.d.ts": {
-        "version": "743111bc08ef368a5efa5ee8b5e9b90acbf460235e9ea10a5fbf84bdd4a8d620",
-        "signature": "743111bc08ef368a5efa5ee8b5e9b90acbf460235e9ea10a5fbf84bdd4a8d620",
+        "version": "8ed56f7ff308bb0b7847f81abc90355f362a1267eb1772ab7cee46991b765e81",
+        "signature": "8ed56f7ff308bb0b7847f81abc90355f362a1267eb1772ab7cee46991b765e81",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/main.d.ts": {
-        "version": "d3c805e078fb9652847035a8add4756d248891d934bb44eb150c79b583b6ec43",
-        "signature": "d3c805e078fb9652847035a8add4756d248891d934bb44eb150c79b583b6ec43",
+        "version": "777c4e1049f5153eb1f5e61bdbd8f6d614a96618fc4bdf9a17b5ca6f9b27bb32",
+        "signature": "777c4e1049f5153eb1f5e61bdbd8f6d614a96618fc4bdf9a17b5ca6f9b27bb32",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/commons-ui/float-pane/MarkdownView.d.ts": {
@@ -476,8 +476,13 @@
         "signature": "5a4e2836fde9d3b5da50a9c4ae4ee01e46cafd3a221ff889fa234e0d4a1edea2",
         "affectsGlobalScope": false
       },
+      "../node_modules/atom-ide-base/commons-ui/float-pane/selectable-overlay.d.ts": {
+        "version": "3e494130022e8dbf6428a9aeefe9336aa2e83543f1c36d2ba5cd3922dec667a7",
+        "signature": "3e494130022e8dbf6428a9aeefe9336aa2e83543f1c36d2ba5cd3922dec667a7",
+        "affectsGlobalScope": false
+      },
       "../lib/datatip-manager.ts": {
-        "version": "22b883fbda3d957dd20df92f6b936c03b07f9c9933a45545d1b82d84bc6ece26",
+        "version": "56d5cd7a9119964d29b2177094301db754401074541405f2d08b5e7165b34a1b",
         "signature": "cc3831aa30011a0bc82d920d805d8bfc4c42927d2f6f6433608c8fe9284487a2",
         "affectsGlobalScope": false
       },
@@ -562,6 +567,7 @@
         "../node_modules/@types/atom/index.d.ts",
         "../node_modules/atom-ide-base/commons-atom/ProviderRegistry.d.ts",
         "../node_modules/atom-ide-base/commons-ui/float-pane/ViewContainer.d.ts",
+        "../node_modules/atom-ide-base/commons-ui/float-pane/selectable-overlay.d.ts",
         "../node_modules/atom-ide-base/types-packages/main.d.ts",
         "../node_modules/tslib/tslib.d.ts"
       ],
@@ -771,6 +777,9 @@
         "../node_modules/atom-ide-base/commons-ui/float-pane/MarkdownView.d.ts",
         "../node_modules/atom-ide-base/commons-ui/float-pane/ReactView.d.ts",
         "../node_modules/atom-ide-base/commons-ui/float-pane/SnippetView.d.ts"
+      ],
+      "../node_modules/atom-ide-base/commons-ui/float-pane/selectable-overlay.d.ts": [
+        "../node_modules/@types/atom/index.d.ts"
       ],
       "../node_modules/atom-ide-base/types-packages/code-actions.d.ts": [
         "../node_modules/@types/atom/index.d.ts",
@@ -1021,6 +1030,9 @@
         "../node_modules/atom-ide-base/commons-ui/float-pane/ReactView.d.ts",
         "../node_modules/atom-ide-base/commons-ui/float-pane/SnippetView.d.ts"
       ],
+      "../node_modules/atom-ide-base/commons-ui/float-pane/selectable-overlay.d.ts": [
+        "../node_modules/@types/atom/index.d.ts"
+      ],
       "../node_modules/atom-ide-base/types-packages/code-actions.d.ts": [
         "../node_modules/@types/atom/index.d.ts",
         "../node_modules/@types/atom/linter/index.d.ts"
@@ -1066,7 +1078,7 @@
         [
           {
             "file": "../lib/datatip-manager.ts",
-            "start": 11789,
+            "start": 11875,
             "length": 300,
             "messageText": "Expected 0 arguments, but got 1.",
             "category": 1,
@@ -1074,7 +1086,7 @@
           },
           {
             "file": "../lib/datatip-manager.ts",
-            "start": 13385,
+            "start": 13471,
             "length": 141,
             "messageText": "Expected 0 arguments, but got 1.",
             "category": 1,
@@ -1143,6 +1155,7 @@
       "../node_modules/atom-ide-base/commons-ui/float-pane/ReactView.d.ts",
       "../node_modules/atom-ide-base/commons-ui/float-pane/SnippetView.d.ts",
       "../node_modules/atom-ide-base/commons-ui/float-pane/ViewContainer.d.ts",
+      "../node_modules/atom-ide-base/commons-ui/float-pane/selectable-overlay.d.ts",
       "../node_modules/atom-ide-base/types-packages/busy-signal.d.ts",
       "../node_modules/atom-ide-base/types-packages/code-actions.d.ts",
       "../node_modules/atom-ide-base/types-packages/code-highlight.d.ts",
