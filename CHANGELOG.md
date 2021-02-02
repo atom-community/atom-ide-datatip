@@ -1,3 +1,18 @@
+# [0.23.0](https://github.com/atom-community/atom-ide-datatip/compare/v0.22.1...v0.23.0) (2021-02-02)
+
+
+### Bug Fixes
+
+* make copyListener async ([ceff0e2](https://github.com/atom-community/atom-ide-datatip/commit/ceff0e2971f35d133371bb167ae3421661c5f5b3))
+* remove focus once mouse leaves ([6dffe99](https://github.com/atom-community/atom-ide-datatip/commit/6dffe99571260a846dcff7e4ec075bb7c180eb23))
+
+
+### Features
+
+* make datatip text copyable ([9e04409](https://github.com/atom-community/atom-ide-datatip/commit/9e044098cc56dc93cf89d2e8d18ce16604cfec4f))
+* make datatip text selectable ([9c2a28e](https://github.com/atom-community/atom-ide-datatip/commit/9c2a28ec6987aaf9791688d5eca40f582cf27249))
+* remove z-index override ([426d303](https://github.com/atom-community/atom-ide-datatip/commit/426d303cb84570f527c21d182a7928e40e82ba0c))
+
 ## [0.22.1](https://github.com/atom-community/atom-ide-datatip/compare/v0.22.0...v0.22.1) (2021-01-31)
 
 
