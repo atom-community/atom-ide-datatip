@@ -1,8 +1,13 @@
 import { TextEditor, TextEditorComponent } from "atom"
 
-/** makes the text selectable with the help of `user-select: text` and `pointer-events: all` in CSS */
+/** makes the text selectable
+  - You can directly add `user-select: text` and `pointer-events: all` in CSS for better performance
+  */
 export function makeOverlaySelectable(editor: TextEditor, overlayElement: HTMLElement) {
   overlayElement.setAttribute("tabindex", "-1")
+  if (overlayElement.style.userSelect === "none") {
+    overlayElement.style.userSelect = "text"
+  }
   overlayFocusFix(editor, overlayElement)
 }
 
