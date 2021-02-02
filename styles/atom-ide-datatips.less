@@ -5,8 +5,9 @@
   overflow: auto; // prevents the long text to come out of the datatip
   color: @syntax-text-color;
   white-space: nowrap;
+
   pointer-events: all; // hyperlinks will work
-  // user-select: text;   // allow selecting text // TODO does not work
+  user-select: text; // allow selecting text
 
   font-family: @font-family;
   font-size: var(--editor-font-size);
@@ -46,11 +47,6 @@
 }
 
 .datatip-overlay {
-  z-index: 12 !important; // HACK: exceed the z-index of
-  // .atom-dock-resize-handle-resizable, so that
-  // mouseleaves aren't triggered when the cursor enters
-  // the resizable
-
   // info border
   border-bottom: 5px solid @background-color-highlight;
   border-radius: 3px;
@@ -85,20 +81,17 @@
   .list-tree {
     cursor: inherit;
   }
-  // user-select: text;   // allow selecting text // TODO does not work
 }
 
 /** Applied to MarkdownView */
 
 .datatip-markdown > div:not(:last-child) {
   border-bottom: 1px solid fade(@syntax-cursor-color, 10%);
-  // user-select: text;   // allow selecting text // TODO does not work
 }
 
 .datatip-markdown-container {
   color: @syntax-text-color;
   white-space: normal;
-  // user-select: text;
 
   // Avoid excess internal padding from markdown blocks.
   :first-child {
@@ -130,7 +123,6 @@
   .cursors {
     display: none;
   }
-  // user-select: text;   // allow selecting text // TODO does not work
 }
 
 // Highlight the hovered words
