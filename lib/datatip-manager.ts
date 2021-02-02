@@ -478,6 +478,7 @@ export class DataTipManager {
 
     // makes the text selectable with the help of user-select: text
     element.setAttribute("tabindex", "-1")
+    overlayFocusFix(editor, element)
 
     editor.decorateMarker(overlayMarker, {
       type: "overlay",
@@ -487,7 +488,6 @@ export class DataTipManager {
     })
     disposables.add(new Disposable(() => overlayMarker.destroy()))
 
-    const editorComponent = atom.views.getView(editor).getComponent()
 
     element.addEventListener("mouseenter", () => {
       this.editorView?.removeEventListener("mousemove", this.onMouseMoveEvt)
@@ -497,17 +497,6 @@ export class DataTipManager {
     element.addEventListener("mouseleave", () => {
       this.editorView?.addEventListener("mousemove", this.onMouseMoveEvt)
       element.removeEventListener("keydown", copyListener)
-    })
-
-    /**
-      - focus on the datatip once the text is selected (cursor gets disabled temporarily)
-      - remove focus once mouse leaves
-    */
-    element.addEventListener("mousedown", () => {
-      blurEditor(editorComponent)
-      element.addEventListener("mouseleave", () => {
-        focusEditor(editorComponent)
-      })
     })
 
     // TODO move this code to atom-ide-base
@@ -531,6 +520,21 @@ export class DataTipManager {
     this.dataTipMarkerDisposables?.dispose()
     this.dataTipMarkerDisposables = null
   }
+}
+
+function overlayFocusFix(editor: TextEditor, element: HTMLElement) {
+  const editorComponent = atom.views.getView(editor).getComponent()
+  /**
+    - focus on the datatip once the text is selected (cursor gets disabled temporarily)
+    - remove focus once mouse leaves
+  */
+  element.addEventListener("mousedown", () => {
+    blurEditor(editorComponent)
+    element.addEventListener("mouseleave", () => {
+      focusEditor(editorComponent)
+    })
+  })
+
 }
 
 // TODO we should not need this
