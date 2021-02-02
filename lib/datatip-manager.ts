@@ -476,9 +476,8 @@ export class DataTipManager {
       invalidate: "never",
     })
 
-    // makes the text selectable with the help of user-select: text
-    element.setAttribute("tabindex", "-1")
-    overlayFocusFix(editor, element)
+    //
+    makeOverlaySelectable(editor, element)
 
     editor.decorateMarker(overlayMarker, {
       type: "overlay",
@@ -520,6 +519,12 @@ export class DataTipManager {
     this.dataTipMarkerDisposables?.dispose()
     this.dataTipMarkerDisposables = null
   }
+}
+
+/** makes the text selectable with the help of user-select: text */
+function makeOverlaySelectable(editor: TextEditor, overlayElement: HTMLElement) {
+  overlayElement.setAttribute("tabindex", "-1")
+  overlayFocusFix(editor, overlayElement)
 }
 
 function overlayFocusFix(editor: TextEditor, element: HTMLElement) {
