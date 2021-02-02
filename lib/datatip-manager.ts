@@ -7,11 +7,11 @@ import {
   TextEditorElement,
   CommandEvent,
   CursorPositionChangedEvent,
-  TextEditorComponent,
 } from "atom"
 import type { Datatip, DatatipProvider } from "atom-ide-base"
 import { ViewContainer } from "atom-ide-base/commons-ui/float-pane/ViewContainer"
 import { ProviderRegistry } from "atom-ide-base/commons-atom/ProviderRegistry"
+import { makeOverlaySelectable, copyListener } from "atom-ide-base/commons-ui/float-pane/selectable-overlay"
 
 export class DataTipManager {
   /**
@@ -476,8 +476,8 @@ export class DataTipManager {
       invalidate: "never",
     })
 
-    // makes the text selectable with the help of user-select: text
-    element.setAttribute("tabindex", "-1")
+    // makes overlay selectable
+    makeOverlaySelectable(editor, element)
 
     editor.decorateMarker(overlayMarker, {
       type: "overlay",
@@ -487,8 +487,6 @@ export class DataTipManager {
     })
     disposables.add(new Disposable(() => overlayMarker.destroy()))
 
-    const editorComponent = atom.views.getView(editor).getComponent()
-
     element.addEventListener("mouseenter", () => {
       this.editorView?.removeEventListener("mousemove", this.onMouseMoveEvt)
       element.addEventListener("keydown", copyListener)
@@ -497,17 +495,6 @@ export class DataTipManager {
     element.addEventListener("mouseleave", () => {
       this.editorView?.addEventListener("mousemove", this.onMouseMoveEvt)
       element.removeEventListener("keydown", copyListener)
-    })
-
-    /**
-      - focus on the datatip once the text is selected (cursor gets disabled temporarily)
-      - remove focus once mouse leaves
-    */
-    element.addEventListener("mousedown", () => {
-      blurEditor(editorComponent)
-      element.addEventListener("mouseleave", () => {
-        focusEditor(editorComponent)
-      })
     })
 
     // TODO move this code to atom-ide-base
@@ -531,26 +518,4 @@ export class DataTipManager {
     this.dataTipMarkerDisposables?.dispose()
     this.dataTipMarkerDisposables = null
   }
-}
-
-// TODO we should not need this
-/** A manual copy listener */
-async function copyListener(event: KeyboardEvent) {
-  event.preventDefault()
-  if (event.ctrlKey && event.key === "c") {
-    const text = document.getSelection()?.toString() ?? ""
-    await navigator.clipboard.writeText(text)
-  }
-}
-
-function focusEditor(editorComponent: TextEditorComponent) {
-  // @ts-ignore
-  editorComponent?.didFocus()
-}
-
-function blurEditor(editorComponent: TextEditorComponent) {
-  // @ts-ignore
-  editorComponent?.didBlurHiddenInput({
-    relatedTarget: null,
-  })
 }
