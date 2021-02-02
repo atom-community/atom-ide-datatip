@@ -7,6 +7,7 @@ import {
   TextEditorElement,
   CommandEvent,
   CursorPositionChangedEvent,
+  TextEditorComponent,
 } from "atom"
 import type { Datatip, DatatipProvider } from "atom-ide-base"
 import { ViewContainer } from "atom-ide-base/commons-ui/float-pane/ViewContainer"
@@ -486,6 +487,8 @@ export class DataTipManager {
     })
     disposables.add(new Disposable(() => overlayMarker.destroy()))
 
+    const editorComponent = atom.views.getView(editor).getComponent()
+
     element.addEventListener("mouseenter", () => {
       this.editorView?.removeEventListener("mousemove", this.onMouseMoveEvt)
       element.addEventListener("keydown", copyListener)
@@ -494,6 +497,17 @@ export class DataTipManager {
     element.addEventListener("mouseleave", () => {
       this.editorView?.addEventListener("mousemove", this.onMouseMoveEvt)
       element.removeEventListener("keydown", copyListener)
+    })
+
+    /**
+      - focus on the datatip once the text is selected (cursor gets disabled temporarily)
+      - remove focus once mouse leaves
+    */
+    element.addEventListener("mousedown", () => {
+      blurEditor(editorComponent)
+      element.addEventListener("mouseleave", () => {
+        focusEditor(editorComponent)
+      })
     })
 
     // TODO move this code to atom-ide-base
@@ -529,3 +543,14 @@ function copyListener(event: KeyboardEvent) {
   }
 }
 
+function focusEditor(editorComponent: TextEditorComponent) {
+  // @ts-ignore
+  editorComponent?.didFocus()
+}
+
+function blurEditor(editorComponent: TextEditorComponent) {
+  // @ts-ignore
+  editorComponent?.didBlurHiddenInput({
+    relatedTarget: null,
+  })
+}
