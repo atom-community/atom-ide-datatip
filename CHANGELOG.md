@@ -1,3 +1,11 @@
+## [0.23.2](https://github.com/atom-community/atom-ide-datatip/compare/v0.23.1...v0.23.2) (2021-02-06)
+
+
+### Bug Fixes
+
+* update dependencies ([01e368d](https://github.com/atom-community/atom-ide-datatip/commit/01e368df15d1a757d8908182f9cff367dd3a0600))
+* use native copying on the datatips ([475036b](https://github.com/atom-community/atom-ide-datatip/commit/475036b770332d3f254c1d9cdaf3cf55cfedab24))
+
 ## [0.23.1](https://github.com/atom-community/atom-ide-datatip/compare/v0.23.0...v0.23.1) (2021-02-02)
 
 
