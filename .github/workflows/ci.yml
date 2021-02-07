@@ -41,6 +41,8 @@ jobs:
   Lint:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -48,14 +50,20 @@ jobs:
       - name: Commit lint ✨
         uses: wagoid/commitlint-github-action@v2
 
-      - uses: actions/setup-node@v1
+      - uses: UziTech/action-setup-atom@v1
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v1.2.1
         with:
-          node-version: "14.x"
-      - name: Install NPM dependencies
-        run: |
-          npm install
+          version: latest
+
+      - name: Install dependencies
+        run: pnpm install --only=dev --ignore-scripts
+
+      - name: Format ✨
+        run: pnpm test.format
+
       - name: Lint ✨
-        run: npm run lint
+        run: pnpm test.lint
 
   Release:
     needs: [Test, Lint]
