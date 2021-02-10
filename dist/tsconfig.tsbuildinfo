@@ -412,8 +412,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/datatip.d.ts": {
-        "version": "86ca56b2006d3fb3f88fea7efbe27ac84fc3a3f8e5f795ceab538f9f792f2ab8",
-        "signature": "86ca56b2006d3fb3f88fea7efbe27ac84fc3a3f8e5f795ceab538f9f792f2ab8",
+        "version": "e8a16b4a45109feb11d2706b33e4fe65f205f37a3acb6744ef3ec09cdf30ade1",
+        "signature": "e8a16b4a45109feb11d2706b33e4fe65f205f37a3acb6744ef3ec09cdf30ade1",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/definitions.d.ts": {

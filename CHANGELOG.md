@@ -1,3 +1,10 @@
+## [0.23.3](https://github.com/atom-community/atom-ide-datatip/compare/v0.23.2...v0.23.3) (2021-02-10)
+
+
+### Bug Fixes
+
+* fix copying text on MacOS ([f7e64e4](https://github.com/atom-community/atom-ide-datatip/commit/f7e64e4d023f87b490e2649319764e329e6a24f3))
+
 ## [0.23.2](https://github.com/atom-community/atom-ide-datatip/compare/v0.23.1...v0.23.2) (2021-02-06)
 
 
