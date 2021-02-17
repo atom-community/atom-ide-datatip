@@ -1,3 +1,10 @@
+## [0.23.4](https://github.com/atom-community/atom-ide-datatip/compare/v0.23.3...v0.23.4) (2021-02-17)
+
+
+### Bug Fixes
+
+* add type defs for react ([6a3531f](https://github.com/atom-community/atom-ide-datatip/commit/6a3531f8b96cfbfdd71647672ec0ed7e38d474d4))
+
 ## [0.23.3](https://github.com/atom-community/atom-ide-datatip/compare/v0.23.2...v0.23.3) (2021-02-10)
 
 
