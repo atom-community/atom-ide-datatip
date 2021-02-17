@@ -8,7 +8,6 @@ devDependencies:
   '@types/react': 17.0.2
   '@types/react-dom': 17.0.1
   atom-jasmine3-test-runner: 5.1.8
-  atom-languageclient: 1.0.6
   build-commit: 0.1.4
   cross-env: 7.0.3
   eslint: 7.19.0
@@ -1012,16 +1011,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-TOc/JgA0EmyQ6lc1RjK1Tsv1/tNvUJiH0GqK/zbKUTRER38rhsEv6WGMsF6pq9AOgX4KVjrUeuAgMFlz+FbLBQ==
-  /atom-languageclient/1.0.6:
-    dependencies:
-      fuzzaldrin-plus-fast: 1.2.4
-      rimraf: 3.0.2
-      vscode-jsonrpc: 5.0.1
-      vscode-languageserver-protocol: 3.15.3
-      vscode-languageserver-types: 3.15.1
-    dev: true
-    resolution:
-      integrity: sha512-/K3ulisvui/sKMvx4WYEgJ/1oSzg8Jz6uujYlCwbyB0/jhS+a9JVkKY0yJNb2nbaT6XA4eluBi3CTQM4lJnkLQ==
   /atom-package-deps/7.2.0:
     dev: false
     hasBin: true
@@ -1163,12 +1152,6 @@ packages:
     optional: true
     resolution:
       integrity: sha512-iRarAqdH5lMWlMBzrDuJgLYJR2g4QXk93iYE2zpr6gEZkb/jCgDpPUXdhuN11Ge1zZ/6By4DwA1mmifcx7FWaw==
-  /bindings/1.5.0:
-    dependencies:
-      file-uri-to-path: 1.0.0
-    dev: true
-    resolution:
-      integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==
   /boxen/4.2.0:
     dependencies:
       ansi-align: 3.0.0
@@ -2407,10 +2390,6 @@ packages:
       node: ^10.12.0 || >=12.0.0
     resolution:
       integrity: sha512-fqoO76jZ3ZnYrXLDRxBR1YvOvc0k844kcOg40bgsPrE25LAb/PDqTY+ho64Xh2c8ZXgIKldchCFHczG2UVRcWA==
-  /file-uri-to-path/1.0.0:
-    dev: true
-    resolution:
-      integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==
   /fill-range/7.0.1:
     dependencies:
       to-regex-range: 5.0.1
@@ -2529,15 +2508,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
-  /fuzzaldrin-plus-fast/1.2.4:
-    dependencies:
-      bindings: 1.5.0
-      node-addon-api: 3.0.2
-      node-gyp-build: 4.2.3
-    dev: true
-    requiresBuild: true
-    resolution:
-      integrity: sha512-RLJALZdoNGtItWVcm0ROU1E3SZiBT7nRWCew7aPGRzaG4kGA7hxytuEH43+taUjXw/VWSa89nEJu37//bsYIqA==
   /gauge/2.7.4:
     dependencies:
       aproba: 1.2.0
@@ -3698,15 +3668,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
-  /node-addon-api/3.0.2:
-    dev: true
-    resolution:
-      integrity: sha512-+D4s2HCnxPd5PjjI0STKwncjXTUKKqm74MDMz9OPXavjsGmjkvwgLtA5yoxJUdmpj52+2u+RrXgPipahKczMKg==
-  /node-gyp-build/4.2.3:
-    dev: true
-    hasBin: true
-    resolution:
-      integrity: sha512-MN6ZpzmfNCRM+3t57PTJHgHyw/h4OWnZ6mR8P5j/uZtqQr46RRuDE/P+g3n0YR/AiYXeWixZZzaip77gdICfRg==
   /node-gyp/7.1.2:
     dependencies:
       env-paths: 2.2.0
@@ -5389,27 +5350,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-QxI+qV97uD7HHOCjh3MrM1TfbdwmTXrMckri5Tus1/FQiG3baDZb2C9Y0y8QThs7PwHYBIQXcAc59ZveCRZKPA==
-  /vscode-jsonrpc/5.0.1:
-    dev: true
-    engines:
-      node: '>=8.0.0 || >=10.0.0'
-    resolution:
-      integrity: sha512-JvONPptw3GAQGXlVV2utDcHx0BiY34FupW/kI6mZ5x06ER5DdPG/tXWMVHjTNULF5uKPOUUD0SaXg5QaubJL0A==
-  /vscode-languageserver-protocol/3.15.3:
-    dependencies:
-      vscode-jsonrpc: 5.0.1
-      vscode-languageserver-types: 3.15.1
-    dev: true
-    resolution:
-      integrity: sha512-zrMuwHOAQRhjDSnflWdJG+O2ztMWss8GqUUB8dXLR/FPenwkiBNkMIJJYfSN6sgskvsF0rHAoBowNQfbyZnnvw==
   /vscode-languageserver-textdocument/1.0.1:
     dev: true
     resolution:
       integrity: sha512-UIcJDjX7IFkck7cSkNNyzIz5FyvpQfY7sdzVy+wkKN/BLaD4DQ0ppXQrKePomCxTS7RrolK1I0pey0bG9eh8dA==
-  /vscode-languageserver-types/3.15.1:
-    dev: true
-    resolution:
-      integrity: sha512-+a9MPUQrNGRrGU630OGbYVQ+11iOIovjCkqxajPa9w57Sd5ruK8WQNsslzpa0x/QJqC8kRc2DUxWjIFwoNm4ZQ==
   /vscode-languageserver-types/3.16.0-next.2:
     dev: true
     resolution:
@@ -5524,7 +5468,6 @@ specifiers:
   '@types/react-dom': ^17.0.0
   atom-ide-base: ^2.3.4
   atom-jasmine3-test-runner: ^5.1.8
-  atom-languageclient: ^1.0.6
   atom-package-deps: ^7.2.2
   build-commit: ^0.1.4
   cross-env: latest
