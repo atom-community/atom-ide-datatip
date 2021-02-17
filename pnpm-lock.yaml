@@ -1,6 +1,6 @@
 dependencies:
   atom-ide-base: 2.3.4
-  atom-package-deps: 7.2.0
+  atom-package-deps: 7.2.2
 devDependencies:
   '@types/atom': 1.40.7
   '@types/jasmine': 3.6.3
@@ -1008,6 +1008,11 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-P7XnvYv+qYjFrdWWOuRCJ2oOe6Ps0DinwUhJ+h4Zwk/VGStO/x23A/tBDCWyvsZFwEfgGnnhTY+jZ7/pCxxYng==
+  /atom-package-deps/7.2.2:
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-xV4l1Ll987zluBjMiYGtDbZbdM5PF/hOECgaI2mv2+dNzbuugd2M+A2liw1JUenuGrngGw/wcpPqXpAVMGFeDw==
   /aws-sign2/0.7.0:
     dev: true
     resolution:
@@ -5495,7 +5500,7 @@ specifiers:
   atom-ide-base: ^2.3.4
   atom-jasmine3-test-runner: ^5.1.8
   atom-languageclient: ^1.0.6
-  atom-package-deps: ^7.2.0
+  atom-package-deps: ^7.2.2
   build-commit: ^0.1.4
   cross-env: latest
   eslint: 7.19.0
