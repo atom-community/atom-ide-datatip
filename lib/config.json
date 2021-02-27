@@ -15,7 +15,7 @@
     "title": "Hover/Stay Time",
     "description": "The time that the mouse/cursor should hover/stay to show a datatip. Also specifies the time that the datatip is still shown when the mouse/cursor moves [ms].",
     "type": "number",
-    "default": 80
+    "default": 100
   },
   "glowOnHover": {
     "title": "Glow on hover",
