@@ -38,18 +38,16 @@
   width: auto;
 }
 
-.datatip-element.datatip-glow {
-  // glow on hover
-  transition: background-color 0.15s ease;
-  &:hover {
-    background-color: mix(@syntax-background-color, @syntax-selection-color, 95%);
-  }
-}
-
 .datatip-overlay {
   // info border
   border-bottom: 5px solid @background-color-highlight;
   border-radius: 3px;
+
+  // info bar glow
+  transition: border-bottom-color 0.15s ease;
+  &:hover {
+    border-bottom-color: lighten(@background-color-highlight, 10%);
+  }
 }
 
 /** Applied to ReactView (Components) */
