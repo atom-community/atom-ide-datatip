@@ -20,6 +20,7 @@
     "test.integration": "npm run build && atom --test spec",
     "clean": "shx rm -rf dist",
     "tsc": "tsc -p ./lib/tsconfig.json",
+    "tsc.dev": "npm run tsc -- --watch",
     "dev": "npm run clean && cross-env NODE_ENV=development cross-env BABEL_KEEP_MODULES=true rollup -c -w",
     "build": "npm run clean && cross-env NODE_ENV=production cross-env BABEL_KEEP_MODULES=true rollup -c",
     "build-commit": "build-commit -o dist",
