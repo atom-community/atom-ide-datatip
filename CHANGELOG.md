@@ -1,3 +1,11 @@
+## [0.23.5](https://github.com/atom-community/atom-ide-datatip/compare/v0.23.4...v0.23.5) (2021-02-27)
+
+
+### Bug Fixes
+
+* datatips were shown on mouse move even when disabled in the configs ([c354bd9](https://github.com/atom-community/atom-ide-datatip/commit/c354bd930f6f6b9540f76171524da01b3f29162a))
+* increase wait time for showing datatips to 100ms ([3ce7d5f](https://github.com/atom-community/atom-ide-datatip/commit/3ce7d5f0c5e76703be7ba720bcf57ce5fd5aa7e4))
+
 ## [0.23.4](https://github.com/atom-community/atom-ide-datatip/compare/v0.23.3...v0.23.4) (2021-02-17)
 
 
