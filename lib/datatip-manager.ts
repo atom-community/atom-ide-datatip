@@ -487,23 +487,25 @@ export class DataTipManager {
     })
     disposables.add(new Disposable(() => overlayMarker.destroy()))
 
-    element.addEventListener("mouseenter", () => {
-      this.editorView?.removeEventListener("mousemove", this.onMouseMoveEvt)
-    })
+    if (this.showDataTipOnMouseMove) {
+      element.addEventListener("mouseenter", () => {
+        this.editorView?.removeEventListener("mousemove", this.onMouseMoveEvt)
+      })
 
-    element.addEventListener("mouseleave", () => {
-      this.editorView?.addEventListener("mousemove", this.onMouseMoveEvt)
-    })
+      element.addEventListener("mouseleave", () => {
+        this.editorView?.addEventListener("mousemove", this.onMouseMoveEvt)
+      })
+
+      disposables.add(
+        new Disposable(() => {
+          this.editorView?.addEventListener("mousemove", this.onMouseMoveEvt)
+          view.destroy()
+        })
+      )
+    }
 
     // TODO move this code to atom-ide-base
     element.addEventListener("wheel", this.onMouseWheel, { passive: true })
-
-    disposables.add(
-      new Disposable(() => {
-        this.editorView?.addEventListener("mousemove", this.onMouseMoveEvt)
-        view.destroy()
-      })
-    )
 
     return disposables
   }
