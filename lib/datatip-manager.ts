@@ -79,9 +79,6 @@ export class DataTipManager {
   /** The time that the mouse/cursor should hover/stay to show a datatip. Also specifies the time that the datatip is still shown when the mouse/cursor moves [ms]. */
   hoverTime = atom.config.get("atom-ide-datatip.hoverTime")
 
-  // glow on hover
-  glowClass = atom.config.get("atom-ide-datatip.glowOnHover") ? "datatip-glow" : ""
-
   constructor() {
     /**
      * the mouse move event handler that evaluates the screen position and eventually shows a data tip
@@ -371,7 +368,7 @@ export class DataTipManager {
               containerClassName: "datatip-component-container",
               contentClassName: "datatip-component",
             },
-            className: `datatip-element select-list popover-list ${this.glowClass}`,
+            className: "datatip-element select-list popover-list datatip-transform",
           })
           this.dataTipMarkerDisposables = this.mountDataTipWithMarker(editor, datatip.range, position, dataTipView)
         } else if (datatip.markedStrings.length > 0) {
@@ -409,7 +406,7 @@ export class DataTipManager {
           const dataTipView = new ViewContainer({
             snippet,
             markdown,
-            className: `datatip-element select-list popover-list ${this.glowClass}`,
+            className: "datatip-element select-list popover-list datatip-transform",
           })
 
           this.dataTipMarkerDisposables = this.mountDataTipWithMarker(editor, datatip.range, position, dataTipView)
