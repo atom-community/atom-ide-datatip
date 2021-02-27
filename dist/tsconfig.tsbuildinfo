@@ -527,13 +527,13 @@
         "affectsGlobalScope": false
       },
       "../lib/datatip-manager.ts": {
-        "version": "95a029f1ff2bfd92a963c40287537c1bc464b52f22673f5eaa8d65fdb8c02502",
-        "signature": "cc3831aa30011a0bc82d920d805d8bfc4c42927d2f6f6433608c8fe9284487a2",
+        "version": "7ec26d4b9ef43a36c8bee179a210e3e8b28ebd6403d873110659079400f69250",
+        "signature": "c6e6d1a7b6f49352fb548bb365297191a5f8d212862b44296365fc249d071f44",
         "affectsGlobalScope": false
       },
       "../lib/config.json": {
-        "version": "053c825b1f4b8d760b4195f8db9962e5b90aef5b414aed362b4f0234e8de3f30",
-        "signature": "93c9bec358e41badb258a6623003126f30490db75d3261ba20cdaaf3376316d3",
+        "version": "f2bf830d20a9a6a6df72ee130507f906ffe2cccea0a55289ea43da2c1683240c",
+        "signature": "18cefa50111a3561a55f7d47a2c68a51a1c80da513a77228bf013ef08376a30c",
         "affectsGlobalScope": true
       },
       "../node_modules/atom-package-deps/lib/index.d.ts": {

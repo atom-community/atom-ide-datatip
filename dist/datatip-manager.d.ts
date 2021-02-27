@@ -17,7 +17,6 @@ export declare class DataTipManager {
     mouseMoveTimer: NodeJS.Timeout | null;
     cursorMoveTimer: NodeJS.Timeout | null;
     hoverTime: any;
-    glowClass: string;
     constructor();
     initialize(): void;
     dispose(): void;

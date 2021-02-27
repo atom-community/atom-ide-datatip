@@ -1,3 +1,15 @@
+# [0.24.0](https://github.com/atom-community/atom-ide-datatip/compare/v0.23.5...v0.24.0) (2021-02-27)
+
+
+### Features
+
+* only glow info bar ([3a56420](https://github.com/atom-community/atom-ide-datatip/commit/3a56420496975781cac7dfc2e6d859a734482f1c))
+
+
+### Performance Improvements
+
+* remove config for hover animation ([2aa61c9](https://github.com/atom-community/atom-ide-datatip/commit/2aa61c9e5a07bbb029a7aa1b99bba908b0edb672))
+
 ## [0.23.5](https://github.com/atom-community/atom-ide-datatip/compare/v0.23.4...v0.23.5) (2021-02-27)
 
 
