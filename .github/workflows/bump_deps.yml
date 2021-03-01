@@ -1,8 +1,7 @@
 name: Bump_Dependencies
 
 on:
-  schedule:
-    - cron: "5 8 * * Sun" #  8:05 every Sunday
+  push:
 
 jobs:
   Bump_Dependencies:
