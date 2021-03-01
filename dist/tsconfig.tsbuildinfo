@@ -386,9 +386,14 @@
         "signature": "fd5cfe95a40dd40a80dce2e6513c7059d43aad0e9f13474ca42f2c343b5ec906",
         "affectsGlobalScope": true
       },
+      "../node_modules/atom-ide-base/types-packages/uri.d.ts": {
+        "version": "cd97f39f321cbd52142b0b65f5f5660114982c9bf9f0857754cd76bb93b29d9b",
+        "signature": "cd97f39f321cbd52142b0b65f5f5660114982c9bf9f0857754cd76bb93b29d9b",
+        "affectsGlobalScope": false
+      },
       "../node_modules/atom-ide-base/types-packages/busy-signal.d.ts": {
-        "version": "921b3ecb9fa8126c8df1aa6ca84d826aeec4b79ec626862dcc95848559ac3e42",
-        "signature": "921b3ecb9fa8126c8df1aa6ca84d826aeec4b79ec626862dcc95848559ac3e42",
+        "version": "34ed532af06d20ed087cbee6c74402480bc042e879958e2d93864f0cf6be695a",
+        "signature": "34ed532af06d20ed087cbee6c74402480bc042e879958e2d93864f0cf6be695a",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/atom/linter/config.d.ts": {
@@ -402,8 +407,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/code-actions.d.ts": {
-        "version": "9203301efaed9db5b0c10f17092c2a7c51c86e480a0aacbf10aaa313fc3a3b12",
-        "signature": "9203301efaed9db5b0c10f17092c2a7c51c86e480a0aacbf10aaa313fc3a3b12",
+        "version": "7bba939129531cfcd16e881b747340bf25a6807ce7d0beda7903ae7bdd14595a",
+        "signature": "7bba939129531cfcd16e881b747340bf25a6807ce7d0beda7903ae7bdd14595a",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/code-highlight.d.ts": {
@@ -412,18 +417,18 @@
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/datatip.d.ts": {
-        "version": "e8a16b4a45109feb11d2706b33e4fe65f205f37a3acb6744ef3ec09cdf30ade1",
-        "signature": "e8a16b4a45109feb11d2706b33e4fe65f205f37a3acb6744ef3ec09cdf30ade1",
+        "version": "e2e38d6fce1d46730ea2fcd138d3177e8ee66d4b159dd284efa8ef29ffa10c2e",
+        "signature": "e2e38d6fce1d46730ea2fcd138d3177e8ee66d4b159dd284efa8ef29ffa10c2e",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/definitions.d.ts": {
-        "version": "5ca6d5604a9fc45fb854a9f456f7a06e9f0253edb262977930a161b064faf173",
-        "signature": "5ca6d5604a9fc45fb854a9f456f7a06e9f0253edb262977930a161b064faf173",
+        "version": "06ad0b0dcf9bb18e427d3f9cf0d009320267f52efc331725bc3a767abb9bc742",
+        "signature": "06ad0b0dcf9bb18e427d3f9cf0d009320267f52efc331725bc3a767abb9bc742",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/find-references.d.ts": {
-        "version": "6c456ecf8ebd3e2512cf572e228d99665c9a7d5ed854115276f3d2dce11fa6df",
-        "signature": "6c456ecf8ebd3e2512cf572e228d99665c9a7d5ed854115276f3d2dce11fa6df",
+        "version": "36e792868faa6bc6f9d1750481a6fa61f4188681a6eac92ffa90c1f18eeb02bc",
+        "signature": "36e792868faa6bc6f9d1750481a6fa61f4188681a6eac92ffa90c1f18eeb02bc",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/hyperclick.d.ts": {
@@ -432,13 +437,13 @@
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/outline.d.ts": {
-        "version": "60f96b541f2b63e7f30ab642707c45fe8454d6bb22545925c4906a55f4532254",
-        "signature": "60f96b541f2b63e7f30ab642707c45fe8454d6bb22545925c4906a55f4532254",
+        "version": "7eb827b1cc718de76ffb938edaf868818aad873cc0142a291113635e17e3b5b6",
+        "signature": "7eb827b1cc718de76ffb938edaf868818aad873cc0142a291113635e17e3b5b6",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/sig-help.d.ts": {
-        "version": "733d3a6fd4e4145856e5a6e83483db88e95405383ca22c5e5078fa4efb1b9756",
-        "signature": "733d3a6fd4e4145856e5a6e83483db88e95405383ca22c5e5078fa4efb1b9756",
+        "version": "e64ebfc79e8d60bc582806bf9bbb261564c11f35e1c61418364df830405481ae",
+        "signature": "e64ebfc79e8d60bc582806bf9bbb261564c11f35e1c61418364df830405481ae",
         "affectsGlobalScope": false
       },
       "../node_modules/atom-ide-base/types-packages/markdown-service.d.ts": {
@@ -446,9 +451,29 @@
         "signature": "8ed56f7ff308bb0b7847f81abc90355f362a1267eb1772ab7cee46991b765e81",
         "affectsGlobalScope": false
       },
+      "../node_modules/atom-ide-base/types-packages/text-edit.d.ts": {
+        "version": "98d329ad9fb000e6b45ae60dc0d99ee1d7b7be971292820702156c3e948fcd2d",
+        "signature": "98d329ad9fb000e6b45ae60dc0d99ee1d7b7be971292820702156c3e948fcd2d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/atom-ide-base/types-packages/code-format.d.ts": {
+        "version": "5888485b281ac21d09ccf57177bec0c79b6cbd298e524c302dae58ac381949c8",
+        "signature": "5888485b281ac21d09ccf57177bec0c79b6cbd298e524c302dae58ac381949c8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/atom-ide-base/types-packages/refactor.d.ts": {
+        "version": "0b9491fa8828680144c72f72b019b381b20eff451672585b508b1a68b65c8653",
+        "signature": "0b9491fa8828680144c72f72b019b381b20eff451672585b508b1a68b65c8653",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/atom-ide-base/types-packages/console.d.ts": {
+        "version": "d40068e62fce362e07dcfbacbbefcf25061fa9530e4600519f1547b65faca804",
+        "signature": "d40068e62fce362e07dcfbacbbefcf25061fa9530e4600519f1547b65faca804",
+        "affectsGlobalScope": false
+      },
       "../node_modules/atom-ide-base/types-packages/main.d.ts": {
-        "version": "777c4e1049f5153eb1f5e61bdbd8f6d614a96618fc4bdf9a17b5ca6f9b27bb32",
-        "signature": "777c4e1049f5153eb1f5e61bdbd8f6d614a96618fc4bdf9a17b5ca6f9b27bb32",
+        "version": "4319b3da30a1420e8c6216197956daf15d060a097c4740d0f4bf0460175765a4",
+        "signature": "4319b3da30a1420e8c6216197956daf15d060a097c4740d0f4bf0460175765a4",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/react/global.d.ts": {
@@ -887,9 +912,16 @@
       "../node_modules/atom-ide-base/commons-ui/float-pane/selectable-overlay.d.ts": [
         "../node_modules/@types/atom/index.d.ts"
       ],
+      "../node_modules/atom-ide-base/types-packages/busy-signal.d.ts": [
+        "../node_modules/atom-ide-base/types-packages/uri.d.ts"
+      ],
       "../node_modules/atom-ide-base/types-packages/code-actions.d.ts": [
         "../node_modules/@types/atom/index.d.ts",
         "../node_modules/@types/atom/linter/index.d.ts"
+      ],
+      "../node_modules/atom-ide-base/types-packages/code-format.d.ts": [
+        "../node_modules/@types/atom/index.d.ts",
+        "../node_modules/atom-ide-base/types-packages/text-edit.d.ts"
       ],
       "../node_modules/atom-ide-base/types-packages/code-highlight.d.ts": [
         "../node_modules/@types/atom/index.d.ts"
@@ -898,10 +930,12 @@
         "../node_modules/@types/atom/index.d.ts"
       ],
       "../node_modules/atom-ide-base/types-packages/definitions.d.ts": [
-        "../node_modules/@types/atom/index.d.ts"
+        "../node_modules/@types/atom/index.d.ts",
+        "../node_modules/atom-ide-base/types-packages/uri.d.ts"
       ],
       "../node_modules/atom-ide-base/types-packages/find-references.d.ts": [
-        "../node_modules/@types/atom/index.d.ts"
+        "../node_modules/@types/atom/index.d.ts",
+        "../node_modules/atom-ide-base/types-packages/uri.d.ts"
       ],
       "../node_modules/atom-ide-base/types-packages/hyperclick.d.ts": [
         "../node_modules/@types/atom/index.d.ts"
@@ -909,19 +943,32 @@
       "../node_modules/atom-ide-base/types-packages/main.d.ts": [
         "../node_modules/atom-ide-base/types-packages/busy-signal.d.ts",
         "../node_modules/atom-ide-base/types-packages/code-actions.d.ts",
+        "../node_modules/atom-ide-base/types-packages/code-format.d.ts",
         "../node_modules/atom-ide-base/types-packages/code-highlight.d.ts",
+        "../node_modules/atom-ide-base/types-packages/console.d.ts",
         "../node_modules/atom-ide-base/types-packages/datatip.d.ts",
         "../node_modules/atom-ide-base/types-packages/definitions.d.ts",
         "../node_modules/atom-ide-base/types-packages/find-references.d.ts",
         "../node_modules/atom-ide-base/types-packages/hyperclick.d.ts",
         "../node_modules/atom-ide-base/types-packages/markdown-service.d.ts",
         "../node_modules/atom-ide-base/types-packages/outline.d.ts",
-        "../node_modules/atom-ide-base/types-packages/sig-help.d.ts"
+        "../node_modules/atom-ide-base/types-packages/refactor.d.ts",
+        "../node_modules/atom-ide-base/types-packages/sig-help.d.ts",
+        "../node_modules/atom-ide-base/types-packages/text-edit.d.ts",
+        "../node_modules/atom-ide-base/types-packages/uri.d.ts"
       ],
       "../node_modules/atom-ide-base/types-packages/outline.d.ts": [
         "../node_modules/@types/atom/index.d.ts"
       ],
+      "../node_modules/atom-ide-base/types-packages/refactor.d.ts": [
+        "../node_modules/@types/atom/index.d.ts",
+        "../node_modules/atom-ide-base/types-packages/text-edit.d.ts",
+        "../node_modules/atom-ide-base/types-packages/uri.d.ts"
+      ],
       "../node_modules/atom-ide-base/types-packages/sig-help.d.ts": [
+        "../node_modules/@types/atom/index.d.ts"
+      ],
+      "../node_modules/atom-ide-base/types-packages/text-edit.d.ts": [
         "../node_modules/@types/atom/index.d.ts"
       ]
     },
@@ -1214,9 +1261,16 @@
       "../node_modules/atom-ide-base/commons-ui/float-pane/selectable-overlay.d.ts": [
         "../node_modules/@types/atom/index.d.ts"
       ],
+      "../node_modules/atom-ide-base/types-packages/busy-signal.d.ts": [
+        "../node_modules/atom-ide-base/types-packages/uri.d.ts"
+      ],
       "../node_modules/atom-ide-base/types-packages/code-actions.d.ts": [
         "../node_modules/@types/atom/index.d.ts",
         "../node_modules/@types/atom/linter/index.d.ts"
+      ],
+      "../node_modules/atom-ide-base/types-packages/code-format.d.ts": [
+        "../node_modules/@types/atom/index.d.ts",
+        "../node_modules/atom-ide-base/types-packages/text-edit.d.ts"
       ],
       "../node_modules/atom-ide-base/types-packages/code-highlight.d.ts": [
         "../node_modules/@types/atom/index.d.ts"
@@ -1225,10 +1279,12 @@
         "../node_modules/@types/atom/index.d.ts"
       ],
       "../node_modules/atom-ide-base/types-packages/definitions.d.ts": [
-        "../node_modules/@types/atom/index.d.ts"
+        "../node_modules/@types/atom/index.d.ts",
+        "../node_modules/atom-ide-base/types-packages/uri.d.ts"
       ],
       "../node_modules/atom-ide-base/types-packages/find-references.d.ts": [
-        "../node_modules/@types/atom/index.d.ts"
+        "../node_modules/@types/atom/index.d.ts",
+        "../node_modules/atom-ide-base/types-packages/uri.d.ts"
       ],
       "../node_modules/atom-ide-base/types-packages/hyperclick.d.ts": [
         "../node_modules/@types/atom/index.d.ts"
@@ -1236,19 +1292,32 @@
       "../node_modules/atom-ide-base/types-packages/main.d.ts": [
         "../node_modules/atom-ide-base/types-packages/busy-signal.d.ts",
         "../node_modules/atom-ide-base/types-packages/code-actions.d.ts",
+        "../node_modules/atom-ide-base/types-packages/code-format.d.ts",
         "../node_modules/atom-ide-base/types-packages/code-highlight.d.ts",
+        "../node_modules/atom-ide-base/types-packages/console.d.ts",
         "../node_modules/atom-ide-base/types-packages/datatip.d.ts",
         "../node_modules/atom-ide-base/types-packages/definitions.d.ts",
         "../node_modules/atom-ide-base/types-packages/find-references.d.ts",
         "../node_modules/atom-ide-base/types-packages/hyperclick.d.ts",
         "../node_modules/atom-ide-base/types-packages/markdown-service.d.ts",
         "../node_modules/atom-ide-base/types-packages/outline.d.ts",
-        "../node_modules/atom-ide-base/types-packages/sig-help.d.ts"
+        "../node_modules/atom-ide-base/types-packages/refactor.d.ts",
+        "../node_modules/atom-ide-base/types-packages/sig-help.d.ts",
+        "../node_modules/atom-ide-base/types-packages/text-edit.d.ts",
+        "../node_modules/atom-ide-base/types-packages/uri.d.ts"
       ],
       "../node_modules/atom-ide-base/types-packages/outline.d.ts": [
         "../node_modules/@types/atom/index.d.ts"
       ],
+      "../node_modules/atom-ide-base/types-packages/refactor.d.ts": [
+        "../node_modules/@types/atom/index.d.ts",
+        "../node_modules/atom-ide-base/types-packages/text-edit.d.ts",
+        "../node_modules/atom-ide-base/types-packages/uri.d.ts"
+      ],
       "../node_modules/atom-ide-base/types-packages/sig-help.d.ts": [
+        "../node_modules/@types/atom/index.d.ts"
+      ],
+      "../node_modules/atom-ide-base/types-packages/text-edit.d.ts": [
         "../node_modules/@types/atom/index.d.ts"
       ]
     },
@@ -1351,7 +1420,9 @@
       "../node_modules/atom-ide-base/commons-ui/float-pane/selectable-overlay.d.ts",
       "../node_modules/atom-ide-base/types-packages/busy-signal.d.ts",
       "../node_modules/atom-ide-base/types-packages/code-actions.d.ts",
+      "../node_modules/atom-ide-base/types-packages/code-format.d.ts",
       "../node_modules/atom-ide-base/types-packages/code-highlight.d.ts",
+      "../node_modules/atom-ide-base/types-packages/console.d.ts",
       "../node_modules/atom-ide-base/types-packages/datatip.d.ts",
       "../node_modules/atom-ide-base/types-packages/definitions.d.ts",
       "../node_modules/atom-ide-base/types-packages/find-references.d.ts",
@@ -1359,7 +1430,10 @@
       "../node_modules/atom-ide-base/types-packages/main.d.ts",
       "../node_modules/atom-ide-base/types-packages/markdown-service.d.ts",
       "../node_modules/atom-ide-base/types-packages/outline.d.ts",
+      "../node_modules/atom-ide-base/types-packages/refactor.d.ts",
       "../node_modules/atom-ide-base/types-packages/sig-help.d.ts",
+      "../node_modules/atom-ide-base/types-packages/text-edit.d.ts",
+      "../node_modules/atom-ide-base/types-packages/uri.d.ts",
       "../node_modules/atom-package-deps/lib/index.d.ts",
       "../node_modules/csstype/index.d.ts",
       "../node_modules/tslib/tslib.d.ts"
