@@ -16,10 +16,12 @@ let datatipManager: DataTipManager
 /**
  * called by Atom when activating an extension
  */
-export async function activate() {
+export function activate() {
   // Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
   subscriptions = new CompositeDisposable()
-  if (!datatipManager) datatipManager = new DataTipManager()
+  if (!datatipManager) {
+    datatipManager = new DataTipManager()
+  }
   subscriptions.add(datatipManager)
 
   install_deps().then(() => {
@@ -31,7 +33,6 @@ async function install_deps() {
   // install package-deps if not loaded
   if (!atom.packages.isPackageLoaded("busy-signal")) {
     // Dynamic import https://mariusschulz.com/blog/dynamic-import-expressions-in-typescript
-    // @ts-ignore
     await import("atom-package-deps").then((atom_package_deps) => {
       atom_package_deps.install("atom-ide-datatip", true)
     })

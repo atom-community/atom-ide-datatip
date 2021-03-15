@@ -282,6 +282,7 @@ export class DataTipManager {
         // means the mouse event occured quite far away from where the text ends on that row. Do not
         // show the datatip in such situations and hide any existing datatips (the mouse moved more to
         // the right, away from the actual text)
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore: internal API
         if (distance >= this.editor.getDefaultCharWidth()) {
           return this.unmountDataTip()
@@ -327,6 +328,8 @@ export class DataTipManager {
     try {
       let datatip: Datatip | null = null
       for (const provider of this.providerRegistry.getAllProvidersForEditor(editor)) {
+        // we only need one and we want to process them synchronously
+        // eslint-disable-next-line no-await-in-loop
         const providerTip = await provider.datatip(editor, position)
         if (providerTip) {
           datatip = providerTip
