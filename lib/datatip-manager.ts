@@ -200,7 +200,7 @@ export class DataTipManager {
     this.editor = null
     this.editorView = null
 
-    if (editor == null || !atom.workspace.isTextEditor(editor)) {
+    if (editor === null || !atom.workspace.isTextEditor(editor)) {
       return
     }
 
@@ -263,7 +263,7 @@ export class DataTipManager {
 
     this.mouseMoveTimer = setTimeout(
       (evt) => {
-        if (this.editorView == null || this.editor == null) {
+        if (this.editorView === null || this.editor === null) {
           return
         }
 
@@ -345,7 +345,7 @@ export class DataTipManager {
         this.unmountDataTip()
       } else {
         // omit update of UI if the range is the same as the current one
-        if (this.currentMarkerRange != null && datatip.range.intersectsWith(this.currentMarkerRange)) {
+        if (this.currentMarkerRange !== null && datatip.range.intersectsWith(this.currentMarkerRange)) {
           return
         }
         // make sure we are still on the same position
