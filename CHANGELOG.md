@@ -1,3 +1,15 @@
+## [0.24.1](https://github.com/atom-community/atom-ide-datatip/compare/v0.24.0...v0.24.1) (2021-03-15)
+
+
+### Bug Fixes
+
+* make onMouseWheel free ([07f6760](https://github.com/atom-community/atom-ide-datatip/commit/07f6760b3d329c12d4260ea44706555dca22dd12))
+* remove excess null-check for subs ([8df66d5](https://github.com/atom-community/atom-ide-datatip/commit/8df66d53d9a8714bdb5c57cbb00a90a33ee4c3ef))
+* show datatips even when there is other overlays such as Linter ([91f7e3e](https://github.com/atom-community/atom-ide-datatip/commit/91f7e3e1e5a69b783a942364665cd65de1af25bf))
+* simplify comparing markers ([371cd9c](https://github.com/atom-community/atom-ide-datatip/commit/371cd9cc73804115806f67be714fa2a37ff020c1))
+* update atom dependencies ([b9bd8aa](https://github.com/atom-community/atom-ide-datatip/commit/b9bd8aa5b4c742fcad1201c485ca5929a457e987))
+* use === in null checks ([3924ecd](https://github.com/atom-community/atom-ide-datatip/commit/3924ecd5cf82f07a4c78e831b089e50d3c336faa))
+
 # [0.24.0](https://github.com/atom-community/atom-ide-datatip/compare/v0.23.5...v0.24.0) (2021-02-27)
 
 
