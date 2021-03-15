@@ -176,9 +176,7 @@ export class DataTipManager {
 
     return new Disposable(() => {
       disposable.dispose()
-      if (this.subscriptions != null) {
-        this.subscriptions.remove(disposable)
-      }
+      this.subscriptions.remove(disposable)
       this.watchedEditors.delete(editor)
     })
   }
@@ -202,7 +200,7 @@ export class DataTipManager {
     this.editor = null
     this.editorView = null
 
-    if (editor == null || !atom.workspace.isTextEditor(editor)) {
+    if (editor === null || !atom.workspace.isTextEditor(editor)) {
       return
     }
 
@@ -234,7 +232,7 @@ export class DataTipManager {
    * the central cursor movement event handler
    * @param evt the cursor move event
    */
-  onCursorMoveEvt(evt: CursorPositionChangedEvent) {
+  onCursorMoveEvt(event: CursorPositionChangedEvent) {
     if (this.cursorMoveTimer) {
       clearTimeout(this.cursorMoveTimer)
     }
@@ -251,21 +249,21 @@ export class DataTipManager {
         }
       },
       this.hoverTime,
-      evt
+      event
     )
   }
 
   /**
    * the central mouse movement event handler
    */
-  onMouseMoveEvt(evt: MouseEvent) {
+  onMouseMoveEvt(event: MouseEvent) {
     if (this.mouseMoveTimer) {
       clearTimeout(this.mouseMoveTimer)
     }
 
     this.mouseMoveTimer = setTimeout(
       (evt) => {
-        if (this.editorView == null || this.editor == null) {
+        if (this.editorView === null || this.editor === null) {
           return
         }
 
@@ -284,6 +282,7 @@ export class DataTipManager {
         // means the mouse event occured quite far away from where the text ends on that row. Do not
         // show the datatip in such situations and hide any existing datatips (the mouse moved more to
         // the right, away from the actual text)
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore: internal API
         if (distance >= this.editor.getDefaultCharWidth()) {
           return this.unmountDataTip()
@@ -295,16 +294,8 @@ export class DataTipManager {
         }
       },
       this.hoverTime,
-      evt
+      event
     )
-  }
-
-  /**
-   * handles the mouse wheel event to enable scrolling over long text
-   * @param evt the mouse wheel event being triggered
-   */
-  onMouseWheel(evt: WheelEvent) {
-    evt.stopPropagation()
   }
 
   /**
@@ -337,6 +328,8 @@ export class DataTipManager {
     try {
       let datatip: Datatip | null = null
       for (const provider of this.providerRegistry.getAllProvidersForEditor(editor)) {
+        // we only need one and we want to process them synchronously
+        // eslint-disable-next-line no-await-in-loop
         const providerTip = await provider.datatip(editor, position)
         if (providerTip) {
           datatip = providerTip
@@ -347,7 +340,7 @@ export class DataTipManager {
         this.unmountDataTip()
       } else {
         // omit update of UI if the range is the same as the current one
-        if (this.currentMarkerRange != null && datatip.range.intersectsWith(this.currentMarkerRange)) {
+        if (this.currentMarkerRange !== null && datatip.range.intersectsWith(this.currentMarkerRange)) {
           return
         }
         // make sure we are still on the same position
@@ -448,25 +441,22 @@ export class DataTipManager {
     })
 
     // OPTIMIZATION:
-    // if there is an overlay already on the same position, skip showing the datatip
+    // if there is an highligh overlay already on the same position, skip adding the highlight
     const decorations = editor.getOverlayDecorations().filter((decoration) => {
-      const decorationMarker = decoration.getMarker()
-      if (decorationMarker.compare(highlightMarker) == 1) {
-        return decoration
-      }
-      return null
+      return decoration.isType("highligh") && decoration.getMarker().compare(highlightMarker) === 1
     })
     if (decorations.length > 0) {
       highlightMarker.destroy()
-      return this.dataTipMarkerDisposables
-    }
-    // END OPTIMIZATION
+      // END OPTIMIZATION
+    } else {
+      // Actual Highlighting
+      disposables.add(new Disposable(() => highlightMarker.destroy()))
 
-    disposables.add(new Disposable(() => highlightMarker.destroy()))
-    editor.decorateMarker(highlightMarker, {
-      type: "highlight",
-      class: "datatip-highlight-region",
-    })
+      editor.decorateMarker(highlightMarker, {
+        type: "highlight",
+        class: "datatip-highlight-region",
+      })
+    }
 
     // The actual datatip should appear at the trigger position.
     const overlayMarker = editor.markBufferRange(new Range(position, position), {
@@ -502,7 +492,7 @@ export class DataTipManager {
     }
 
     // TODO move this code to atom-ide-base
-    element.addEventListener("wheel", this.onMouseWheel, { passive: true })
+    element.addEventListener("wheel", onMouseWheel, { passive: true })
 
     return disposables
   }
@@ -515,4 +505,12 @@ export class DataTipManager {
     this.dataTipMarkerDisposables?.dispose()
     this.dataTipMarkerDisposables = null
   }
+}
+
+/**
+ * handles the mouse wheel event to enable scrolling over long text
+ * @param evt the mouse wheel event being triggered
+ */
+function onMouseWheel(evt: WheelEvent) {
+  evt.stopPropagation()
 }
