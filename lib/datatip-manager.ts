@@ -450,11 +450,7 @@ export class DataTipManager {
     // OPTIMIZATION:
     // if there is an overlay already on the same position, skip showing the datatip
     const decorations = editor.getOverlayDecorations().filter((decoration) => {
-      const decorationMarker = decoration.getMarker()
-      if (decorationMarker.compare(highlightMarker) == 1) {
-        return decoration
-      }
-      return null
+      return decoration.getMarker().compare(highlightMarker) === 1
     })
     if (decorations.length > 0) {
       highlightMarker.destroy()
