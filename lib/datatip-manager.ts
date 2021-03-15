@@ -176,9 +176,7 @@ export class DataTipManager {
 
     return new Disposable(() => {
       disposable.dispose()
-      if (this.subscriptions != null) {
-        this.subscriptions.remove(disposable)
-      }
+      this.subscriptions.remove(disposable)
       this.watchedEditors.delete(editor)
     })
   }
