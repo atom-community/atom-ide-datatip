@@ -298,14 +298,6 @@ export class DataTipManager {
   }
 
   /**
-   * handles the mouse wheel event to enable scrolling over long text
-   * @param evt the mouse wheel event being triggered
-   */
-  onMouseWheel(evt: WheelEvent) {
-    evt.stopPropagation()
-  }
-
-  /**
    * the central command event handler
    * @param evt command event
    */
@@ -497,7 +489,7 @@ export class DataTipManager {
     }
 
     // TODO move this code to atom-ide-base
-    element.addEventListener("wheel", this.onMouseWheel, { passive: true })
+    element.addEventListener("wheel", onMouseWheel, { passive: true })
 
     return disposables
   }
@@ -510,4 +502,12 @@ export class DataTipManager {
     this.dataTipMarkerDisposables?.dispose()
     this.dataTipMarkerDisposables = null
   }
+}
+
+/**
+ * handles the mouse wheel event to enable scrolling over long text
+ * @param evt the mouse wheel event being triggered
+ */
+function onMouseWheel(evt: WheelEvent) {
+  evt.stopPropagation()
 }
