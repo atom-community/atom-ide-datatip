@@ -14,7 +14,7 @@ describe("atom-ide-datatip tests", () => {
     await atom.packages.activatePackage("atom-ide-datatip")
   })
 
-  it("Activation", async function () {
+  it("Activation", function () {
     expect(atom.packages.isPackageLoaded("atom-ide-datatip")).toBeTruthy()
   })
 })

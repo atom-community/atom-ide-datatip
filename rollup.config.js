@@ -14,7 +14,7 @@ const RollupConfig = [
     ],
     // loaded externally
     external: ["atom"],
-    plugins: plugins,
+    plugins,
   },
 ]
 export default RollupConfig
