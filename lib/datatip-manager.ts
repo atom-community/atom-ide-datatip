@@ -448,21 +448,22 @@ export class DataTipManager {
     })
 
     // OPTIMIZATION:
-    // if there is an overlay already on the same position, skip showing the datatip
+    // if there is an highligh overlay already on the same position, skip adding the highlight
     const decorations = editor.getOverlayDecorations().filter((decoration) => {
-      return decoration.getMarker().compare(highlightMarker) === 1
+      return decoration.isType("highligh") && decoration.getMarker().compare(highlightMarker) === 1
     })
     if (decorations.length > 0) {
       highlightMarker.destroy()
-      return this.dataTipMarkerDisposables
-    }
-    // END OPTIMIZATION
+      // END OPTIMIZATION
+    } else {
+      // Actual Highlighting
+      disposables.add(new Disposable(() => highlightMarker.destroy()))
 
-    disposables.add(new Disposable(() => highlightMarker.destroy()))
-    editor.decorateMarker(highlightMarker, {
-      type: "highlight",
-      class: "datatip-highlight-region",
-    })
+      editor.decorateMarker(highlightMarker, {
+        type: "highlight",
+        class: "datatip-highlight-region",
+      })
+    }
 
     // The actual datatip should appear at the trigger position.
     const overlayMarker = editor.markBufferRange(new Range(position, position), {
