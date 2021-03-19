@@ -361,7 +361,7 @@ export class DataTipManager {
               containerClassName: "datatip-component-container",
               contentClassName: "datatip-component",
             },
-            className: "datatip-element select-list popover-list",
+            className: "datatip-element",
           })
           this.dataTipMarkerDisposables = this.mountDataTipWithMarker(editor, datatip.range, position, dataTipView)
         } else if (datatip.markedStrings.length > 0) {
@@ -399,7 +399,7 @@ export class DataTipManager {
           const dataTipView = new ViewContainer({
             snippet,
             markdown,
-            className: "datatip-element select-list popover-list",
+            className: "datatip-element",
           })
 
           this.dataTipMarkerDisposables = this.mountDataTipWithMarker(editor, datatip.range, position, dataTipView)
@@ -425,7 +425,10 @@ export class DataTipManager {
     position: Point,
     view: ViewContainer
   ): CompositeDisposable | null {
-    const element = view.element as HTMLElement
+    const element = document.createElement("div")
+    element.className = "datatip-border"
+
+    element.appendChild(view.element as HTMLElement)
 
     // TODO do we need this?
     if (!element) {

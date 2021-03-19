@@ -1,7 +1,19 @@
 @import "ui-variables";
 @import "syntax-variables";
 
+// .datatip-overlay {
+// }
+
+.datatip-border {
+  background: @app-background-color;
+  padding: 10px;
+}
+
 .datatip-element {
+  background: @app-background-color;
+  .datatip-hover-effect();
+  padding: 2px;
+
   overflow: auto; // prevents the long text to come out of the datatip
   color: @syntax-text-color;
   white-space: nowrap;
@@ -34,19 +46,14 @@
   }
 }
 
-.datatip-element.select-list.popover-list {
-  width: auto;
-}
-
-.datatip-overlay {
+.datatip-hover-effect() {
   // info border
-  border-bottom: 5px solid @background-color-highlight;
-  border-radius: 3px;
+  border-left: 5px solid @background-color-highlight;
 
   // info bar glow
-  transition: border-bottom-color 0.15s ease;
+  transition: border-left-color 0.15s ease;
   &:hover {
-    border-bottom-color: lighten(@background-color-highlight, 10%);
+    border-left-color: lighten(@background-color-highlight, 10%);
   }
 }
 
