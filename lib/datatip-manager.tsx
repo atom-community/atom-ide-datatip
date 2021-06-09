@@ -8,8 +8,9 @@ import {
   CommandEvent,
   CursorPositionChangedEvent,
 } from "atom"
-import type { Datatip, DatatipProvider } from "atom-ide-base"
-import { ViewContainer } from "atom-ide-base/src-commons-ui/float-pane/ViewContainer"
+import type { Datatip, DatatipProvider, ReactComponentDatatip } from "atom-ide-base"
+import { ViewContainer, Props as ViewContainerProps } from "atom-ide-base/src-commons-ui/float-pane/ViewContainer"
+import { render } from "solid-js/web"
 import { ProviderRegistry } from "atom-ide-base/src-commons-atom/ProviderRegistry"
 import { makeOverlaySelectable } from "atom-ide-base/src-commons-ui/float-pane/selectable-overlay"
 
@@ -330,15 +331,21 @@ export class DataTipManager {
         this.currentMarkerRange = datatip.range
 
         if ("component" in datatip) {
-          const dataTipView = new ViewContainer({
-            component: {
-              component: datatip.component,
-              containerClassName: "datatip-component-container",
-              contentClassName: "datatip-component",
-            },
-            className: "datatip-element select-list popover-list",
-          })
-          this.dataTipMarkerDisposables = this.mountDataTipWithMarker(editor, datatip.range, position, dataTipView)
+          const element = document.createElement("div")
+          render(
+            () => (
+              <ViewContainer
+                component={{
+                  component: (datatip as ReactComponentDatatip).component,
+                  containerClassName: "datatip-component-container",
+                  contentClassName: "datatip-component",
+                }}
+                className="datatip-element select-list popover-list"
+              />
+            ),
+            element
+          )
+          this.dataTipMarkerDisposables = this.mountDataTipWithMarker(editor, datatip.range, position, element)
         } else if (datatip.markedStrings.length > 0) {
           const grammar = editor.getGrammar().scopeName.toLowerCase()
 
@@ -352,8 +359,8 @@ export class DataTipManager {
             }
           }
 
-          let snippet,
-            markdown = undefined
+          let snippet: ViewContainerProps["snippet"] | undefined = undefined
+          let markdown: ViewContainerProps["markdown"] | undefined = undefined
           if (snippetData.length > 0) {
             snippet = {
               snippet: snippetData,
@@ -370,14 +377,18 @@ export class DataTipManager {
               contentClassName: "datatip-markdown",
             }
           }
-
-          const dataTipView = new ViewContainer({
-            snippet,
-            markdown,
-            className: "datatip-element select-list popover-list",
-          })
-
-          this.dataTipMarkerDisposables = this.mountDataTipWithMarker(editor, datatip.range, position, dataTipView)
+          const element = document.createElement("div")
+          render(
+            () => (
+              <ViewContainer
+                snippet={snippet}
+                markdown={markdown}
+                className="datatip-element select-list popover-list"
+              />
+            ),
+            element
+          )
+          this.dataTipMarkerDisposables = this.mountDataTipWithMarker(editor, datatip.range, position, element)
         }
       }
     } catch (err) {
@@ -399,16 +410,8 @@ export class DataTipManager {
     editor: TextEditor,
     range: Range,
     position: Point,
-    view: ViewContainer
+    element: HTMLElement
   ): CompositeDisposable | null {
-    const element = view.element as HTMLElement
-
-    // TODO do we need this?
-    if (!element) {
-      // if the element is not created return right away
-      return this.dataTipMarkerDisposables
-    }
-
     const disposables = new CompositeDisposable()
 
     // Highlight the text indicated by the datatip's range.
@@ -462,7 +465,6 @@ export class DataTipManager {
       disposables.add(
         new Disposable(() => {
           this.editorView?.addEventListener("mousemove", this.onMouseMoveEvt)
-          view.destroy()
         })
       )
     }
