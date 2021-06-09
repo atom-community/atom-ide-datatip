@@ -1,3 +1,19 @@
+# [0.25.0](https://github.com/atom-community/atom-ide-datatip/compare/v0.24.1...v0.25.0) (2021-06-09)
+
+
+### Bug Fixes
+
+* fix package-deps loading ([6030cc4](https://github.com/atom-community/atom-ide-datatip/commit/6030cc4213827bee80f258fdfa02383e053d319a))
+* handle showDataTip promise correcrly - fix types ([4f4bc23](https://github.com/atom-community/atom-ide-datatip/commit/4f4bc23873ac8331afbbf9d430ac2e0a8100cbd7))
+* make datatip glow less pronounced ([5a2b365](https://github.com/atom-community/atom-ide-datatip/commit/5a2b365c747a3a6e0b87619985c9a541c4562c79))
+* update atom-ide-base ([416bf82](https://github.com/atom-community/atom-ide-datatip/commit/416bf8279069d6a9fc686e73b31380ed31541c72))
+* update dependencies ([1050929](https://github.com/atom-community/atom-ide-datatip/commit/10509299a9cb1bbe8fd4552d3c248a9e5d6997c3))
+
+
+### Features
+
+* use the Solid ViewContainer ([62066e7](https://github.com/atom-community/atom-ide-datatip/commit/62066e7be31f97256cef98ec01bb49212e33b2a9))
+
 ## [0.24.1](https://github.com/atom-community/atom-ide-datatip/compare/v0.24.0...v0.24.1) (2021-03-15)
 
 
