@@ -4,18 +4,12 @@ import type { DatatipService } from "atom-ide-base"
 
 export { default as config } from "./config.json"
 
-/**
- * [subscriptions description]
- */
+/** [subscriptions description] */
 let subscriptions: CompositeDisposable
-/**
- * [datatipManager description]
- */
+/** [datatipManager description] */
 let datatipManager: DataTipManager
 
-/**
- * called by Atom when activating an extension
- */
+/** Called by Atom when activating an extension */
 export function activate() {
   // Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
   subscriptions = new CompositeDisposable()
@@ -39,9 +33,7 @@ async function install_deps() {
   }
 }
 
-/**
- * called by Atom when deactivating an extension
- */
+/** Called by Atom when deactivating an extension */
 export function deactivate() {
   if (subscriptions) {
     subscriptions.dispose()
@@ -49,8 +41,9 @@ export function deactivate() {
 }
 
 /**
- * called by IDE extensions to retrieve the Datatip service for registration
- * @return the current DataTipManager instance
+ * Called by IDE extensions to retrieve the Datatip service for registration
+ *
+ * @returns The current DataTipManager instance
  */
 export function provideDatatipService(): DatatipService {
   return datatipManager!.datatipService
