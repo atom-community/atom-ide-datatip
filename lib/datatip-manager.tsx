@@ -49,19 +49,19 @@ export class DataTipManager {
    * To optimize show/hide calls we set a timeout of hoverTime for the mouse movement only if the mouse pointer is not
    * moving for more than hoverTime the data tip functionality is triggered
    */
-  mouseMoveTimer: NodeJS.Timeout | null = null
+  mouseMoveTimer?: number
 
   /**
    * To optimize show/hide calls we set a timeout of hoverTime for the cursor movement only if the cursor is not moving
    * for more than hoverTime the data tip functionality is triggered
    */
-  cursorMoveTimer: NodeJS.Timeout | null = null
+  cursorMoveTimer?: number
 
   /**
    * The time that the mouse/cursor should hover/stay to show a datatip. Also specifies the time that the datatip is
    * still shown when the mouse/cursor moves [ms].
    */
-  hoverTime = atom.config.get("atom-ide-datatip.hoverTime")
+  hoverTime = atom.config.get("atom-ide-datatip.hoverTime") as number
 
   constructor() {
     /** The mouse move event handler that evaluates the screen position and eventually shows a data tip */
@@ -207,19 +207,20 @@ export class DataTipManager {
    * @param evt The cursor move event
    */
   onCursorMoveEvt(event: CursorPositionChangedEvent) {
-    if (this.cursorMoveTimer) {
+    if (this.cursorMoveTimer !== undefined) {
       clearTimeout(this.cursorMoveTimer)
     }
 
     this.cursorMoveTimer = setTimeout(
-      (evt) => {
+      async (evt: CursorPositionChangedEvent) => {
         if (evt.textChanged || !this.showDataTipOnCursorMove) {
           return
         }
-        const editor = evt.cursor.editor
+        // @ts-ignore internal API
+        const editor = evt.cursor.editor as TextEditor
         const position = evt.cursor.getBufferPosition()
         if (this.currentMarkerRange === null || !this.currentMarkerRange.containsPoint(position)) {
-          this.showDataTip(editor, position)
+          await this.showDataTip(editor, position)
         }
       },
       this.hoverTime,
@@ -229,12 +230,12 @@ export class DataTipManager {
 
   /** The central mouse movement event handler */
   onMouseMoveEvt(event: MouseEvent) {
-    if (this.mouseMoveTimer) {
+    if (this.mouseMoveTimer !== undefined) {
       clearTimeout(this.mouseMoveTimer)
     }
 
     this.mouseMoveTimer = setTimeout(
-      (evt) => {
+      async (evt: MouseEvent) => {
         if (this.editorView === null || this.editor === null) {
           return
         }
@@ -262,7 +263,7 @@ export class DataTipManager {
 
         const point = this.editor.bufferPositionForScreenPosition(screenPosition)
         if (this.currentMarkerRange === null || !this.currentMarkerRange.containsPoint(point)) {
-          this.showDataTip(this.editor, point)
+          await this.showDataTip(this.editor, point)
         }
       },
       this.hoverTime,
@@ -275,18 +276,18 @@ export class DataTipManager {
    *
    * @param evt Command event
    */
-  onCommandEvt(evt: CommandEvent<TextEditorElement>) {
+  async onCommandEvt(evt: CommandEvent<TextEditorElement>) {
     const editor = evt.currentTarget.getModel()
 
     if (atom.workspace.isTextEditor(editor)) {
       const position = evt.currentTarget.getModel().getCursorBufferPosition()
 
       const isTooltipOpenForPosition = this.currentMarkerRange?.containsPoint(position)
-      if (isTooltipOpenForPosition) {
+      if (isTooltipOpenForPosition === true) {
         return this.unmountDataTip()
       }
 
-      this.showDataTip(editor, position)
+      await this.showDataTip(editor, position)
     }
   }
 
@@ -352,6 +353,7 @@ export class DataTipManager {
           for (const markedString of datatip.markedStrings) {
             if (markedString.type === "snippet") {
               snippetData.push(markedString.value)
+              // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
             } else if (markedString.type === "markdown") {
               markdownData.push(markedString.value)
             }
