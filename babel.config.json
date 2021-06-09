@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "solid",
+    [
+      "babel-preset-atomic",
+      {
+        "addModuleExports": false,
+        "typescript": true,
+        "react": false
+      }
+    ]
+  ]
+}

@@ -20,9 +20,8 @@
     "test.integration": "npm run build && atom --test spec",
     "clean": "shx rm -rf dist",
     "tsc": "tsc -p ./lib/tsconfig.json",
-    "tsc.dev": "npm run tsc -- --watch",
     "dev": "npm run clean && cross-env NODE_ENV=development cross-env BABEL_KEEP_MODULES=true rollup -c -w",
-    "build": "npm run clean && cross-env NODE_ENV=production cross-env BABEL_KEEP_MODULES=true rollup -c",
+    "build": "npm run tsc -- --noEmit && npm run clean && cross-env NODE_ENV=production cross-env BABEL_KEEP_MODULES=true rollup -c",
     "build-commit": "build-commit -o dist",
     "bump": "ncu -u",
     "prepare": "npm run build"
@@ -35,20 +34,20 @@
   ],
   "dependencies": {
     "atom-ide-base": "^2.6.1",
-    "atom-package-deps": "^7.2.3"
+    "atom-package-deps": "^7.2.3",
+    "solid-js": "^0.26.5"
   },
   "devDependencies": {
     "@types/atom": "^1.40.10",
     "@types/jasmine": "^3.7.7",
     "@types/node": "^15.12.2",
-    "@types/react": "^17.0.9",
-    "@types/react-dom": "^17.0.6",
     "atom-jasmine3-test-runner": "^5.2.6",
+    "babel-preset-atomic": "^4.1.0",
+    "babel-preset-solid": "^0.26.5",
     "build-commit": "^0.1.4",
     "cross-env": "latest",
     "eslint": "7.28.0",
     "eslint-config-atomic": "^1.15.3",
-    "npm-check-updates": "^11.6.0",
     "prettier-config-atomic": "^2.0.5",
     "rollup-plugin-atomic": "^2.3.2",
     "shx": "^0.3.3",
