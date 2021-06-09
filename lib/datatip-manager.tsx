@@ -8,92 +8,70 @@ import {
   CommandEvent,
   CursorPositionChangedEvent,
 } from "atom"
-import type { Datatip, DatatipProvider } from "atom-ide-base"
-import { ViewContainer } from "atom-ide-base/commons-ui/float-pane/ViewContainer"
-import { ProviderRegistry } from "atom-ide-base/commons-atom/ProviderRegistry"
-import { makeOverlaySelectable } from "atom-ide-base/commons-ui/float-pane/selectable-overlay"
+import type { Datatip, DatatipProvider, ReactComponentDatatip } from "atom-ide-base"
+import { ViewContainer, Props as ViewContainerProps } from "atom-ide-base/src-commons-ui/float-pane/ViewContainer"
+import { render } from "solid-js/web"
+import { ProviderRegistry } from "atom-ide-base/src-commons-atom/ProviderRegistry"
+import { makeOverlaySelectable } from "atom-ide-base/src-commons-ui/float-pane/selectable-overlay"
 
 export class DataTipManager {
-  /**
-   * holds a reference to disposable items from this data tip manager
-   */
+  /** Holds a reference to disposable items from this data tip manager */
   subscriptions: CompositeDisposable = new CompositeDisposable()
 
-  /**
-   * holds a list of registered data tip providers
-   */
+  /** Holds a list of registered data tip providers */
   providerRegistry: ProviderRegistry<DatatipProvider> = new ProviderRegistry()
 
-  /**
-   * holds a weak reference to all watched Atom text editors
-   */
+  /** Holds a weak reference to all watched Atom text editors */
   watchedEditors: WeakSet<TextEditor> = new WeakSet()
 
-  /**
-   * holds a reference to the current watched Atom text editor
-   */
+  /** Holds a reference to the current watched Atom text editor */
   editor: TextEditor | null = null
 
-  /**
-   * holds a reference to the current watched Atom text editor viewbuffer
-   */
+  /** Holds a reference to the current watched Atom text editor viewbuffer */
   editorView: TextEditorElement | null = null
 
-  /**
-   * holds a reference to all disposable items for the current watched Atom text editor
-   */
+  /** Holds a reference to all disposable items for the current watched Atom text editor */
   editorSubscriptions: CompositeDisposable | null = null
 
-  /**
-   * holds a reference to all disposable items for the current data tip
-   */
+  /** Holds a reference to all disposable items for the current data tip */
   dataTipMarkerDisposables: CompositeDisposable | null = null
 
-  /**
-   * config flag denoting if the data tip should be shown when moving the cursor on screen
-   */
+  /** Config flag denoting if the data tip should be shown when moving the cursor on screen */
   showDataTipOnCursorMove = false
 
-  /**
-   * config flag denoting if the data tip should be shown when moving the mouse cursor around
-   */
+  /** Config flag denoting if the data tip should be shown when moving the mouse cursor around */
   showDataTipOnMouseMove = true
 
-  /**
-   * holds the range of the current data tip to prevent unnecessary show/hide calls
-   */
+  /** Holds the range of the current data tip to prevent unnecessary show/hide calls */
   currentMarkerRange: Range | null = null
 
   /**
-   * to optimize show/hide calls we set a timeout of hoverTime for the mouse movement
-   * only if the mouse pointer is not moving for more than hoverTime the data tip functionality is triggered
+   * To optimize show/hide calls we set a timeout of hoverTime for the mouse movement only if the mouse pointer is not
+   * moving for more than hoverTime the data tip functionality is triggered
    */
-  mouseMoveTimer: NodeJS.Timeout | null = null
+  mouseMoveTimer?: number
 
   /**
-   * to optimize show/hide calls we set a timeout of hoverTime for the cursor movement
-   * only if the cursor is not moving for more than hoverTime the data tip functionality is triggered
+   * To optimize show/hide calls we set a timeout of hoverTime for the cursor movement only if the cursor is not moving
+   * for more than hoverTime the data tip functionality is triggered
    */
-  cursorMoveTimer: NodeJS.Timeout | null = null
+  cursorMoveTimer?: number
 
-  /** The time that the mouse/cursor should hover/stay to show a datatip. Also specifies the time that the datatip is still shown when the mouse/cursor moves [ms]. */
-  hoverTime = atom.config.get("atom-ide-datatip.hoverTime")
+  /**
+   * The time that the mouse/cursor should hover/stay to show a datatip. Also specifies the time that the datatip is
+   * still shown when the mouse/cursor moves [ms].
+   */
+  hoverTime = atom.config.get("atom-ide-datatip.hoverTime") as number
 
   constructor() {
-    /**
-     * the mouse move event handler that evaluates the screen position and eventually shows a data tip
-     */
+    /** The mouse move event handler that evaluates the screen position and eventually shows a data tip */
     this.onMouseMoveEvt = this.onMouseMoveEvt.bind(this)
 
-    /**
-     * the cursor move event handler that evaluates the cursor position and eventually shows a data tip
-     */
+    /** The cursor move event handler that evaluates the cursor position and eventually shows a data tip */
     this.onCursorMoveEvt = this.onCursorMoveEvt.bind(this)
   }
 
-  /**
-   * initialization routine retrieving a reference  to the markdown service
-   */
+  /** Initialization routine retrieving a reference to the markdown service */
   initialize() {
     this.subscriptions.add(
       atom.workspace.observeTextEditors((editor) => {
@@ -120,9 +98,7 @@ export class DataTipManager {
     )
   }
 
-  /**
-   * dispose function to clean up any disposable references used
-   */
+  /** Dispose function to clean up any disposable references used */
   dispose() {
     if (this.dataTipMarkerDisposables) {
       this.dataTipMarkerDisposables.dispose()
@@ -134,21 +110,18 @@ export class DataTipManager {
     }
     this.editorSubscriptions = null
 
-    if (this.subscriptions) {
-      this.subscriptions.dispose()
-    }
+    this.subscriptions.dispose()
   }
 
-  /**
-   * returns the provider registry as a consumable service
-   */
+  /** Returns the provider registry as a consumable service */
   get datatipService() {
     return this.providerRegistry
   }
 
   /**
-   * checks and setups an Atom Text editor instance for tracking cursor/mouse movements
-   * @param editor  a valid Atom Text editor instance
+   * Checks and setups an Atom Text editor instance for tracking cursor/mouse movements
+   *
+   * @param editor A valid Atom Text editor instance
    */
   watchEditor(editor: TextEditor) {
     if (this.watchedEditors.has(editor)) {
@@ -182,9 +155,9 @@ export class DataTipManager {
   }
 
   /**
-   * updates the internal references to a specific Atom Text editor instance in case
-   * it has been decided to track this instance
-   * @param editor the Atom Text editor instance to be tracked
+   * Updates the internal references to a specific Atom Text editor instance in case it has been decided to track this instance
+   *
+   * @param editor The Atom Text editor instance to be tracked
    */
   updateCurrentEditor(editor: TextEditor | null) {
     if (editor === this.editor) {
@@ -229,23 +202,25 @@ export class DataTipManager {
   }
 
   /**
-   * the central cursor movement event handler
-   * @param evt the cursor move event
+   * The central cursor movement event handler
+   *
+   * @param evt The cursor move event
    */
   onCursorMoveEvt(event: CursorPositionChangedEvent) {
-    if (this.cursorMoveTimer) {
+    if (this.cursorMoveTimer !== undefined) {
       clearTimeout(this.cursorMoveTimer)
     }
 
     this.cursorMoveTimer = setTimeout(
-      (evt) => {
+      async (evt: CursorPositionChangedEvent) => {
         if (evt.textChanged || !this.showDataTipOnCursorMove) {
           return
         }
-        const editor = evt.cursor.editor
+        // @ts-ignore internal API
+        const editor = evt.cursor.editor as TextEditor
         const position = evt.cursor.getBufferPosition()
         if (this.currentMarkerRange === null || !this.currentMarkerRange.containsPoint(position)) {
-          this.showDataTip(editor, position)
+          await this.showDataTip(editor, position)
         }
       },
       this.hoverTime,
@@ -253,16 +228,14 @@ export class DataTipManager {
     )
   }
 
-  /**
-   * the central mouse movement event handler
-   */
+  /** The central mouse movement event handler */
   onMouseMoveEvt(event: MouseEvent) {
-    if (this.mouseMoveTimer) {
+    if (this.mouseMoveTimer !== undefined) {
       clearTimeout(this.mouseMoveTimer)
     }
 
     this.mouseMoveTimer = setTimeout(
-      (evt) => {
+      async (evt: MouseEvent) => {
         if (this.editorView === null || this.editor === null) {
           return
         }
@@ -290,7 +263,7 @@ export class DataTipManager {
 
         const point = this.editor.bufferPositionForScreenPosition(screenPosition)
         if (this.currentMarkerRange === null || !this.currentMarkerRange.containsPoint(point)) {
-          this.showDataTip(this.editor, point)
+          await this.showDataTip(this.editor, point)
         }
       },
       this.hoverTime,
@@ -299,30 +272,32 @@ export class DataTipManager {
   }
 
   /**
-   * the central command event handler
-   * @param evt command event
+   * The central command event handler
+   *
+   * @param evt Command event
    */
-  onCommandEvt(evt: CommandEvent<TextEditorElement>) {
+  async onCommandEvt(evt: CommandEvent<TextEditorElement>) {
     const editor = evt.currentTarget.getModel()
 
     if (atom.workspace.isTextEditor(editor)) {
       const position = evt.currentTarget.getModel().getCursorBufferPosition()
 
       const isTooltipOpenForPosition = this.currentMarkerRange?.containsPoint(position)
-      if (isTooltipOpenForPosition) {
+      if (isTooltipOpenForPosition === true) {
         return this.unmountDataTip()
       }
 
-      this.showDataTip(editor, position)
+      await this.showDataTip(editor, position)
     }
   }
 
   /**
-   * evaluates the responsible DatatipProvider to call for data tip information at a given position in a specific Atom Text editor
-   * @param editor the Atom Text editor instance to be used
-   * @param position the cursor or mouse position within the text editor to qualify for a data tip
-   * @param evt the original event triggering this data tip evaluation
-   * @return a promise object to track the asynchronous operation
+   * Evaluates the responsible DatatipProvider to call for data tip information at a given position in a specific Atom Text editor
+   *
+   * @param editor The Atom Text editor instance to be used
+   * @param position The cursor or mouse position within the text editor to qualify for a data tip
+   * @param evt The original event triggering this data tip evaluation
+   * @returns A promise object to track the asynchronous operation
    */
   async showDataTip(editor: TextEditor, position: Point): Promise<void> {
     try {
@@ -355,15 +330,21 @@ export class DataTipManager {
         this.currentMarkerRange = datatip.range
 
         if ("component" in datatip) {
-          const dataTipView = new ViewContainer({
-            component: {
-              component: datatip.component,
-              containerClassName: "datatip-component-container",
-              contentClassName: "datatip-component",
-            },
-            className: "datatip-element select-list popover-list",
-          })
-          this.dataTipMarkerDisposables = this.mountDataTipWithMarker(editor, datatip.range, position, dataTipView)
+          const element = document.createElement("div")
+          render(
+            () => (
+              <ViewContainer
+                component={{
+                  component: (datatip as ReactComponentDatatip).component,
+                  containerClassName: "datatip-component-container",
+                  contentClassName: "datatip-component",
+                }}
+                className="datatip-element select-list popover-list"
+              />
+            ),
+            element
+          )
+          this.dataTipMarkerDisposables = this.mountDataTipWithMarker(editor, datatip.range, position, element)
         } else if (datatip.markedStrings.length > 0) {
           const grammar = editor.getGrammar().scopeName.toLowerCase()
 
@@ -372,13 +353,14 @@ export class DataTipManager {
           for (const markedString of datatip.markedStrings) {
             if (markedString.type === "snippet") {
               snippetData.push(markedString.value)
+              // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
             } else if (markedString.type === "markdown") {
               markdownData.push(markedString.value)
             }
           }
 
-          let snippet,
-            markdown = undefined
+          let snippet: ViewContainerProps["snippet"] | undefined = undefined
+          let markdown: ViewContainerProps["markdown"] | undefined = undefined
           if (snippetData.length > 0) {
             snippet = {
               snippet: snippetData,
@@ -395,14 +377,18 @@ export class DataTipManager {
               contentClassName: "datatip-markdown",
             }
           }
-
-          const dataTipView = new ViewContainer({
-            snippet,
-            markdown,
-            className: "datatip-element select-list popover-list",
-          })
-
-          this.dataTipMarkerDisposables = this.mountDataTipWithMarker(editor, datatip.range, position, dataTipView)
+          const element = document.createElement("div")
+          render(
+            () => (
+              <ViewContainer
+                snippet={snippet}
+                markdown={markdown}
+                className="datatip-element select-list popover-list"
+              />
+            ),
+            element
+          )
+          this.dataTipMarkerDisposables = this.mountDataTipWithMarker(editor, datatip.range, position, element)
         }
       }
     } catch (err) {
@@ -412,27 +398,20 @@ export class DataTipManager {
   }
 
   /**
-   * mounts / displays a data tip view component at a specific position in a given Atom Text editor
-   * @param  editor the Atom Text editor instance to host the data tip view
-   * @param  range  the range for which the data tip component is valid
-   * @param  position the position on which to show the data tip view
-   * @param  view the data tip component to display
-   * @return a composite object to release references at a later stage
+   * Mounts / displays a data tip view component at a specific position in a given Atom Text editor
+   *
+   * @param editor The Atom Text editor instance to host the data tip view
+   * @param range The range for which the data tip component is valid
+   * @param position The position on which to show the data tip view
+   * @param view The data tip component to display
+   * @returns A composite object to release references at a later stage
    */
   mountDataTipWithMarker(
     editor: TextEditor,
     range: Range,
     position: Point,
-    view: ViewContainer
+    element: HTMLElement
   ): CompositeDisposable | null {
-    const element = view.element as HTMLElement
-
-    // TODO do we need this?
-    if (!element) {
-      // if the element is not created return right away
-      return this.dataTipMarkerDisposables
-    }
-
     const disposables = new CompositeDisposable()
 
     // Highlight the text indicated by the datatip's range.
@@ -486,7 +465,6 @@ export class DataTipManager {
       disposables.add(
         new Disposable(() => {
           this.editorView?.addEventListener("mousemove", this.onMouseMoveEvt)
-          view.destroy()
         })
       )
     }
@@ -497,9 +475,7 @@ export class DataTipManager {
     return disposables
   }
 
-  /**
-   * unmounts / hides the most recent data tip view component
-   */
+  /** Unmounts / hides the most recent data tip view component */
   unmountDataTip() {
     this.currentMarkerRange = null
     this.dataTipMarkerDisposables?.dispose()
@@ -508,8 +484,9 @@ export class DataTipManager {
 }
 
 /**
- * handles the mouse wheel event to enable scrolling over long text
- * @param evt the mouse wheel event being triggered
+ * Handles the mouse wheel event to enable scrolling over long text
+ *
+ * @param evt The mouse wheel event being triggered
  */
 function onMouseWheel(evt: WheelEvent) {
   evt.stopPropagation()

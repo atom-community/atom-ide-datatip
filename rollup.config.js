@@ -1,6 +1,6 @@
 import { createPlugins } from "rollup-plugin-atomic"
 
-const plugins = createPlugins([["ts", { tsconfig: "./lib/tsconfig.json" }, true], "js", "json"])
+const plugins = createPlugins([["babel", { extensions: [".ts", ".tsx"] }, true], "js", "json"])
 
 const RollupConfig = [
   {
