@@ -110,9 +110,7 @@ export class DataTipManager {
     }
     this.editorSubscriptions = null
 
-    if (this.subscriptions) {
-      this.subscriptions.dispose()
-    }
+    this.subscriptions.dispose()
   }
 
   /** Returns the provider registry as a consumable service */
