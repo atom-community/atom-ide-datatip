@@ -9,9 +9,9 @@ import {
   CursorPositionChangedEvent,
 } from "atom"
 import type { Datatip, DatatipProvider } from "atom-ide-base"
-import { ViewContainer } from "atom-ide-base/commons-ui/float-pane/ViewContainer"
-import { ProviderRegistry } from "atom-ide-base/commons-atom/ProviderRegistry"
-import { makeOverlaySelectable } from "atom-ide-base/commons-ui/float-pane/selectable-overlay"
+import { ViewContainer } from "atom-ide-base/src-commons-ui/float-pane/ViewContainer"
+import { ProviderRegistry } from "atom-ide-base/src-commons-atom/ProviderRegistry"
+import { makeOverlaySelectable } from "atom-ide-base/src-commons-ui/float-pane/selectable-overlay"
 
 export class DataTipManager {
   /** Holds a reference to disposable items from this data tip manager */
