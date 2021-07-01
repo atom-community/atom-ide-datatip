@@ -9,7 +9,7 @@ const RollupConfig = [
       {
         dir: "dist",
         format: "cjs",
-        sourcemap: true,
+        sourcemap: process.env.NODE_ENV === "development" ? "inline" : true,
       },
     ],
     // loaded externally

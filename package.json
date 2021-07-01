@@ -33,25 +33,32 @@
     "busy-signal"
   ],
   "dependencies": {
-    "atom-ide-base": "^3.0.0",
+    "atom-ide-base": "^3.2.0",
+    "atom-ide-markdown-service": "link:C:/Users/aminy/Documents/GitHub/JavaScript/@atom-ide-community/atom-ide-markdown-service",
     "atom-package-deps": "^7.2.3",
+    "markdown-wasm": "^1.2.0",
     "solid-js": "^0.26.5"
+  },
+  "pnpm": {
+    "overrides": {
+      "atom-ide-markdown-service": "link:C:/Users/aminy/Documents/GitHub/JavaScript/@atom-ide-community/atom-ide-markdown-service"
+    }
   },
   "devDependencies": {
     "@types/atom": "^1.40.10",
     "@types/jasmine": "^3.7.7",
-    "@types/node": "^15.12.2",
+    "@types/node": "^15.12.5",
     "atom-jasmine3-test-runner": "^5.2.6",
     "babel-preset-atomic": "^4.1.0",
     "babel-preset-solid": "^0.26.5",
     "build-commit": "^0.1.4",
     "cross-env": "latest",
-    "eslint": "7.28.0",
-    "eslint-config-atomic": "^1.15.3",
-    "prettier-config-atomic": "^2.0.5",
+    "eslint": "7.29.0",
+    "eslint-config-atomic": "^1.16.1",
+    "prettier-config-atomic": "^2.1.0",
     "rollup-plugin-atomic": "^2.3.2",
     "shx": "^0.3.3",
-    "typescript": "^4.3.2"
+    "typescript": "^4.3.5"
   },
   "atomTestRunner": "./spec/runner",
   "prettier": "prettier-config-atomic",
