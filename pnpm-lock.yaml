@@ -1,44 +1,45 @@
 lockfileVersion: 5.3
 
-specifiers:
-  '@types/atom': ^1.40.10
-  '@types/jasmine': ^3.7.7
-  '@types/node': ^15.12.2
-  atom-ide-base: ^3.0.0
-  atom-jasmine3-test-runner: ^5.2.6
-  atom-package-deps: ^7.2.3
-  babel-preset-atomic: ^4.1.0
-  babel-preset-solid: ^0.26.5
-  build-commit: ^0.1.4
-  cross-env: latest
-  eslint: 7.28.0
-  eslint-config-atomic: ^1.15.3
-  prettier-config-atomic: ^2.0.5
-  rollup-plugin-atomic: ^2.3.2
-  shx: ^0.3.3
-  solid-js: ^0.26.5
-  typescript: ^4.3.2
+importers:
 
-dependencies:
-  atom-ide-base: 3.0.0
-  atom-package-deps: 7.2.3
-  solid-js: 0.26.5
-
-devDependencies:
-  '@types/atom': 1.40.10
-  '@types/jasmine': 3.7.7
-  '@types/node': 15.12.2
-  atom-jasmine3-test-runner: 5.2.6
-  babel-preset-atomic: 4.1.0
-  babel-preset-solid: 0.26.5
-  build-commit: 0.1.4
-  cross-env: 7.0.3
-  eslint: 7.28.0
-  eslint-config-atomic: 1.15.3
-  prettier-config-atomic: 2.0.5
-  rollup-plugin-atomic: 2.3.2_@types+node@15.12.2
-  shx: 0.3.3
-  typescript: 4.3.2
+  .:
+    specifiers:
+      '@types/atom': ^1.40.10
+      '@types/jasmine': ^3.7.7
+      '@types/node': ^15.12.2
+      atom-ide-base: ^3.0.0
+      atom-jasmine3-test-runner: ^5.2.6
+      atom-package-deps: ^8.0.0
+      babel-preset-atomic: ^4.1.0
+      babel-preset-solid: ^0.26.5
+      build-commit: ^0.1.4
+      cross-env: latest
+      eslint: 7.28.0
+      eslint-config-atomic: ^1.15.3
+      prettier-config-atomic: ^2.0.5
+      rollup-plugin-atomic: ^2.3.2
+      shx: ^0.3.3
+      solid-js: ^1.0.0
+      typescript: ^4.3.2
+    dependencies:
+      atom-ide-base: 3.0.0
+      atom-package-deps: 8.0.0
+      solid-js: 1.0.4
+    devDependencies:
+      '@types/atom': 1.40.10
+      '@types/jasmine': 3.7.7
+      '@types/node': 15.12.2
+      atom-jasmine3-test-runner: 5.2.6
+      babel-preset-atomic: 4.1.0
+      babel-preset-solid: 0.26.5
+      build-commit: 0.1.4
+      cross-env: 7.0.3
+      eslint: 7.28.0
+      eslint-config-atomic: 1.15.3
+      prettier-config-atomic: 2.0.5
+      rollup-plugin-atomic: 2.3.2_@types+node@15.12.2
+      shx: 0.3.3
+      typescript: 4.3.2
 
 packages:
 
@@ -2137,6 +2138,11 @@ packages:
 
   /atom-package-deps/7.2.3:
     resolution: {integrity: sha512-Z1FHJS2c2xBN3wQVniG7jXDyE4mUjZlHA0tfIkCND9U/fHaZyBJPno4/jD8PtYUnhlymaHRbCsgxCU3QuKjqfQ==}
+    hasBin: true
+    dev: false
+
+  /atom-package-deps/8.0.0:
+    resolution: {integrity: sha512-TSY6WX4+QbMK9r6iCY99hNW+9vW7SF0zGHfnMLgiinMj5VR5MNQIhU+2pVXqIbGWnl32uqBAKB+iBztUV0ssyg==}
     hasBin: true
     dev: false
 
@@ -5612,8 +5618,8 @@ packages:
     dev: true
     optional: true
 
-  /solid-js/0.26.5:
-    resolution: {integrity: sha512-cMjxcVoyRBgnfSpwYxXPM5WF800guR+x/01RDBFQjAAkqU7X28GbRkTNKcyQ1KHcFOnzEsG18J+JJ9/PvqyNmw==}
+  /solid-js/1.0.4:
+    resolution: {integrity: sha512-yPMYlzdxHQAD2TeATrKDG0VBNQUFEVIBBI6uh3Y/fLmh6iID48ldt8ExukHyHwj38MW0mXK421nZu91rRJl99w==}
     dev: false
 
   /source-map-resolve/0.5.3:
